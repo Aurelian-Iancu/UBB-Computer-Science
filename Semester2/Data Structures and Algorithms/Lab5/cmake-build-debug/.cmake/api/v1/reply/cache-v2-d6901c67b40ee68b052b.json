@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/cmake-build-debug"
+			"value" : "c:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -623,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5"
+			"value" : "C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1239,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/cmake-build-debug"
+			"value" : "C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/cmake-build-debug"
 		},
 		{
 			"name" : "Lab5_IS_TOP_LEVEL",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5"
+			"value" : "C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5"
 		}
 	],
 	"kind" : "cache",

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5
+# Install script for directory: C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

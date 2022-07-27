@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Aurelian/Informatica/Year$ 1$ -$ Semester$ 2/DSA/Lab5/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data$ Structures$ and$ Algorithms/Lab5/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Lab5
 
@@ -49,46 +49,46 @@ cmake_ninja_workdir = C$:/Aurelian/Informatica/Year$ 1$ -$ Semester$ 2/DSA/Lab5/
 
 build cmake_object_order_depends_target_Lab5: phony || CMakeFiles/Lab5.dir
 
-build CMakeFiles/Lab5.dir/App.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Aurelian/Informatica/Year$ 1$ -$ Semester$ 2/DSA/Lab5/App.cpp || cmake_object_order_depends_target_Lab5
+build CMakeFiles/Lab5.dir/App.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data$ Structures$ and$ Algorithms/Lab5/App.cpp || cmake_object_order_depends_target_Lab5
   DEP_FILE = CMakeFiles\Lab5.dir\App.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I"C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/."
+  INCLUDES = -I"C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/."
   OBJECT_DIR = CMakeFiles\Lab5.dir
   OBJECT_FILE_DIR = CMakeFiles\Lab5.dir
   TARGET_COMPILE_PDB = CMakeFiles\Lab5.dir\
   TARGET_PDB = Lab5.pdb
 
-build CMakeFiles/Lab5.dir/ExtendedTest.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Aurelian/Informatica/Year$ 1$ -$ Semester$ 2/DSA/Lab5/ExtendedTest.cpp || cmake_object_order_depends_target_Lab5
+build CMakeFiles/Lab5.dir/ExtendedTest.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data$ Structures$ and$ Algorithms/Lab5/ExtendedTest.cpp || cmake_object_order_depends_target_Lab5
   DEP_FILE = CMakeFiles\Lab5.dir\ExtendedTest.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I"C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/."
+  INCLUDES = -I"C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/."
   OBJECT_DIR = CMakeFiles\Lab5.dir
   OBJECT_FILE_DIR = CMakeFiles\Lab5.dir
   TARGET_COMPILE_PDB = CMakeFiles\Lab5.dir\
   TARGET_PDB = Lab5.pdb
 
-build CMakeFiles/Lab5.dir/ShortTest.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Aurelian/Informatica/Year$ 1$ -$ Semester$ 2/DSA/Lab5/ShortTest.cpp || cmake_object_order_depends_target_Lab5
+build CMakeFiles/Lab5.dir/ShortTest.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data$ Structures$ and$ Algorithms/Lab5/ShortTest.cpp || cmake_object_order_depends_target_Lab5
   DEP_FILE = CMakeFiles\Lab5.dir\ShortTest.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I"C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/."
+  INCLUDES = -I"C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/."
   OBJECT_DIR = CMakeFiles\Lab5.dir
   OBJECT_FILE_DIR = CMakeFiles\Lab5.dir
   TARGET_COMPILE_PDB = CMakeFiles\Lab5.dir\
   TARGET_PDB = Lab5.pdb
 
-build CMakeFiles/Lab5.dir/SMMIterator.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Aurelian/Informatica/Year$ 1$ -$ Semester$ 2/DSA/Lab5/SMMIterator.cpp || cmake_object_order_depends_target_Lab5
+build CMakeFiles/Lab5.dir/SMMIterator.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data$ Structures$ and$ Algorithms/Lab5/SMMIterator.cpp || cmake_object_order_depends_target_Lab5
   DEP_FILE = CMakeFiles\Lab5.dir\SMMIterator.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I"C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/."
+  INCLUDES = -I"C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/."
   OBJECT_DIR = CMakeFiles\Lab5.dir
   OBJECT_FILE_DIR = CMakeFiles\Lab5.dir
   TARGET_COMPILE_PDB = CMakeFiles\Lab5.dir\
   TARGET_PDB = Lab5.pdb
 
-build CMakeFiles/Lab5.dir/SortedMultiMap.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Aurelian/Informatica/Year$ 1$ -$ Semester$ 2/DSA/Lab5/SortedMultiMap.cpp || cmake_object_order_depends_target_Lab5
+build CMakeFiles/Lab5.dir/SortedMultiMap.cpp.obj: CXX_COMPILER__Lab5_Debug C$:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data$ Structures$ and$ Algorithms/Lab5/SortedMultiMap.cpp || cmake_object_order_depends_target_Lab5
   DEP_FILE = CMakeFiles\Lab5.dir\SortedMultiMap.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I"C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/."
+  INCLUDES = -I"C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/."
   OBJECT_DIR = CMakeFiles\Lab5.dir
   OBJECT_FILE_DIR = CMakeFiles\Lab5.dir
   TARGET_COMPILE_PDB = CMakeFiles\Lab5.dir\
@@ -118,7 +118,7 @@ build Lab5.exe: CXX_EXECUTABLE_LINKER__Lab5_Debug CMakeFiles/Lab5.dir/App.cpp.ob
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Aurelian\Informatica\Year 1 - Semester 2\DSA\Lab5\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Aurelian\Documents\GitHub\Personal\UBB-Computer-Science\Semester2\Data Structures and Algorithms\Lab5\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -129,7 +129,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Aurelian\Informatica\Year 1 - Semester 2\DSA\Lab5\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Aurelian\Informatica\Year 1 - Semester 2\DSA\Lab5" -B"C:\Aurelian\Informatica\Year 1 - Semester 2\DSA\Lab5\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Aurelian\Documents\GitHub\Personal\UBB-Computer-Science\Semester2\Data Structures and Algorithms\Lab5\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\Aurelian\Documents\GitHub\Personal\UBB-Computer-Science\Semester2\Data Structures and Algorithms\Lab5" -B"C:\Users\Aurelian\Documents\GitHub\Personal\UBB-Computer-Science\Semester2\Data Structures and Algorithms\Lab5\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -147,7 +147,7 @@ build Lab5: phony Lab5.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab5/cmake-build-debug
+# Folder: C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester2/Data Structures and Algorithms/Lab5/cmake-build-debug
 
 build all: phony Lab5.exe
 
