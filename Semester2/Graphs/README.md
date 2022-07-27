@@ -1,4 +1,4 @@
-# Data structures and algorithms
+# Graph algorithms
 
 * Requirements
     * Design and implement an abstract data type directed graph with many functionalities. You ll see them.
