@@ -1,0 +1,6 @@
+2,    Dorel, 914
+3,    Andrei, 912
+4,    Cornel, 911
+5,    Aurelian, 911
+6,  Aurelian, 911
+7, Vasile, 913
