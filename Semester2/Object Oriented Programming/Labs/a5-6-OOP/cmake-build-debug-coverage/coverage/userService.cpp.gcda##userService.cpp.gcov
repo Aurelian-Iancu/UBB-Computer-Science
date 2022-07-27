@@ -1,0 +1,157 @@
+        -:    0:Source:C:/Users/Aurelian/Documents/GitHub/OOP/a5-6-913-Iancu-Gheorghe-Aurelian/userService.cpp
+        -:    0:Graph:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\userService.cpp.gcno
+        -:    0:Data:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\userService.cpp.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "userService.h"
+        -:    3:
+function _ZN11UserServiceC2EP10RepositoryP14UserRepository called 2 returned 100% blocks executed 100%
+        2:    4:UserService::UserService(Repository *repository1, UserRepository *userRepository1) {
+        2:    5:    this->repository = repository1;
+        2:    6:    this->userRepository = userRepository1;
+        -:    7:
+        2:    8:}
+        -:    9:
+function _ZN11UserService18getAllUsersServiceEv called 1 returned 100% blocks executed 100%
+        1:   10:Movie *UserService::getAllUsersService() {
+        1:   11:    return this->userRepository->getAllUsersRepo();
+        1:   11-block  0
+call    0 returned 1
+        -:   12:}
+        -:   13:
+function _ZN11UserService14getSizeServiceEv called 3 returned 100% blocks executed 100%
+        3:   14:int UserService::getSizeService() {
+        3:   15:    return this->userRepository->getSize();
+        3:   15-block  0
+call    0 returned 3
+        -:   16:}
+        -:   17:
+function _ZN11UserService18getCapacityServiceEv called 1 returned 100% blocks executed 100%
+        1:   18:int UserService::getCapacityService() {
+        1:   19:    return this->userRepository->getCapacity();
+        1:   19-block  0
+call    0 returned 1
+        -:   20:}
+        -:   21:
+function _ZN11UserService14addUserServiceER5Movie called 2 returned 100% blocks executed 100%
+        2:   22:void UserService::addUserService(Movie &movie) {
+        2:   23:    this->userRepository->addUserRepo(movie);
+        2:   23-block  0
+call    0 returned 2
+        -:   24:/*    std::string title = movie.getTitle();
+        -:   25:    int delete_index = this->repository->findByTitle(title);
+        -:   26:    this->repository->removeRepo(delete_index);*/
+        2:   27:}
+        -:   28:
+function _ZN11UserService17removeUserServiceERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   29:void UserService::removeUserService(std::string &title)
+        -:   30:{
+        1:   31:    int index = this->userRepository->findByTitle(title);
+        1:   31-block  0
+call    0 returned 1
+        -:   32:    //Movie movie;
+        -:   33:    //movie = this->userRepository->getAllUsersRepo()[index];
+        1:   34:    this->userRepository->removeUserRepo(index);
+call    0 returned 1
+        -:   35:    //this->repository->addRepo(movie);
+        1:   36:}
+        -:   37:
+function _ZN11UserService11getFilteredEP5MovieNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 84%
+        2:   38:int UserService::getFiltered(Movie *validMovies, std::string filter_string) {
+        -:   39:    int index;
+        2:   40:    int counter = 0;
+        2:   41:    int length = this->repository->getSize();
+        2:   41-block  0
+call    0 returned 2
+        2:   42:    if(filter_string[0] == '\0')
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        -:   43:    {
+       11:   44:        for(index = 0; index < length; index++)
+        1:   44-block  0
+       11:   44-block  1
+branch  0 taken 10
+branch  1 taken 1
+        -:   45:        {
+       10:   46:            Movie movie;
+       10:   46-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   47:            movie = this->repository->getRepo()[index];
+       10:   47-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   47-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   48:            validMovies[counter] = movie;
+       10:   48-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   49:            counter++;
+       10:   50:        }
+       10:   50-block  0
+call    0 returned 10
+    $$$$$:   50-block  1
+call    1 never executed
+        -:   51:    }
+        -:   52:    else
+        -:   53:    {
+       11:   54:        for(index = 0; index < length; index++) {
+        1:   54-block  0
+       11:   54-block  1
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+       10:   55:            Movie movie;
+       10:   55-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   56:            movie = this->repository->getRepo()[index];
+       10:   56-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   56-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   57:            if(filter_string == movie.getGenre())
+       10:   57-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   57-block  1
+call    3 returned 10
+call    4 returned 10
+branch  5 taken 2 (fallthrough)
+branch  6 taken 8
+        -:   58:            {
+        2:   59:                validMovies[counter] = movie;
+        2:   59-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   60:                counter++;
+        2:   60-block  0
+        -:   61:            }
+       10:   62:        }
+       10:   62-block  0
+call    0 returned 10
+    $$$$$:   62-block  1
+call    1 never executed
+        -:   63:
+        -:   64:    }
+        2:   65:    return counter;
+        2:   65-block  0
+        2:   65-block  1
+        -:   66:}
+        -:   67:
+function _ZN11UserServiceD2Ev called 1 returned 100% blocks executed 100%
+        1:   68:UserService::~UserService() = default;
+        -:   69:

@@ -1,0 +1,517 @@
+        -:    0:Source:C:/Users/Aurelian/Documents/GitHub/OOP/a5-6-913-Iancu-Gheorghe-Aurelian/repository.cpp
+        -:    0:Graph:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\repository.cpp.gcno
+        -:    0:Data:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repository.h"
+        -:    2:#include <stdexcept>
+        -:    3:#include <string>
+        -:    4:
+        -:    5:
+        -:    6:
+function _ZN10RepositoryC2EP13DynamicVectorI5MovieE called 4 returned 100% blocks executed 100%
+        4:    7:Repository::Repository(DynamicVector<Movie> *repoArray) {
+        4:    8:    this->database = repoArray;
+        4:    9:}
+        -:   10:
+function _ZN10Repository14initialiseRepoEv called 4 returned 100% blocks executed 43%
+        4:   11:void Repository::initialiseRepo()
+        -:   12:{
+        -:   13:    Movie m1 = Movie("The Shawshank Redemption", "Drama", 1994, 2563415,
+        8:   14:                     "https://www.imdb.com/video/vi3877612057?playlistId=tt0111161&ref_=tt_ov_vi");
+        4:   14-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   14-block  1
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   14-block  2
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   14-block  3
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   14-block  4
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+    $$$$$:   14-block  7
+    $$$$$:   14-block  8
+    $$$$$:   14-block  9
+        -:   15:    Movie m2 = Movie("The Godfather", "Drama, Crime", 1972, 1764309,
+        8:   16:                     "https://www.imdb.com/video/vi1348706585?playlistId=tt0068646&ref_=tt_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   16-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   16-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   16-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+    $$$$$:   16-block  6
+    $$$$$:   16-block  7
+    $$$$$:   16-block  8
+        -:   17:    Movie m3 = Movie("The Dark knight", "Action, Crime, Drama", 2008, 2525427,
+        8:   18:                     "https://www.imdb.com/video/vi324468761?playlistId=tt0468569&ref_=tt_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   18-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   18-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   18-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   18-block  3
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+    $$$$$:   18-block  8
+        -:   19:    Movie m4 = Movie("The Godfather: part II", "Drama, Crime", 1974, 1221431,
+        8:   20:                     "https://www.imdb.com/video/vi696162841?playlistId=tt0071562&ref_=tt_pr_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   20-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   20-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   20-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   20-block  3
+    $$$$$:   20-block  4
+    $$$$$:   20-block  5
+    $$$$$:   20-block  6
+    $$$$$:   20-block  7
+    $$$$$:   20-block  8
+        -:   21:    Movie m5 = Movie("12 Angry Men", "Crime, Drama", 1957, 757166,
+        8:   22:                     "https://www.imdb.com/video/vi3452609817?playlistId=tt0050083&ref_=tt_pr_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   22-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   22-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   22-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+    $$$$$:   22-block  7
+    $$$$$:   22-block  8
+        -:   23:    Movie m6 = Movie("Schindler's List", "Biography, Drama, History", 1993, 1306699,
+        8:   24:                     "https://www.imdb.com/video/vi1158527769?playlistId=tt0108052&ref_=tt_pr_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   24-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   24-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   24-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   24-block  3
+    $$$$$:   24-block  4
+    $$$$$:   24-block  5
+    $$$$$:   24-block  6
+    $$$$$:   24-block  7
+    $$$$$:   24-block  8
+        -:   25:    Movie m7 = Movie("The Lord of the Rings: The Return of the King", "Action, Adventure, Drama", 2003,
+        8:   26:                     1764464, "https://www.imdb.com/video/vi718127897?playlistId=tt0167260&ref_=tt_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   26-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   26-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   26-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   26-block  3
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+    $$$$$:   26-block  8
+        -:   27:    Movie m8 = Movie("Pulp fiction", "Crime, Drama", 1994, 1968553,
+        8:   28:                     "https://www.imdb.com/video/vi2620371481?playlistId=tt0110912&ref_=tt_pr_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   28-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   28-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   28-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   28-block  3
+    $$$$$:   28-block  4
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+    $$$$$:   28-block  7
+    $$$$$:   28-block  8
+        -:   29:    Movie m9 = Movie("The Lord of the Rings: The Fellowship of the Ring", "Action, Adventure, Drama", 2001,
+        8:   30:                     1786262, "https://www.imdb.com/video/vi684573465?playlistId=tt0120737&ref_=tt_pr_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   30-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   30-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   30-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+    $$$$$:   30-block  7
+    $$$$$:   30-block  8
+        -:   31:    Movie m10 = Movie("The good, the bad and the ugly", "Adventure, Western", 1966, 737806,
+        8:   32:                      "https://www.imdb.com/video/vi3416964889?playlistId=tt0060196&ref_=tt_pr_ov_vi");
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   32-block  0
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:   32-block  1
+call    8 returned 4
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   32-block  2
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 4
+call   16 returned 4
+call   17 returned 4
+call   18 returned 4
+call   19 returned 4
+    $$$$$:   32-block  3
+    $$$$$:   32-block  4
+    $$$$$:   32-block  5
+    $$$$$:   32-block  6
+    $$$$$:   32-block  7
+    $$$$$:   32-block  8
+        4:   33:    this->database->addVector(m1);
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   34:    this->database->addVector(m2);
+        4:   34-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   35:    this->database->addVector(m3);
+        4:   35-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   36:    this->database->addVector(m4);
+        4:   36-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   37:    this->database->addVector(m5);
+        4:   37-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   38:    this->database->addVector(m6);
+        4:   38-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   39:    this->database->addVector(m7);
+        4:   39-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   40:    this->database->addVector(m8);
+        4:   40-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   41:    this->database->addVector(m9);
+        4:   41-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   42:    this->database->addVector(m10);
+        4:   42-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   43:
+        -:   44:
+        4:   45:}
+        4:   45-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+call    7 returned 4
+call    8 returned 4
+call    9 returned 4
+    $$$$$:   45-block  1
+call   10 never executed
+    $$$$$:   45-block  2
+call   11 never executed
+    $$$$$:   45-block  3
+call   12 never executed
+    $$$$$:   45-block  4
+call   13 never executed
+    $$$$$:   45-block  5
+call   14 never executed
+    $$$$$:   45-block  6
+call   15 never executed
+    $$$$$:   45-block  7
+call   16 never executed
+    $$$$$:   45-block  8
+call   17 never executed
+    $$$$$:   45-block  9
+call   18 never executed
+    $$$$$:   45-block 10
+call   19 never executed
+        -:   46:
+function _ZN10Repository7getRepoEv called 46 returned 100% blocks executed 100%
+       46:   47:Movie* Repository::getRepo()
+        -:   48:{
+       46:   49:    return this->database->getVector();
+       46:   49-block  0
+call    0 returned 46
+        -:   50:}
+        -:   51:
+function _ZN10Repository11getCapacityEv called 4 returned 100% blocks executed 100%
+        4:   52:int Repository::getCapacity()
+        -:   53:{
+        4:   54:    return this->database->getCapacity();
+        4:   54-block  0
+call    0 returned 4
+        -:   55:}
+        -:   56:
+function _ZN10Repository7getSizeEv called 15 returned 100% blocks executed 100%
+       15:   57:int Repository::getSize()
+        -:   58:{
+       15:   59:    return this->database->getSize();
+       15:   59-block  0
+call    0 returned 15
+        -:   60:}
+        -:   61:
+function _ZN10Repository7addRepoER5Movie called 2 returned 100% blocks executed 100%
+        2:   62:void Repository::addRepo( Movie &m) {
+        2:   63:    this -> database->addVector(m);
+        2:   63-block  0
+call    0 returned 2
+        2:   64:}
+        -:   65:
+function _ZN10Repository11findByTitleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 100% blocks executed 89%
+        5:   66:int Repository::findByTitle(const std::string &title) {
+        5:   67:    int searched_index = -1, index = 0, length;
+        5:   68:    length = this->getSize();
+        5:   68-block  0
+call    0 returned 5
+       42:   69:    while(index < length && searched_index == -1)
+       42:   69-block  0
+branch  0 taken 39 (fallthrough)
+branch  1 taken 3
+       39:   69-block  1
+branch  2 taken 37
+branch  3 taken 2 (fallthrough)
+        -:   70:    {
+       37:   71:        Movie m = this->database->getVector()[index];
+       37:   71-block  0
+call    0 returned 37
+call    1 returned 37
+branch  2 taken 37 (fallthrough)
+branch  3 taken 0 (throw)
+       37:   72:        std::string other_title = m.getTitle();
+       37:   72-block  0
+call    0 returned 37
+branch  1 taken 37 (fallthrough)
+branch  2 taken 0 (throw)
+       37:   73:        if(other_title == title)
+       37:   73-block  0
+call    0 returned 37
+branch  1 taken 3 (fallthrough)
+branch  2 taken 34
+        3:   74:            searched_index = index;
+        3:   74-block  0
+       37:   75:        index ++;
+       37:   76:    }
+       37:   76-block  0
+call    0 returned 37
+call    1 returned 37
+    $$$$$:   76-block  1
+call    2 never executed
+        5:   77:    return searched_index;
+        5:   77-block  0
+        5:   77-block  1
+        -:   78:}
+        -:   79:
+function _ZN10Repository10removeRepoEi called 2 returned 100% blocks executed 100%
+        2:   80:void Repository::removeRepo(int index) {
+        2:   81:    this-> database->removeVector(index);
+        2:   81-block  0
+call    0 returned 2
+        2:   82:}
+        -:   83:
+function _ZN10Repository10updateRepoEiR5Movie called 2 returned 100% blocks executed 71%
+        2:   84:void Repository::updateRepo(int index, Movie &newMovie)
+        -:   85:{
+        2:   86:    this->database->updateVector(index, newMovie);
+        2:   86-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   86-block  1
+call    4 returned 2
+    $$$$$:   86-block  2
+call    5 never executed
+        -:   87:
+        2:   88:}
+        -:   89:
+function _ZN10RepositoryD2Ev called 1 returned 100% blocks executed 100%
+        1:   90:Repository::~Repository() = default;
+        -:   91:
+        -:   92:
+        -:   93:
+        -:   94:

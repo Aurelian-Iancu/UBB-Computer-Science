@@ -1,0 +1,25 @@
+# ninja log v5
+33	638	6712489898972388	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/tests.cpp.obj	71b5e62dadcdcc4
+4	633	6712335720849151	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/dynamicVector.cpp.obj	934347907c0e5a68
+1436	1730	6714050011870464	a5_6_913_Iancu_Gheorghe_Aurelian.exe	281183afebf65569
+16	469	6712489897260308	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/service.cpp.obj	3e1b029eff24bda4
+23	534	6712489897920452	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/repository.cpp.obj	4845554ab8707422
+5	1435	6714050008964053	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/ui.cpp.obj	db4129e8a36c1865
+28	575	6712489898330542	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/main.cpp.obj	ebcd3fcfed2c304
+4	681	6712489899392494	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/movie.cpp.obj	56062b24b0d0e884
+39	480	6712489897380311	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/userService.cpp.obj	368ae92937b8ee32
+46	645	6712335720929053	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/userRepository.cpp.obj	9fbd176ae336534a
+40	548	6734339873739499	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/comparator.cpp.obj	58a8090aadbefb61
+9	668	6734339874844847	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/service.cpp.obj	3e1b029eff24bda4
+20	795	6734339876208659	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/main.cpp.obj	ebcd3fcfed2c304
+27	3151	6734339899768743	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/ui.cpp.obj	db4129e8a36c1865
+5	585	6734343415143410	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/repository.cpp.obj	4845554ab8707422
+12	1058	6734343419971790	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/tests.cpp.obj	71b5e62dadcdcc4
+45	601	6734344755372065	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/comparator.cpp.obj	58a8090aadbefb61
+22	659	6734344755871607	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/service.cpp.obj	3e1b029eff24bda4
+30	798	6734344757278968	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/main.cpp.obj	ebcd3fcfed2c304
+10	2958	6734344778946907	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/ui.cpp.obj	db4129e8a36c1865
+4	734	6734344828383998	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/tests.cpp.obj	71b5e62dadcdcc4
+734	901	6734344829991760	a5_6_913_Iancu_Gheorghe_Aurelian.exe	67f600fb208478b8
+3	537	6734345004328297	CMakeFiles/a5_6_913_Iancu_Gheorghe_Aurelian.dir/main.cpp.obj	ebcd3fcfed2c304
+538	697	6734345005915691	a5_6_913_Iancu_Gheorghe_Aurelian.exe	67f600fb208478b8

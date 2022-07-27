@@ -1,0 +1,106 @@
+        -:    0:Source:C:/Users/Aurelian/Documents/GitHub/OOP/a5-6-913-Iancu-Gheorghe-Aurelian/movie.h
+        -:    0:Graph:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\tests.cpp.gcno
+        -:    0:Data:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:
+        -:    3:#include <string>
+        -:    4:
+        -:    5:
+        -:    6:class Movie
+        -:    7:{
+        -:    8:private:
+        -:    9:    std::string title;
+        -:   10:    std::string genre;
+        -:   11:    int year;
+        -:   12:    int numberOfLikes;
+        -:   13:    std::string trailer;
+        -:   14:
+        -:   15:public:
+        -:   16:    ///Constructor for the Movie class;
+function _ZN5MovieC1Ev called 0 returned 0% blocks executed 0%
+    #####:   17:    Movie() : title{"" }, genre{"" }, year{ 0 }, numberOfLikes{0 }, trailer{"" }{}
+    %%%%%:   17-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   17-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   17-block  2
+call    9 never executed
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   17-block  3
+call   14 never executed
+    $$$$$:   17-block  4
+call   15 never executed
+    $$$$$:   17-block  5
+call   16 never executed
+    $$$$$:   17-block  6
+call   17 never executed
+    $$$$$:   17-block  7
+    $$$$$:   17-block  8
+call   18 never executed
+    $$$$$:   17-block  9
+    $$$$$:   17-block 10
+call   19 never executed
+    $$$$$:   17-block 11
+call   20 never executed
+        -:   18:
+        -:   19:    ///Function used to create a Movie object
+        -:   20:    Movie(const std::string& title, const std::string& genre, int year, int numberOfLikes, const std::string& trailer);
+        -:   21:
+        -:   22:    ///Function used to get the title of a Movie
+function _ZNK5Movie8getTitleB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   23:    std::string getTitle() const { return this->title; }
+    %%%%%:   23-block  0
+call    0 never executed
+        -:   24:
+        -:   25:    /// Function used to get the genre of a Movie
+function _ZNK5Movie8getGenreB5cxx11Ev called 22 returned 100% blocks executed 100%
+       22:   26:    std::string getGenre() const { return this->genre; }
+       22:   26-block  0
+call    0 returned 22
+        -:   27:
+        -:   28:    ///Function used to get the year of a Movie
+function _ZNK5Movie7getYearEv called 3 returned 100% blocks executed 100%
+        3:   29:    int getYear() const { return this->year; }
+        3:   29-block  0
+        -:   30:
+        -:   31:    ///Function used to get the number of likes of a Movie
+function _ZNK5Movie16getNumberOfLikesEv called 0 returned 0% blocks executed 0%
+    #####:   32:    int getNumberOfLikes() const { return this->numberOfLikes; }
+    %%%%%:   32-block  0
+        -:   33:
+        -:   34:    ///Function used to get the trailer of the movie
+function _ZNK5Movie10getTrailerB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   35:    std::string getTrailer() const { return this->trailer; }
+    %%%%%:   35-block  0
+call    0 never executed
+        -:   36:
+        -:   37:    ///Setter for the genre
+        -:   38:    void setGenre(const std::string genre){this->genre = genre;}
+        -:   39:
+        -:   40:    ///Setter for the year of release
+        -:   41:    void setYear(int newYear) { this->year = newYear ;}
+        -:   42:
+        -:   43:    ///Setter for the number of likes
+function _ZN5Movie16setNumberOfLikesEi called 0 returned 0% blocks executed 0%
+    #####:   44:    void setNumberOfLikes(int newNumberOfLikes) { this->numberOfLikes = newNumberOfLikes ;}
+        -:   45:
+        -:   46:    ///Setter for the trailer
+        -:   47:    void setTrailer(const std::string trailer){this->trailer = trailer;}
+        -:   48:
+        -:   49:    ///Function to overwrite the == operator(Now we can see if 2 objects of type Movie are equal)
+        -:   50:    bool operator==(const Movie& movie);
+        -:   51:
+        -:   52:    ///Function that returns the way we want to print a Movie
+        -:   53:    std::string toString() const;
+        -:   54:};

@@ -1,0 +1,155 @@
+        -:    0:Source:C:/Users/Aurelian/Documents/GitHub/OOP/a5-6-913-Iancu-Gheorghe-Aurelian/movie.cpp
+        -:    0:Graph:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\movie.cpp.gcno
+        -:    0:Data:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\movie.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "movie.h"
+        -:    2:#include <iomanip>
+        -:    3:
+        -:    4:using std::ostream;
+        -:    5:
+function _ZN5MovieC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_iiS7_ called 55 returned 100% blocks executed 62%
+       55:    6:Movie::Movie(const std::string& title, const std::string& genre, const int year, const int numberOfLikes, const std::string& trailer)
+       55:    7:    :title{ title }, genre{ genre }, year { year }, numberOfLikes {numberOfLikes}, trailer{ trailer }{}
+       55:    7-block  0
+call    0 returned 55
+call    1 returned 55
+branch  2 taken 55 (fallthrough)
+branch  3 taken 0 (throw)
+       55:    7-block  1
+call    4 returned 55
+branch  5 taken 55 (fallthrough)
+branch  6 taken 0 (throw)
+       55:    7-block  2
+    $$$$$:    7-block  3
+call    7 never executed
+    $$$$$:    7-block  4
+call    8 never executed
+        -:    8:
+function _ZN5MovieeqERKS_ called 3 returned 100% blocks executed 67%
+        3:    9:bool Movie :: operator==(const Movie& movie)
+        -:   10:{
+       3*:   11:    if(movie.title != this->title) return false;
+        3:   11-block  0
+call    0 returned 3
+branch  1 taken 0 (fallthrough)
+branch  2 taken 3
+    %%%%%:   11-block  1
+       3*:   12:    if(movie.genre != this->genre) return false;
+        3:   12-block  0
+call    0 returned 3
+branch  1 taken 0 (fallthrough)
+branch  2 taken 3
+    %%%%%:   12-block  1
+       3*:   13:    if(movie.year != this->year) return false;
+        3:   13-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    %%%%%:   13-block  1
+       3*:   14:    if(movie.numberOfLikes != this->numberOfLikes) return false;
+        3:   14-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    %%%%%:   14-block  1
+       3*:   15:    if(movie.trailer != this->trailer) return false;
+        3:   15-block  0
+call    0 returned 3
+branch  1 taken 0 (fallthrough)
+branch  2 taken 3
+    %%%%%:   15-block  1
+        3:   16:    return true;
+        3:   16-block  0
+        -:   17:}
+        -:   18:
+function _ZNK5Movie8toStringB5cxx11Ev called 1 returned 100% blocks executed 47%
+        1:   19:std::string Movie::toString() const
+        -:   20:{
+        1:   21:    auto strYear = std::to_string(this->year);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22:    auto strNumberOfLikes = std::to_string(this->numberOfLikes);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   23:    return "Title: " + this->title + " | Genre: " + this->genre + " | Year: " + strYear + " | Number of likes: " + strNumberOfLikes
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   23-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   23-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   23-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+    $$$$$:   23-block  6
+call   24 never executed
+    $$$$$:   23-block  7
+    $$$$$:   23-block  8
+call   25 never executed
+    $$$$$:   23-block  9
+    $$$$$:   23-block 10
+call   26 never executed
+    $$$$$:   23-block 11
+    $$$$$:   23-block 12
+call   27 never executed
+    $$$$$:   23-block 13
+    $$$$$:   23-block 14
+call   28 never executed
+    $$$$$:   23-block 15
+    $$$$$:   23-block 16
+call   29 never executed
+    $$$$$:   23-block 17
+    $$$$$:   23-block 18
+call   30 never executed
+    $$$$$:   23-block 19
+        4:   24:            + " | Trailer link: " + this->trailer;
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   24-block  3
+call    9 returned 1
+call   10 returned 1
+        1:   24-block  4
+    $$$$$:   24-block  5
+call   11 never executed
+    $$$$$:   24-block  6
+        1:   25:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   25-block  0
+call    2 never executed
+    $$$$$:   25-block  1
+call    3 never executed
+        -:   26:

@@ -1,0 +1,94 @@
+        -:    0:Source:C:/Users/Aurelian/Documents/GitHub/OOP/a5-6-913-Iancu-Gheorghe-Aurelian/userRepository.cpp
+        -:    0:Graph:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\userRepository.cpp.gcno
+        -:    0:Data:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\userRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "userRepository.h"
+        -:    2:
+function _ZN14UserRepositoryC2EP13DynamicVectorI5MovieE called 3 returned 100% blocks executed 100%
+        3:    3:UserRepository::UserRepository(DynamicVector <Movie> *playlist1) {
+        3:    4:    this->playlist = playlist1;
+        -:    5:
+        3:    6:}
+        -:    7:
+function _ZN14UserRepository15getAllUsersRepoEv called 4 returned 100% blocks executed 100%
+        4:    8:Movie *UserRepository::getAllUsersRepo() {
+        4:    9:    return this->playlist->getVector();
+        4:    9-block  0
+call    0 returned 4
+        -:   10:}
+        -:   11:
+function _ZN14UserRepository7getSizeEv called 7 returned 100% blocks executed 100%
+        7:   12:int UserRepository::getSize() {
+        7:   13:    return this->playlist->getSize();
+        7:   13-block  0
+call    0 returned 7
+        -:   14:}
+        -:   15:
+function _ZN14UserRepository11getCapacityEv called 2 returned 100% blocks executed 100%
+        2:   16:int UserRepository::getCapacity() {
+        2:   17:    return this->playlist->getCapacity();
+        2:   17-block  0
+call    0 returned 2
+        -:   18:}
+        -:   19:
+function _ZN14UserRepository11addUserRepoERK5Movie called 4 returned 100% blocks executed 100%
+        4:   20:void UserRepository::addUserRepo(const Movie &movie) {
+        4:   21:    this->playlist->addVector(movie);
+        4:   21-block  0
+call    0 returned 4
+        4:   22:}
+        -:   23:
+function _ZN14UserRepository14removeUserRepoEj called 2 returned 100% blocks executed 100%
+        2:   24:void UserRepository::removeUserRepo(unsigned int index)
+        -:   25:{
+        2:   26:    this->playlist->removeVector(index);
+        2:   26-block  0
+call    0 returned 2
+        2:   27:}
+        -:   28:
+function _ZN14UserRepository11findByTitleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 89%
+        2:   29:int UserRepository::findByTitle(const std::string &title) {
+        2:   30:    int searched_index = -1, index = 0, length;
+        2:   31:    length = this->getSize();
+        2:   31-block  0
+call    0 returned 2
+        4:   32:    while(index < length && searched_index == -1)
+        4:   32-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:   32-block  1
+branch  2 taken 2
+branch  3 taken 0 (fallthrough)
+        -:   33:    {
+        2:   34:        Movie m = this->playlist->getVector()[index];
+        2:   34-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   35:        std::string other_title = m.getTitle();
+        2:   35-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   36:        if(other_title == title)
+        2:   36-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
+        2:   37:            searched_index = index;
+        2:   37-block  0
+        2:   38:        index ++;
+        2:   39:    }
+        2:   39-block  0
+call    0 returned 2
+call    1 returned 2
+    $$$$$:   39-block  1
+call    2 never executed
+        2:   40:    return searched_index;
+        2:   40-block  0
+        2:   40-block  1
+        -:   41:}
+        -:   42:
+function _ZN14UserRepositoryD2Ev called 1 returned 100% blocks executed 100%
+        1:   43:UserRepository::~UserRepository() = default;

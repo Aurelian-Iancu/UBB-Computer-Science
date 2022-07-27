@@ -1,0 +1,205 @@
+        -:    0:Source:C:/Users/Aurelian/Documents/GitHub/OOP/a5-6-913-Iancu-Gheorghe-Aurelian/dynamicVector.h
+        -:    0:Graph:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\userRepository.cpp.gcno
+        -:    0:Data:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\userRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <movie.h>
+        -:    3:template <typename TElem>
+        -:    4:class DynamicVector {
+        -:    5:private:
+        -:    6:    unsigned int capacity, size;
+        -:    7:    TElem *data;
+        -:    8:
+        -:    9:    void resize();
+        -:   10:
+        -:   11:public:
+        -:   12:    ///Constructor
+        -:   13:    explicit DynamicVector(int capacity);
+        -:   14:
+        -:   15:    ///Copy constructor
+        -:   16:    DynamicVector (const DynamicVector& v);
+        -:   17:
+        -:   18:    ///Function that adds a TElem to the vector(TElem is of type Movie)
+        -:   19:    void addVector(const TElem& elem);
+        -:   20:
+        -:   21:    ///Function that removes a TElem from the certain index from of the vector
+        -:   22:    void removeVector(unsigned int index);
+        -:   23:
+        -:   24:    ///Function that updates a TElem from a certain index
+        -:   25:    void updateVector(int update_index, TElem elem);
+        -:   26:
+        -:   27:    ///This function overwrites the = operator(Now you can assign a vector to the other)
+        -:   28:    DynamicVector& operator=(const DynamicVector& v);
+        -:   29:
+        -:   30:    ///Function that returns the capacity of the vector
+        -:   31:    int getCapacity() const;
+        -:   32:
+        -:   33:    ///Function that returns the size of the vector
+        -:   34:    int getSize() const;
+        -:   35:
+        -:   36:    ///Function that returns the DynamicVector
+        -:   37:    TElem * getVector();
+        -:   38:
+        -:   39:    ///Function that overwrites the []operator(Now we can get to the elements of the vector [vector[i]])
+        -:   40:    TElem &operator [](unsigned int index);
+        -:   41:
+        -:   42:    ///This is a destructor for the DynamicVector class
+        -:   43:    ~DynamicVector();
+        -:   44:
+        -:   45:};
+        -:   46:
+        -:   47:template <typename TElem>
+        -:   48:DynamicVector<TElem>::DynamicVector(int capacity) {
+        -:   49:    if(capacity <= 0)
+        -:   50:    {
+        -:   51:        throw "Can t have an array with less than an element!";
+        -:   52:    }
+        -:   53:    this->capacity = capacity;
+        -:   54:    this->size = 0;
+        -:   55:    this->data = new TElem[capacity];
+        -:   56:}
+        -:   57:
+        -:   58:template <typename TElem>
+        -:   59:DynamicVector<TElem>::DynamicVector(const DynamicVector<TElem> &v) {
+        -:   60:    this->capacity = v.capacity;
+        -:   61:    this->size = v.size;
+        -:   62:    this->data = new TElem[this->capacity];
+        -:   63:    for(int i = 0; i < this->size; i++)
+        -:   64:        this->data[i] = v.data[i];
+        -:   65:}
+        -:   66:
+        -:   67:template <typename TElem>
+function _ZN13DynamicVectorI5MovieE9addVectorERKS0_ called 0 returned 0% blocks executed 0%
+    #####:   68:void DynamicVector<TElem>::addVector(const TElem &elem) {
+    #####:   69:    if(this->capacity == this->size)
+    %%%%%:   69-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   70:        this->resize();
+    %%%%%:   70-block  0
+call    0 never executed
+    #####:   71:    this -> data[this -> size++] = elem;
+    %%%%%:   71-block  0
+call    0 never executed
+    #####:   72:}
+        -:   73:
+        -:   74:template <typename TElem>
+function _ZN13DynamicVectorI5MovieE12removeVectorEj called 0 returned 0% blocks executed 0%
+    #####:   75:void DynamicVector<TElem>::removeVector(unsigned int index) {
+    #####:   76:    for(unsigned int i = index; i < this->size-1; i++)
+    %%%%%:   76-block  0
+    %%%%%:   76-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   77:        this->data[i] = this->data[i+1];
+    %%%%%:   77-block  0
+call    0 never executed
+    #####:   78:    this->size--;
+    #####:   79:}
+        -:   80:
+        -:   81:template <typename TElem>
+        -:   82:void DynamicVector<TElem>::updateVector(int update_index, TElem elem) {
+        -:   83:    this->data[update_index] = elem;
+        -:   84:}
+        -:   85:
+        -:   86:template <typename TElem>
+function _ZN13DynamicVectorI5MovieE6resizeEv called 0 returned 0% blocks executed 0%
+    #####:   87:void DynamicVector<TElem>::resize() {
+    #####:   88:    this->capacity += 10;
+    #####:   89:    auto* newElems = new TElem[this->capacity];
+    %%%%%:   89-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   89-block  1
+    %%%%%:   89-block  2
+    %%%%%:   89-block  3
+call    2 never executed
+    %%%%%:   89-block  4
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   89-block  5
+    %%%%%:   89-block  6
+branch  6 never executed
+branch  7 never executed
+    $$$$$:   89-block  7
+    $$$$$:   89-block  8
+call    8 never executed
+    $$$$$:   89-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   89-block 10
+    $$$$$:   89-block 11
+    $$$$$:   89-block 12
+call   11 never executed
+    #####:   90:    for (int i = 0; i < this->size; ++i)
+    %%%%%:   90-block  0
+    %%%%%:   90-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   91:        newElems[i] = this->data[i];
+    %%%%%:   91-block  0
+call    0 never executed
+        -:   92:
+    #####:   93:    delete[] this->data;
+    %%%%%:   93-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   93-block  1
+    %%%%%:   93-block  2
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   93-block  3
+call    4 never executed
+    %%%%%:   93-block  4
+call    5 never executed
+    #####:   94:    this->data = newElems;
+    #####:   95:}
+    %%%%%:   95-block  0
+        -:   96:
+        -:   97:template <typename TElem>
+        -:   98:DynamicVector<TElem> &DynamicVector<TElem>::operator=(const DynamicVector<TElem> &v) {
+        -:   99:    if(this == &v)
+        -:  100:        return *this;
+        -:  101:
+        -:  102:    this->capacity = v.capacity;
+        -:  103:    this->size = v.size;
+        -:  104:
+        -:  105:    delete[] this->data;
+        -:  106:    this->data = new TElem[this->capacity];
+        -:  107:    for(int i = 0; i < this->size; i++)
+        -:  108:        this->data[i] = v.data[i];
+        -:  109:
+        -:  110:    return *this;
+        -:  111:}
+        -:  112:
+        -:  113:template <typename TElem>
+function _ZNK13DynamicVectorI5MovieE11getCapacityEv called 0 returned 0% blocks executed 0%
+    #####:  114:int DynamicVector<TElem>::getCapacity() const {
+    #####:  115:    return this->capacity;
+    %%%%%:  115-block  0
+        -:  116:}
+        -:  117:
+        -:  118:template <typename TElem>
+function _ZNK13DynamicVectorI5MovieE7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:  119:int DynamicVector<TElem>::getSize() const {
+    #####:  120:    return this->size;
+    %%%%%:  120-block  0
+        -:  121:}
+        -:  122:
+        -:  123:template <typename TElem>
+function _ZN13DynamicVectorI5MovieE9getVectorEv called 0 returned 0% blocks executed 0%
+    #####:  124:TElem * DynamicVector<TElem>::getVector() {
+    #####:  125:    return this->data;
+    %%%%%:  125-block  0
+        -:  126:}
+        -:  127:
+        -:  128:template <typename TElem>
+        -:  129:TElem &DynamicVector<TElem>::operator[](unsigned int index) {
+        -:  130:    return this->data[index];
+        -:  131:}
+        -:  132:
+        -:  133:template <typename TElem>
+        -:  134:DynamicVector<TElem>::~DynamicVector<TElem>() {
+        -:  135:    delete[] this->data;
+        -:  136:}

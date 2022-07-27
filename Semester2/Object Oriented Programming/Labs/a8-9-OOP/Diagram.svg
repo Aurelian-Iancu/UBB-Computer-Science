@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1490" height="787" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="1162,348 1171,348 1171,352 1175,352 1175,361 1162,361 1162,348" />
+	<line stroke="black" stroke-opacity="1" x1="1171" y1="348" x2="1175" y2="352" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="864,98 1282,98 1282,102 1286,102 1286,275 864,275 864,98" />
+	<line stroke="black" stroke-opacity="1" x1="1282" y1="98" x2="1286" y2="102" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="868" y="108">UI</text>
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="866,290 1282,290 1282,294 1286,294 1286,423 866,423 866,290" />
+	<line stroke="black" stroke-opacity="1" x1="1282" y1="290" x2="1286" y2="294" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="870" y="300">Validator</text>
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="484,450 1280,450 1280,454 1284,454 1284,672 484,672 484,450" />
+	<line stroke="black" stroke-opacity="1" x1="1280" y1="450" x2="1284" y2="454" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="488" y="460">Service</text>
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="29,49 416,49 416,53 420,53 420,220 29,220 29,49" />
+	<line stroke="black" stroke-opacity="1" x1="416" y1="49" x2="420" y2="53" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="33" y="59">Domain</text>
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="369,630 373,630 373,634 377,634 377,638 369,638 369,630" />
+	<line stroke="black" stroke-opacity="1" x1="373" y1="630" x2="377" y2="634" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="384,356 393,356 393,360 397,360 397,369 384,369 384,356" />
+	<line stroke="black" stroke-opacity="1" x1="393" y1="356" x2="397" y2="360" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="410" y="298" width="2" height="80" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="302" y="376" width="110" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="299" y="295" width="111" height="81" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="355" y="299">Validators::MovieValidator</text>
+	<line stroke="black" stroke-opacity="1" x1="299" y1="303" x2="410" y2="303" />
+	<line stroke="black" stroke-opacity="1" x1="299" y1="306" x2="410" y2="306" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="310">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="310">MovieValidator()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="317">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="317">validateString(in string : std::string) : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="324">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="324">validateTitle(in title : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="331">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="331">validateGenre(in genre : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="338">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="338">validateYearString(in year : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="345">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="345">validateYear(in year : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="352">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="352">validateLikesString(in likes : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="359">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="359">validateYearLikes(in likes : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="366">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="366">validateTrailer(in trailer : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="300" y="373">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="306" y="373">~MovieValidator()</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1229" y="317" width="2" height="78" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1104" y="393" width="127" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="1101" y="314" width="128" height="79" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1165" y="318">Validators::ValidationException</text>
+	<line stroke="black" stroke-opacity="1" x1="1101" y1="322" x2="1229" y2="322" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="1102" y="326">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="1108" y="326">message : std::string</text>
+	<line stroke="black" stroke-opacity="1" x1="1101" y1="330" x2="1229" y2="330" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="1102" y="334">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="1108" y="334">ValidationException(inout _message : std::string)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="1102" y="341">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="1108" y="341">what() : char</text>
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="29,273 419,273 419,277 423,277 423,672 29,672 29,273" />
+	<line stroke="black" stroke-opacity="1" x1="419" y1="273" x2="423" y2="277" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="33" y="283">Repository</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1031" y="316" width="2" height="80" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="923" y="394" width="110" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="920" y="313" width="111" height="81" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="976" y="317">Validators::MovieValidator</text>
+	<line stroke="black" stroke-opacity="1" x1="920" y1="321" x2="1031" y2="321" />
+	<line stroke="black" stroke-opacity="1" x1="920" y1="324" x2="1031" y2="324" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="328">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="328">MovieValidator()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="335">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="335">validateString(in string : std::string) : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="342">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="342">validateTitle(in title : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="349">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="349">validateGenre(in genre : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="356">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="356">validateYearString(in year : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="363">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="363">validateYear(in year : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="370">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="370">validateLikesString(in likes : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="377">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="377">validateYearLikes(in likes : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="384">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="384">validateTrailer(in trailer : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="921" y="391">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="927" y="391">~MovieValidator()</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="230" y="551" width="2" height="106" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="46" y="655" width="186" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="43" y="548" width="187" height="107" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="137" y="552">repository::Repository</text>
+	<line stroke="black" stroke-opacity="1" x1="43" y1="556" x2="230" y2="556" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="560">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="560">&lt;&lt;:vector&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="81" y="560">database : Movie</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="567">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="567">moviesFile : std::string</text>
+	<line stroke="black" stroke-opacity="1" x1="43" y1="571" x2="230" y2="571" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="575">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="575">loadMoviesFromFile() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="582">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="582">writeMoviesToFile() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="589">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="589">Repository(inout repo_vector : std::vector&lt;Movie&gt;, inout movieFile : std::string)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="596">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="596">initialiseRepo() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="603">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="603">getRepo() : std::vector&lt;Movie&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="610">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="610">getSize() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="617">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="617">addRepo(inout m : Movie) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="624">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="624">removeRepo(in index : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="631">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="631">updateRepo(in index : int, inout newMovie : Movie) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="638">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="638">findByTitle(in title : std::string) : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="645">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="645">~Repository()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="44" y="652">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="50" y="652">writeToFileRepo() : void</text>
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="233,639 242,639 242,643 246,643 246,652 233,652 233,639" />
+	<line stroke="black" stroke-opacity="1" x1="242" y1="639" x2="246" y2="643" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="1113,348 1130,348 1130,352 1134,352 1134,361 1113,361 1113,348" />
+	<line stroke="black" stroke-opacity="1" x1="1130" y1="348" x2="1134" y2="352" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="387" y="613" width="2" height="28" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="281" y="639" width="108" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="278" y="610" width="109" height="29" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="333" y="614">UserRepository::UserException</text>
+	<line stroke="black" stroke-opacity="1" x1="278" y1="618" x2="387" y2="618" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="279" y="622">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="285" y="622">message : std::string</text>
+	<line stroke="black" stroke-opacity="1" x1="278" y1="626" x2="387" y2="626" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="279" y="630">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="285" y="630">UserException(inout _message : std::string)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="279" y="637">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="285" y="637">what() : char</text>
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1034" y1="354" x2="1112" y2="354" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1232" y1="320" x2="1167" y2="349" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="412" y1="379" x2="397" y2="367" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="390" y1="637" x2="377" y2="634" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="378,578 385,578 385,582 389,582 389,589 378,589 378,578" />
+	<line stroke="black" stroke-opacity="1" x1="385" y1="578" x2="389" y2="582" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="336" y="71" width="2" height="126" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="108" y="195" width="230" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="105" y="68" width="231" height="127" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="221" y="72">movie::Movie</text>
+	<line stroke="black" stroke-opacity="1" x1="105" y1="76" x2="336" y2="76" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="80">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="80">title : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="87">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="87">genre : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="94">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="94">year : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="101">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="101">numberOfLikes : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="108">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="108">trailer : std::string</text>
+	<line stroke="black" stroke-opacity="1" x1="105" y1="112" x2="336" y2="112" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="116">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="116">Movie()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="123">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="123">Movie(in title : std::string, in genre : std::string, in year : int, in numberOfLikes : int, in trailer : std::string)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="130">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="130">getTitle() : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="137">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="137">getGenre() : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="144">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="144">getYear() : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="151">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="151">getNumberOfLikes() : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="158">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="158">getTrailer() : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="165">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="165">setNumberOfLikes(in newNumberOfLikes : int) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="172">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="172">operator ==(in movie : movie::Movie) : bool</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="179">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="179">toString() : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="186">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="186">operator &gt;&gt;(inout inputStream : std::istream, inout movie : movie::Movie) : std::istream</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="106" y="193">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="112" y="193">operator &lt;&lt;(inout outputStream : std::ostream, in movieOutput : movie::Movie) : std::ostream</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="397" y="562" width="2" height="28" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="277" y="588" width="122" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="274" y="559" width="123" height="29" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="336" y="563">repository::RepositoryException</text>
+	<line stroke="black" stroke-opacity="1" x1="274" y1="567" x2="397" y2="567" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="275" y="571">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="281" y="571">message : std::string</text>
+	<line stroke="black" stroke-opacity="1" x1="274" y1="575" x2="397" y2="575" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="275" y="579">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="281" y="579">RepositoryException(inout _message : std::string)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="275" y="586">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="281" y="586">what() : char</text>
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="400" y1="586" x2="389" y2="583" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="165" y1="198" x2="109" y2="266" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="109" y1="266" x2="3" y2="70" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="353,500 360,500 360,504 364,504 364,511 353,511 353,500" />
+	<line stroke="black" stroke-opacity="1" x1="360" y1="500" x2="364" y2="504" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="404" y="441" width="2" height="80" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="236" y="519" width="170" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="233" y="438" width="171" height="81" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="319" y="442">HTMLrepository::HTMLRepo</text>
+	<line stroke="black" stroke-opacity="1" x1="233" y1="446" x2="404" y2="446" />
+	<line stroke="black" stroke-opacity="1" x1="233" y1="449" x2="404" y2="449" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="453">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="453">HTMLRepo(in playlist : std::vector&lt;Movie&gt;, in userFilename : std::string)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="460">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="460">getAllUsersRepo() : std::vector&lt;Movie&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="467">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="467">getSize() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="474">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="474">getCapacity() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="481">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="481">addUserRepo(in movie : Movie) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="488">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="488">removeUserRepo(in index : uint) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="495">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="495">findByTitle(in title : std::string) : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="502">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="502">writeToFile() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="509">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="509">getFilename() : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="234" y="516">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="240" y="516">~HTMLRepo()</text>
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="387" y1="522" x2="364" y2="508" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="242,391 249,391 249,395 253,395 253,402 242,402 242,391" />
+	<line stroke="black" stroke-opacity="1" x1="249" y1="391" x2="253" y2="395" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="266" y="317" width="2" height="98" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="140" y="413" width="128" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="137" y="314" width="129" height="99" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="202" y="318">UserRepository::UserRepository</text>
+	<line stroke="black" stroke-opacity="1" x1="137" y1="322" x2="266" y2="322" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="326">#</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="144" y="326">&lt;&lt;:vector&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="175" y="326">playlist : Movie</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="333">#</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="144" y="333">userFilename : std::string</text>
+	<line stroke="black" stroke-opacity="1" x1="137" y1="337" x2="266" y2="337" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="341">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="144" y="341">UserRepository(inout playlist1 : std::vector&lt;Movie&gt;)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="348">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="144" y="348">UserRepository()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="355">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="355">getAllUsersRepo() : std::vector&lt;Movie&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="362">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="362">getSize() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="369">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="369">getCapacity() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="376">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="376">addUserRepo(in movie : Movie) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="383">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="144" y="383">~UserRepository()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="390">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="390">removeUserRepo(in index : uint) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="397">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="397">findByTitle(in title : std::string) : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="404">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="404">writeToFile() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="138" y="411">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-style="italic" x="144" y="411">getFilename() : std::string</text>
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="321" y1="437" x2="307" y2="411" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="269" y1="411" x2="253" y2="400" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="307" y1="411" x2="272" y2="370" />
+	<line stroke="#000000" stroke-opacity="1" x1="269" y1="366" x2="268" y2="374" />
+	<line stroke="#000000" stroke-opacity="1" x1="269" y1="366" x2="277" y2="366" />
+	<line stroke="#000000" stroke-opacity="1" x1="268" y1="374" x2="277" y2="366" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="169,499 178,499 178,503 182,503 182,512 169,512 169,499" />
+	<line stroke="black" stroke-opacity="1" x1="178" y1="499" x2="182" y2="503" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="203" y="442" width="2" height="80" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="39" y="520" width="166" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="36" y="439" width="167" height="81" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="120" y="443">CSVrepository::CSVRepo</text>
+	<line stroke="black" stroke-opacity="1" x1="36" y1="447" x2="203" y2="447" />
+	<line stroke="black" stroke-opacity="1" x1="36" y1="450" x2="203" y2="450" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="454">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="454">CSVRepo(in playlist : std::vector&lt;Movie&gt;, in userFilename : std::string)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="461">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="461">getAllUsersRepo() : std::vector&lt;Movie&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="468">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="468">getSize() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="475">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="475">getCapacity() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="482">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="482">addUserRepo(in movie : Movie) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="489">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="489">removeUserRepo(in index : uint) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="496">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="496">findByTitle(in title : std::string) : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="503">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="503">writeToFile() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="510">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="510">getFilename() : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="37" y="517">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="43" y="517">~CSVRepo()</text>
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="119" y1="438" x2="119" y2="430" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="206" y1="519" x2="182" y2="508" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="119" y1="430" x2="204" y2="430" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="204" y1="430" x2="204" y2="422" />
+	<line stroke="#000000" stroke-opacity="1" x1="204" y1="416" x2="198" y2="422" />
+	<line stroke="#000000" stroke-opacity="1" x1="204" y1="416" x2="210" y2="422" />
+	<line stroke="#000000" stroke-opacity="1" x1="198" y1="422" x2="210" y2="422" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="755" y="507">service</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="1131" y="512">userService</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="631">repository</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="279" y="375">userRepository</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="243" y="594">repository</text>
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="865,576 869,576 869,580 873,580 873,584 865,584 865,576" />
+	<line stroke="black" stroke-opacity="1" x1="869" y1="576" x2="873" y2="580" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="899" y="519" width="2" height="72" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="523" y="589" width="378" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="520" y="516" width="379" height="73" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="710" y="520">service::Service</text>
+	<line stroke="black" stroke-opacity="1" x1="520" y1="524" x2="899" y2="524" />
+	<line stroke="black" stroke-opacity="1" x1="520" y1="527" x2="899" y2="527" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="531">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="531">Service(inout repo : repository::Repository)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="538">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="538">getAllService() : std::vector&lt;Movie&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="545">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="545">getSizeService() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="552">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="552">addService(in title : std::string, in genre : std::string, in year : int, in numberOfLikes : int, in trailer : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="559">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="559">removeService(in title : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="566">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="566">updateService(in oldName : std::string, in newName : std::string, in newGenre : std::string, in newYear : int, in newNumberOfLikes : int, in newTrailer : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="573">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="573">~Service()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="580">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="580">findByTitleService(in title : std::string) : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="521" y="587">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="527" y="587">writeToFileService() : void</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="519" y1="552" x2="486" y2="566" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="902" y1="584" x2="873" y2="580" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="233" y1="601" x2="239" y2="606" />
+	<line stroke="black" stroke-opacity="1" x1="233" y1="601" x2="238" y2="594" />
+	<line stroke="black" stroke-opacity="1" x1="486" y1="566" x2="233" y2="601" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="1180,227 1184,227 1184,231 1188,231 1188,235 1180,235 1180,227" />
+	<line stroke="black" stroke-opacity="1" x1="1184" y1="227" x2="1188" y2="231" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1208" y="121" width="2" height="126" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="942" y="245" width="268" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="939" y="118" width="269" height="127" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1074" y="122">ui::UI</text>
+	<line stroke="black" stroke-opacity="1" x1="939" y1="126" x2="1208" y2="126" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="130">-</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="130">validator : MovieValidator</text>
+	<line stroke="black" stroke-opacity="1" x1="939" y1="134" x2="1208" y2="134" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="138">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="138">UI(inout service : service::Service, inout userService : userService::UserService, inout validator1 : MovieValidator)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="145">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="145">printMenuMode() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="152">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" text-decoration="underline" x="946" y="152">printMenuAdmin() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="159">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="159">addMovieAdmin() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="166">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="166">printAllAdmin() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="173">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="173">start() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="180">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="180">removeMovieAdmin() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="187">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="187">updateMovieAdmin() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="194">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="194">printMenuUser() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="201">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="201">UserMode() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="208">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="208">adminMode() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="215">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="215">~UI()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="222">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="222">listFilteredUser() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="229">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="229">listUserPlaylist() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="236">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="236">removeMovieUser() : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="940" y="243">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="946" y="243">openFile() : void</text>
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1211" y1="243" x2="1188" y2="233" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="971" y1="248" x2="899" y2="297" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="737" y1="515" x2="745" y2="513" />
+	<line stroke="black" stroke-opacity="1" x1="737" y1="515" x2="735" y2="506" />
+	<line stroke="black" stroke-opacity="1" x1="899" y1="297" x2="737" y2="515" />
+</g>
+<g>
+	<polygon fill="#c0ffff" stroke="black" stroke-opacity="1" points="1188,578 1195,578 1195,582 1199,582 1199,589 1188,589 1188,578" />
+	<line stroke="black" stroke-opacity="1" x1="1195" y1="578" x2="1199" y2="582" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1248" y="521" width="2" height="80" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="980" y="599" width="270" height="2" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="977" y="518" width="271" height="81" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="1113" y="522">userService::UserService</text>
+	<line stroke="black" stroke-opacity="1" x1="977" y1="526" x2="1248" y2="526" />
+	<line stroke="black" stroke-opacity="1" x1="977" y1="529" x2="1248" y2="529" />
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="533">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="533">UserService(inout repository1 : repository::Repository, inout userRepository1 : UserRepository::UserRepository)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="540">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="540">UserService(inout repository1 : repository::Repository)</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="547">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="547">getAllUsersService() : std::vector&lt;Movie&gt;</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="554">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="554">getSizeService() : uint</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="561">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="561">addUserService(inout movie : Movie) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="568">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="568">getFiltered(inout validMovies : std::vector&lt;Movie&gt;, inout filter_string : std::string) : int</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="575">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="575">getFileService() : std::string</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="582">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="582">repositoryType(in fileType : std::string) : void</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="589">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="589">~UserService()</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" font-weight="bold" x="978" y="596">+</text>
+	<text font-family="Helvetica" font-size="3" fill="#000000" xml:space="preserve" x="984" y="596">removeUserService(inout title : std::string) : void</text>
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="269" y1="378" x2="273" y2="385" />
+	<line stroke="black" stroke-opacity="1" x1="269" y1="378" x2="276" y2="373" />
+	<line stroke="black" stroke-opacity="1" x1="976" y1="529" x2="269" y2="378" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1082" y1="248" x2="1076" y2="192" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="976" y1="595" x2="510" y2="726" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="1185" y1="601" x2="1189" y2="589" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1121" y1="517" x2="1127" y2="512" />
+	<line stroke="black" stroke-opacity="1" x1="1121" y1="517" x2="1116" y2="510" />
+	<line stroke="black" stroke-opacity="1" x1="1142" y1="398" x2="1121" y2="517" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1076" y1="192" x2="1133" y2="336" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="233" y1="633" x2="236" y2="640" />
+	<line stroke="black" stroke-opacity="1" x1="233" y1="633" x2="240" y2="629" />
+	<line stroke="black" stroke-opacity="1" x1="510" y1="726" x2="233" y2="633" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1135" y1="345" x2="1142" y2="398" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1133" y1="336" x2="1135" y2="343" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="1135" y1="343" x2="1135" y2="345" />
+</g>
+</svg>

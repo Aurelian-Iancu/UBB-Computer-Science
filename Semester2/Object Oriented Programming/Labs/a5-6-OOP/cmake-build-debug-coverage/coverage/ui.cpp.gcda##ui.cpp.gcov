@@ -1,0 +1,1539 @@
+        -:    0:Source:C:/Users/Aurelian/Documents/GitHub/OOP/a5-6-913-Iancu-Gheorghe-Aurelian/ui.cpp
+        -:    0:Graph:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\Aurelian\Documents\GitHub\OOP\a5-6-913-Iancu-Gheorghe-Aurelian\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iancu_Gheorghe_Aurelian.dir\ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:#include <windows.h>
+        -:    3:#include <shellapi.h>
+        -:    4:#include <iostream>
+        -:    5:using namespace std;
+        -:    6:
+function _ZN2UIC2EP7ServiceP11UserService called 1 returned 100% blocks executed 100%
+        1:    7:UI::UI(Service *service, UserService* userService)
+        -:    8:{
+        1:    9:    this->service = service;
+        1:   10:    this->userService = userService;
+        1:   11:}
+        -:   12:
+function _ZN2UI13printMenuModeEv called 1 returned 100% blocks executed 100%
+        1:   13:void UI::printMenuMode()
+        -:   14:{
+        1:   15:    cout << "1: If you want to enter the admin mode\n";
+        1:   15-block  0
+call    0 returned 1
+        1:   16:    cout << "2: If you want to enter the user mode\n";
+call    0 returned 1
+        1:   17:    cout << "0: if you want to exit the application";
+call    0 returned 1
+        1:   18:}
+        -:   19:
+function _ZN2UI14printMenuAdminEv called 0 returned 0% blocks executed 0%
+    #####:   20:void UI::printMenuAdmin(){
+    #####:   21:    cout << "ADMIN MENU:\n";
+    %%%%%:   21-block  0
+call    0 never executed
+    #####:   22:    cout << "1. If you want to print all the movies from the database\n";
+call    0 never executed
+    #####:   23:    cout << "2. If you want to add a movie\n";
+call    0 never executed
+    #####:   24:    cout << "3. If you want to remove a movie\n";
+call    0 never executed
+    #####:   25:    cout << "4. If you want to update a movie\n";
+call    0 never executed
+    #####:   26:    cout << "0. If you want to exit the application\n";
+call    0 never executed
+    #####:   27:}
+        -:   28:
+function _ZN2UI13printMenuUserEv called 0 returned 0% blocks executed 0%
+    #####:   29:void UI::printMenuUser()
+        -:   30:{
+    #####:   31:    cout << "USER MENU:\n";
+    %%%%%:   31-block  0
+call    0 never executed
+    #####:   32:    cout << "1. To list the movies of a particular gender 1 by 1\n";
+call    0 never executed
+    #####:   33:    cout << "2. To remove a movie from the playlist\n";
+call    0 never executed
+    #####:   34:    cout << "3. To list the playlist\n";
+call    0 never executed
+    #####:   35:    cout << "0. To exit the user mode\n";
+call    0 never executed
+    #####:   36:}
+        -:   37:
+function _ZN2UI14validateStringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   38:bool UI::validateString(string input) {
+    #####:   39:    for (int i = 0; i <input.length(); i++)
+    %%%%%:   39-block  0
+    %%%%%:   39-block  1
+    %%%%%:   39-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   40:        if (isdigit(input[i]) != false)
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   41:            return false;
+    %%%%%:   41-block  0
+    #####:   42:    return true;
+    %%%%%:   42-block  0
+        -:   43:}
+        -:   44:
+function _ZN2UI13addMovieAdminEv called 0 returned 0% blocks executed 0%
+    #####:   45:void UI::addMovieAdmin(){
+    #####:   46:    cout << "Add a new movie" << endl;
+    %%%%%:   46-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   46-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   47:    string title, genre, yearS, numberOfLikesS, trailer;
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+        -:   48:    int year, numberOfLikes;
+        -:   49:
+    #####:   50:    cout << "Enter the title" << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   50-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   51:    getline(cin , title);
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   52:    if(title.length() == 0)
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   53:        throw "Title input not valid";
+    %%%%%:   53-block  0
+call    0 never executed
+call    1 never executed
+        -:   54:
+    #####:   55:    cout << "Enter the genre" << endl;
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   55-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   56:    getline(cin, genre);
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   57:    if(genre.length() == 0)
+    %%%%%:   57-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   58:        throw "Genre input not valid";
+    %%%%%:   58-block  0
+call    0 never executed
+call    1 never executed
+        -:   59:
+    #####:   60:    cout << "Enter the year of release" << endl;
+    %%%%%:   60-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   60-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   61:    getline(cin, yearS);
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:    if(!(validateString(yearS)) && yearS.length() != 0)
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   62-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   62-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   62-block  3
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   62-block  4
+    %%%%%:   62-block  5
+    %%%%%:   62-block  6
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   62-block  7
+call   13 never executed
+    %%%%%:   62-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   62-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   62-block 10
+call   18 never executed
+    $$$$$:   62-block 11
+    #####:   63:        year = stoi(yearS);
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   63-block  1
+        -:   64:    else
+    #####:   65:        throw "Year input not valid";
+    %%%%%:   65-block  0
+call    0 never executed
+call    1 never executed
+    #####:   66:    if(year < 0)
+    %%%%%:   66-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   67:        throw "The year should be a positive number";
+    %%%%%:   67-block  0
+call    0 never executed
+call    1 never executed
+        -:   68:
+    #####:   69:    cout << "Enter the number of likes" << endl;
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   69-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   70:    getline(cin, numberOfLikesS);
+    %%%%%:   70-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   71:    if(!(validateString(numberOfLikesS)) && numberOfLikesS.length() != 0)
+    %%%%%:   71-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   71-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   71-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   71-block  3
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   71-block  4
+    %%%%%:   71-block  5
+    %%%%%:   71-block  6
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   71-block  7
+call   13 never executed
+    %%%%%:   71-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   71-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:   71-block 10
+call   18 never executed
+    $$$$$:   71-block 11
+    #####:   72:        numberOfLikes = stoi(numberOfLikesS);
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   72-block  1
+        -:   73:    else
+    #####:   74:        throw "Number of likes input not valid";
+    %%%%%:   74-block  0
+call    0 never executed
+call    1 never executed
+    #####:   75:    if(numberOfLikes < 0)
+    %%%%%:   75-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   76:        throw("The number of likes should be a positive number");
+    %%%%%:   76-block  0
+call    0 never executed
+call    1 never executed
+        -:   77:
+    #####:   78:    cout << "Enter link of the trailer" << endl;
+    %%%%%:   78-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   78-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   79:    getline(cin, trailer);
+    %%%%%:   79-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   80:    if(trailer.length() == 0)
+    %%%%%:   80-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   81:        throw "Trailer input not valid";
+    %%%%%:   81-block  0
+call    0 never executed
+call    1 never executed
+        -:   82:
+    #####:   83:    int added = this->service->addService(title, genre, year, numberOfLikes, trailer);
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:    if(added == 1)
+    %%%%%:   84-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   85:        throw "This movie is already in the database";
+    %%%%%:   85-block  0
+call    0 never executed
+call    1 never executed
+    #####:   86:    else if(added == 0)
+    %%%%%:   86-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   87:        cout << "Movie successfully added" << endl;
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   87-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   88:
+    #####:   89:}
+    %%%%%:   89-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    $$$$$:   89-block  1
+call    5 never executed
+    $$$$$:   89-block  2
+call    6 never executed
+    $$$$$:   89-block  3
+call    7 never executed
+    $$$$$:   89-block  4
+call    8 never executed
+    $$$$$:   89-block  5
+call    9 never executed
+        -:   90:
+function _ZN2UI16removeMovieAdminEv called 0 returned 0% blocks executed 0%
+    #####:   91:void UI::removeMovieAdmin(){
+    #####:   92:    cout << "Delete a movie" << endl;
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   92-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   93:    string title;
+    %%%%%:   93-block  0
+call    0 never executed
+    #####:   94:    cout << "Enter the title" << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   94-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   95:    getline(cin, title);
+    %%%%%:   95-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   96:    if(title.length() == 0)
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   97:        throw "Name input not valid";
+    %%%%%:   97-block  0
+call    0 never executed
+call    1 never executed
+    #####:   98:    int removed = this->service->removeService(title);
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   98-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   98-block  2
+call    6 never executed
+    $$$$$:   98-block  3
+call    7 never executed
+    $$$$$:   98-block  4
+    #####:   99:    if(removed == 0)
+branch  0 never executed
+branch  1 never executed
+    #####:  100:        cout << "Movie successfully removed" << endl;
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  100-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  101:    else if(removed == 1)
+    %%%%%:  101-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  102:        throw "The movie does not exist in the database";
+    %%%%%:  102-block  0
+call    0 never executed
+call    1 never executed
+        -:  103:
+    #####:  104:}
+    %%%%%:  104-block  0
+call    0 never executed
+    $$$$$:  104-block  1
+call    1 never executed
+        -:  105:
+function _ZN2UI16updateMovieAdminEv called 0 returned 0% blocks executed 0%
+    #####:  106:void UI::updateMovieAdmin() {
+    #####:  107:    cout << "Update a movie" << endl;
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  107-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  108:    string oldTitle, newTitle, newGenre, newYearS, newNumberOfLikesS, newTrailer;
+    %%%%%:  108-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+        -:  109:    int newYear, newNumberOfLikes;
+        -:  110:
+    #####:  111:    cout << "Enter the old title" << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  111-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  112:    getline(cin , oldTitle);
+    %%%%%:  112-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  113:    if(oldTitle.length() == 0)
+    %%%%%:  113-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  114:        throw "Old title input not valid";
+    %%%%%:  114-block  0
+call    0 never executed
+call    1 never executed
+        -:  115:
+    #####:  116:    cout << "Enter the new title" << endl;
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  116-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  117:    getline(cin , newTitle);
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  118:    if(newTitle.length() == 0)
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  119:        throw "New title input not valid";
+    %%%%%:  119-block  0
+call    0 never executed
+call    1 never executed
+        -:  120:
+    #####:  121:    cout << "Enter the genre" << endl;
+    %%%%%:  121-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  121-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  122:    getline(cin, newGenre);
+    %%%%%:  122-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  123:    if(newGenre.length() == 0)
+    %%%%%:  123-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  124:        throw "Genre input not valid";
+    %%%%%:  124-block  0
+call    0 never executed
+call    1 never executed
+        -:  125:
+    #####:  126:    cout << "Enter the year of release" << endl;
+    %%%%%:  126-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  126-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  127:    getline(cin, newYearS);
+    %%%%%:  127-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  128:    if(!(validateString(newYearS)) && newYearS.length() != 0)
+    %%%%%:  128-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  128-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  128-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  128-block  3
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  128-block  4
+    %%%%%:  128-block  5
+    %%%%%:  128-block  6
+branch 11 never executed
+branch 12 never executed
+    %%%%%:  128-block  7
+call   13 never executed
+    %%%%%:  128-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:  128-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:  128-block 10
+call   18 never executed
+    $$$$$:  128-block 11
+    #####:  129:        newYear = stoi(newYearS);
+    %%%%%:  129-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  129-block  1
+        -:  130:    else
+    #####:  131:        throw "Year input not valid";
+    %%%%%:  131-block  0
+call    0 never executed
+call    1 never executed
+    #####:  132:    if(newYear < 0)
+    %%%%%:  132-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  133:        throw "The year should be a positive number";
+    %%%%%:  133-block  0
+call    0 never executed
+call    1 never executed
+        -:  134:
+    #####:  135:    cout << "Enter the number of likes" << endl;
+    %%%%%:  135-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  135-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  136:    getline(cin, newNumberOfLikesS);
+    %%%%%:  136-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  137:    if(!(validateString(newNumberOfLikesS)) && newNumberOfLikesS.length() != 0)
+    %%%%%:  137-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  137-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  137-block  2
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  137-block  3
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  137-block  4
+    %%%%%:  137-block  5
+    %%%%%:  137-block  6
+branch 11 never executed
+branch 12 never executed
+    %%%%%:  137-block  7
+call   13 never executed
+    %%%%%:  137-block  8
+branch 14 never executed
+branch 15 never executed
+    $$$$$:  137-block  9
+branch 16 never executed
+branch 17 never executed
+    $$$$$:  137-block 10
+call   18 never executed
+    $$$$$:  137-block 11
+    #####:  138:        newNumberOfLikes = stoi(newNumberOfLikesS);
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  138-block  1
+        -:  139:    else
+    #####:  140:        throw "Number of likes input not valid";
+    %%%%%:  140-block  0
+call    0 never executed
+call    1 never executed
+    #####:  141:    if(newNumberOfLikes < 0)
+    %%%%%:  141-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  142:        throw("The number of likes should be a positive number");
+    %%%%%:  142-block  0
+call    0 never executed
+call    1 never executed
+        -:  143:
+    #####:  144:    cout << "Enter link of the trailer" << endl;
+    %%%%%:  144-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  144-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  145:    getline(cin, newTrailer);
+    %%%%%:  145-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  146:    if(newTrailer.length() == 0)
+    %%%%%:  146-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  147:        throw "Trailer input not valid";
+    %%%%%:  147-block  0
+call    0 never executed
+call    1 never executed
+        -:  148:
+    #####:  149:    int updated = this->service->updateService(oldTitle, newTitle, newGenre, newYear, newNumberOfLikes, newTrailer);
+    %%%%%:  149-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  149-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  149-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  149-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  149-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  149-block  5
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+    $$$$$:  149-block  6
+call   19 never executed
+    $$$$$:  149-block  7
+    $$$$$:  149-block  8
+call   20 never executed
+    $$$$$:  149-block  9
+    $$$$$:  149-block 10
+call   21 never executed
+    $$$$$:  149-block 11
+    $$$$$:  149-block 12
+call   22 never executed
+    $$$$$:  149-block 13
+    #####:  150:    if(updated == 1)
+branch  0 never executed
+branch  1 never executed
+    #####:  151:        throw("The movie does not exist in the database");
+    %%%%%:  151-block  0
+call    0 never executed
+call    1 never executed
+    #####:  152:    else if(updated == 0)
+    %%%%%:  152-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  153:        cout <<"Movie updated successfully" << endl;
+    %%%%%:  153-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  153-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  154:
+    #####:  155:}
+    %%%%%:  155-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    $$$$$:  155-block  1
+call    6 never executed
+    $$$$$:  155-block  2
+call    7 never executed
+    $$$$$:  155-block  3
+call    8 never executed
+    $$$$$:  155-block  4
+call    9 never executed
+    $$$$$:  155-block  5
+call   10 never executed
+    $$$$$:  155-block  6
+call   11 never executed
+        -:  156:
+function _ZN2UI13printAllAdminEv called 0 returned 0% blocks executed 0%
+    #####:  157:void UI::printAllAdmin() {
+    #####:  158:    Movie * movies = this->service->getAllService();
+    %%%%%:  158-block  0
+call    0 never executed
+        -:  159:    int index;
+    #####:  160:    int numberOfElements = this->service->getSizeService();
+call    0 never executed
+    #####:  161:    if(numberOfElements == 0)
+branch  0 never executed
+branch  1 never executed
+    #####:  162:        throw("There are no movies in the database");
+    %%%%%:  162-block  0
+call    0 never executed
+call    1 never executed
+    #####:  163:    for(index = 0; index < numberOfElements; index ++)
+    %%%%%:  163-block  0
+    %%%%%:  163-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  164:        cout << index + 1 << ". " << movies[index].toString() << endl;
+    %%%%%:  164-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  164-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  164-block  2
+call    9 never executed
+    $$$$$:  164-block  3
+call   10 never executed
+    #####:  165:}
+    %%%%%:  165-block  0
+        -:  166:
+function _ZN2UI16listFilteredUserEv called 0 returned 0% blocks executed 0%
+    #####:  167:void UI::listFilteredUser(){
+    #####:  168:    string genreFilter;
+    %%%%%:  168-block  0
+call    0 never executed
+    #####:  169:    cout << "Enter the genre: " << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  169-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  170:    getline(cin, genreFilter);
+    %%%%%:  170-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  171:
+    #####:  172:    auto* validMovies = new Movie [this->service->getCapacityService()];
+    %%%%%:  172-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  172-block  1
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  172-block  2
+    %%%%%:  172-block  3
+    %%%%%:  172-block  4
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:  172-block  5
+    %%%%%:  172-block  6
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:  172-block  7
+    %%%%%:  172-block  8
+branch 11 never executed
+branch 12 never executed
+    $$$$$:  172-block  9
+    $$$$$:  172-block 10
+call   13 never executed
+    $$$$$:  172-block 11
+branch 14 never executed
+branch 15 never executed
+    $$$$$:  172-block 12
+    $$$$$:  172-block 13
+    $$$$$:  172-block 14
+call   16 never executed
+    #####:  173:    int length = this->userService->getFiltered(validMovies, genreFilter);
+    %%%%%:  173-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  173-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  173-block  2
+call    6 never executed
+    $$$$$:  173-block  3
+call    7 never executed
+    $$$$$:  173-block  4
+    #####:  174:    if(length == 0)
+branch  0 never executed
+branch  1 never executed
+    #####:  175:        throw "No movies corresponding";
+    %%%%%:  175-block  0
+call    0 never executed
+call    1 never executed
+    #####:  176:    string option;
+    %%%%%:  176-block  0
+call    0 never executed
+    #####:  177:    bool done = false;
+    #####:  178:    int index = 0;
+    #####:  179:    while(!done)
+    %%%%%:  179-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  180:    {
+    #####:  181:        if(length == 0)
+    %%%%%:  181-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  182:            throw "No movies remained";
+    %%%%%:  182-block  0
+call    0 never executed
+call    1 never executed
+    #####:  183:        if(index == length)
+    %%%%%:  183-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  184:            index = 0;
+    %%%%%:  184-block  0
+    #####:  185:        cout << validMovies[index].toString() << endl;
+    %%%%%:  185-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  185-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  185-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  185-block  3
+call    9 never executed
+    $$$$$:  185-block  4
+call   10 never executed
+    $$$$$:  185-block  5
+    #####:  186:        cout << "Add to playlist? [Yes / No / Exit]" << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  186-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  187:        ShellExecuteA(NULL, NULL, "chrome.exe", validMovies[index].getTrailer().c_str(), NULL, SW_SHOWMAXIMIZED);
+    %%%%%:  187-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  187-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  187-block  2
+call    7 never executed
+    $$$$$:  187-block  3
+call    8 never executed
+    $$$$$:  187-block  4
+    #####:  188:        getline(cin, option);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  189:        if (option == "Yes") {
+    %%%%%:  189-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  190:            int found1 = 0;
+    #####:  191:            Movie movie1;
+    %%%%%:  191-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  192:            movie1 = validMovies[index];
+    %%%%%:  192-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  193:            for(int i = 0; i < length; i++)
+    %%%%%:  193-block  0
+    %%%%%:  193-block  1
+    %%%%%:  193-block  2
+branch  0 never executed
+branch  1 never executed
+    #####:  194:                if(this->userService->getAllUsersService()[i] == movie1)
+    %%%%%:  194-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  194-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  194-block  2
+branch  6 never executed
+branch  7 never executed
+    #####:  195:                    found1 = 1;
+    %%%%%:  195-block  0
+    #####:  196:            if(found1 == 1) {
+    %%%%%:  196-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  197:                cout << "The movie is already in the database" << endl;
+    %%%%%:  197-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  197-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  198:            }
+        -:  199:            else
+        -:  200:            {
+    #####:  201:                Movie movie;
+    %%%%%:  201-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  202:                movie = validMovies[index];
+    %%%%%:  202-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  203:                this->userService->addUserService(movie);
+    %%%%%:  203-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  204:            }
+    %%%%%:  204-block  0
+call    0 never executed
+    $$$$$:  204-block  1
+call    1 never executed
+    #####:  205:            index++;
+    #####:  206:        } else if (option == "No") {
+    %%%%%:  206-block  0
+call    0 never executed
+    %%%%%:  206-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  206-block  2
+call    4 never executed
+    #####:  207:            index++;
+    %%%%%:  207-block  0
+    #####:  208:        } else if (option == "Exit")
+    %%%%%:  208-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  209:            done = true;
+    %%%%%:  209-block  0
+        -:  210:    }
+    #####:  211:}
+    %%%%%:  211-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  211-block  1
+call    2 never executed
+    $$$$$:  211-block  2
+call    3 never executed
+        -:  212:
+function _ZN2UI15removeMovieUserEv called 0 returned 0% blocks executed 0%
+    #####:  213:void UI::removeMovieUser()
+        -:  214:{
+    #####:  215:    string titleRemoveMovie;
+    %%%%%:  215-block  0
+call    0 never executed
+    #####:  216:    cout << "What movie would you like to remove from the playlist?" << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  216-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  217:    getline(cin, titleRemoveMovie);
+    %%%%%:  217-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  218:
+    #####:  219:    int found = 0;
+    #####:  220:    int index = 0;
+    #####:  221:    int length = this->userService->getSizeService();
+    %%%%%:  221-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  222:    for(int i = 0; i< length; i++)
+    %%%%%:  222-block  0
+    %%%%%:  222-block  1
+    %%%%%:  222-block  2
+branch  0 never executed
+branch  1 never executed
+    #####:  223:        if(this->userService->getAllUsersService()[i].getTitle() == titleRemoveMovie) {
+    %%%%%:  223-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  223-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  223-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  224:            found = 1;
+    #####:  225:            index = i;
+    %%%%%:  225-block  0
+        -:  226:        }
+        -:  227:
+    #####:  228:    if(found == 0)
+    %%%%%:  228-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  229:        throw "The movie you want to remove does not exist in the playlist";
+    %%%%%:  229-block  0
+call    0 never executed
+call    1 never executed
+        -:  230:    else
+        -:  231:    {
+        -:  232:        int oldNumberOfLikes;
+    #####:  233:        string option;
+    %%%%%:  233-block  0
+call    0 never executed
+    #####:  234:        cout << "Would you like to rate the movie? [Yes / No]" << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  234-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  235:        getline(cin, option);
+    %%%%%:  235-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  236:        if(option == "Yes")
+    %%%%%:  236-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  237:        {
+    #####:  238:            this->service->findByTitleService(titleRemoveMovie);
+    %%%%%:  238-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  239:            oldNumberOfLikes = this->service->getAllService()[index].getNumberOfLikes();
+    %%%%%:  239-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  239-block  1
+call    3 never executed
+    #####:  240:            this->service->getAllService()[index].setNumberOfLikes(oldNumberOfLikes + 1);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  240-block  0
+call    3 never executed
+    #####:  241:            this->userService->removeUserService(titleRemoveMovie);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  242:        }
+    #####:  243:        else if(option == "No")
+    %%%%%:  243-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  244:        {
+    #####:  245:            this->userService->removeUserService(titleRemoveMovie);
+    %%%%%:  245-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  246:        }
+        -:  247:        else
+    #####:  248:            cout << "Option not valid" << endl;
+    %%%%%:  248-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  248-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  249:    }
+    %%%%%:  249-block  0
+call    0 never executed
+    $$$$$:  249-block  1
+call    1 never executed
+        -:  250:
+    #####:  251:}
+call    0 never executed
+    $$$$$:  251-block  0
+call    1 never executed
+        -:  252:
+function _ZN2UI16listUserPlaylistEv called 0 returned 0% blocks executed 0%
+    #####:  253:void UI::listUserPlaylist()
+        -:  254:{
+    #####:  255:    Movie * playlist = this->userService->getAllUsersService();
+    %%%%%:  255-block  0
+call    0 never executed
+        -:  256:    int index;
+    #####:  257:    int numberOfElements = this->userService->getSizeService();
+call    0 never executed
+    #####:  258:    if(numberOfElements == 0)
+branch  0 never executed
+branch  1 never executed
+    #####:  259:        throw "The list is empty!";
+    %%%%%:  259-block  0
+call    0 never executed
+call    1 never executed
+    #####:  260:    for(index = 0; index < numberOfElements; index++)
+    %%%%%:  260-block  0
+    %%%%%:  260-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  261:        cout << index + 1 << ". " << playlist[index].toString() << endl;
+    %%%%%:  261-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  261-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  261-block  2
+call    9 never executed
+    $$$$$:  261-block  3
+call   10 never executed
+    #####:  262:}
+    %%%%%:  262-block  0
+        -:  263:
+        -:  264:
+function _ZN2UI9adminModeEv called 0 returned 0% blocks executed 0%
+    #####:  265:void UI::adminMode()
+        -:  266:{
+    #####:  267:    cout << " You are in admin mode" << endl;
+    %%%%%:  267-block  0
+call    0 never executed
+call    1 never executed
+    #####:  268:    bool done = false;
+    #####:  269:    while(!done)
+    %%%%%:  269-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  270:    {
+        -:  271:        try
+        -:  272:        {
+    #####:  273:            printMenuAdmin();
+    %%%%%:  273-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  274:            string option;
+    %%%%%:  274-block  0
+call    0 never executed
+    #####:  275:            getline(cin, option);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  276:            if(option == "0")
+    %%%%%:  276-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  277:                done = true;
+    %%%%%:  277-block  0
+    #####:  278:            else if(option == "1")
+    %%%%%:  278-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  279:                this->printAllAdmin();
+    %%%%%:  279-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  280:            else if(option == "2")
+    %%%%%:  280-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  281:                this->addMovieAdmin();
+    %%%%%:  281-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  282:            else if(option == "3")
+    %%%%%:  282-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  283:                this->removeMovieAdmin();
+    %%%%%:  283-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  284:            else if(option == "4")
+    %%%%%:  284-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  285:                this->updateMovieAdmin();
+    %%%%%:  285-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  286:            else
+    #####:  287:                cout << "Bad input! Try again" << endl;
+    %%%%%:  287-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  287-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  288:        }
+    %%%%%:  288-block  0
+call    0 never executed
+    $$$$$:  288-block  1
+call    1 never executed
+    =====:  289:        catch(const char *msg)
+    $$$$$:  289-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  289-block  1
+call    3 never executed
+        -:  290:        {
+    =====:  291:            cout << msg << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  291-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  292:        }
+    $$$$$:  292-block  0
+call    0 never executed
+    $$$$$:  292-block  1
+call    1 never executed
+    =====:  293:        catch (const exception &e)
+    $$$$$:  293-block  0
+call    0 never executed
+        -:  294:        {
+    =====:  295:            cerr << e.what();
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    =====:  296:            cout << endl;
+    $$$$$:  296-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  297:        }
+    $$$$$:  297-block  0
+call    0 never executed
+    $$$$$:  297-block  1
+call    1 never executed
+        -:  298:    }
+        -:  299:
+    #####:  300:}
+    %%%%%:  300-block  0
+        -:  301:
+function _ZN2UI8UserModeEv called 0 returned 0% blocks executed 0%
+    #####:  302:void UI::UserMode()
+        -:  303:{
+    #####:  304:    cout << "You are in user mode" << endl;
+    %%%%%:  304-block  0
+call    0 never executed
+call    1 never executed
+    #####:  305:    bool done = false;
+    #####:  306:    while(!done)
+    %%%%%:  306-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  307:    {
+        -:  308:        try
+        -:  309:        {
+    #####:  310:            printMenuUser();
+    %%%%%:  310-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  311:            string option;
+    %%%%%:  311-block  0
+call    0 never executed
+    #####:  312:            getline(cin, option);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  313:            if(option == "0")
+    %%%%%:  313-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  314:                done = true;
+    %%%%%:  314-block  0
+    #####:  315:            else if(option == "1")
+    %%%%%:  315-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  316:                this->listFilteredUser();
+    %%%%%:  316-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  317:            else if(option == "2")
+    %%%%%:  317-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  318:                this->removeMovieUser();
+    %%%%%:  318-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  319:            else if(option == "3")
+    %%%%%:  319-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  320:                this->listUserPlaylist();
+    %%%%%:  320-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  321:        }
+    %%%%%:  321-block  0
+call    0 never executed
+    $$$$$:  321-block  1
+call    1 never executed
+    =====:  322:        catch(const char *msg)
+    $$$$$:  322-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  322-block  1
+call    3 never executed
+        -:  323:        {
+    =====:  324:            cout << msg << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  324-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  325:        }
+    $$$$$:  325-block  0
+call    0 never executed
+    $$$$$:  325-block  1
+call    1 never executed
+    =====:  326:        catch (const exception &e)
+    $$$$$:  326-block  0
+call    0 never executed
+        -:  327:        {
+    =====:  328:            cerr << e.what();
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    =====:  329:            cout << endl;
+    $$$$$:  329-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  330:        }
+    $$$$$:  330-block  0
+call    0 never executed
+    $$$$$:  330-block  1
+call    1 never executed
+        -:  331:    }
+    #####:  332:}
+    %%%%%:  332-block  0
+        -:  333:
+        -:  334:
+function _ZN2UI5startEv called 1 returned 100% blocks executed 75%
+        1:  335:void UI::start(){
+        1:  336:    cout << "Tinder Movie app!! Hello GABI" << endl;
+        1:  336-block  0
+call    0 returned 1
+call    1 returned 1
+        1:  337:    bool done = false;
+        2:  338:    while(!done)
+        2:  338-block  0
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        -:  339:    {
+        1:  340:        printMenuMode();
+        1:  340-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  341:        string option;
+        1:  341-block  0
+call    0 returned 1
+        1:  342:        getline(cin, option);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  343:        if(option == "1")
+        1:  343-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:  344:            adminMode();
+    %%%%%:  344-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        1:  345:        else if(option == "2")
+        1:  345-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:  346:            UserMode();
+    %%%%%:  346-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        1:  347:        else if(option == "0")
+        1:  347-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  348:            done = true;
+        1:  348-block  0
+        -:  349:        else
+    #####:  350:            cout << "Bad input! Try again" << endl;
+    %%%%%:  350-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  350-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  351:
+        1:  352:    }
+        1:  352-block  0
+call    0 returned 1
+    $$$$$:  352-block  1
+call    1 never executed
+        1:  353:}
+        1:  353-block  0
+        -:  354:
+function _ZN2UID2Ev called 0 returned 0% blocks executed 0%
+    #####:  355:UI::~UI() = default;
