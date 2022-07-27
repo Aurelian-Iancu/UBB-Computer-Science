@@ -1,0 +1,3 @@
+C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab2/SortedIndexedList/cmake-build-debug/CMakeFiles/SortedIndexedList.dir
+C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab2/SortedIndexedList/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Aurelian/Informatica/Year 1 - Semester 2/DSA/Lab2/SortedIndexedList/cmake-build-debug/CMakeFiles/rebuild_cache.dir
