@@ -1,0 +1,5 @@
+C:/Users/Aurelian/Documents/GitHub/OOP/a14-913-Iancu-Gheorghe-Aurelian/cmake-build-debug/CMakeFiles/a14-913-Iancu-Gheorghe-Aurelian.dir
+C:/Users/Aurelian/Documents/GitHub/OOP/a14-913-Iancu-Gheorghe-Aurelian/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Aurelian/Documents/GitHub/OOP/a14-913-Iancu-Gheorghe-Aurelian/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Aurelian/Documents/GitHub/OOP/a14-913-Iancu-Gheorghe-Aurelian/cmake-build-debug/CMakeFiles/a14-913-Iancu-Gheorghe-Aurelian_autogen_timestamp_deps.dir
+C:/Users/Aurelian/Documents/GitHub/OOP/a14-913-Iancu-Gheorghe-Aurelian/cmake-build-debug/CMakeFiles/a14-913-Iancu-Gheorghe-Aurelian_autogen.dir

@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "a14-913-Iancu-Gheorghe-Aurelian",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "a14-913-Iancu-Gheorghe-Aurelian::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-a14-913-Iancu-Gheorghe-Aurelian-Debug-b0bbab4157af69ea3f24.json",
+					"name" : "a14-913-Iancu-Gheorghe-Aurelian",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "a14-913-Iancu-Gheorghe-Aurelian_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-a14-913-Iancu-Gheorghe-Aurelian_autogen-Debug-f9bb3843c7e6e7dc041b.json",
+					"name" : "a14-913-Iancu-Gheorghe-Aurelian_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "a14-913-Iancu-Gheorghe-Aurelian_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-a14-913-Iancu-Gheorghe-Aurelian_autogen_timestamp_deps-Debug-227c5e6c8c5e925edc9e.json",
+					"name" : "a14-913-Iancu-Gheorghe-Aurelian_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Aurelian/Documents/GitHub/OOP/a14-913-Iancu-Gheorghe-Aurelian/cmake-build-debug",
+		"source" : "C:/Users/Aurelian/Documents/GitHub/OOP/a14-913-Iancu-Gheorghe-Aurelian"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
