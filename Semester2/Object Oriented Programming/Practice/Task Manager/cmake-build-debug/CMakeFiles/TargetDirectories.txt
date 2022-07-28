@@ -1,0 +1,3 @@
+C:/Users/Aurelian/CLionProjects/Test917/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Aurelian/CLionProjects/Test917/cmake-build-debug/CMakeFiles/Test917.dir
+C:/Users/Aurelian/CLionProjects/Test917/cmake-build-debug/CMakeFiles/rebuild_cache.dir

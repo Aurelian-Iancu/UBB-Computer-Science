@@ -1,0 +1,22 @@
+# ninja log v5
+24	117	6733103844359380	CMakeFiles/Test2practice_seminar.dir/main.cpp.obj	86c88945da65d08d
+28	495	6733103848135294	CMakeFiles/Test2practice_seminar.dir/MedicalAnalysis.cpp.obj	adb21ff7f5191068
+35	519	6733103848385337	CMakeFiles/Test2practice_seminar.dir/UI.cpp.obj	5a5030998b2165ab
+14	551	6733103848685382	CMakeFiles/Test2practice_seminar.dir/BMI.cpp.obj	57545b49b3bcf6a6
+1	581	6733103849005505	CMakeFiles/Test2practice_seminar.dir/BP.cpp.obj	63cb7f744148bf3c
+17	596	6733103849165520	CMakeFiles/Test2practice_seminar.dir/Utils.cpp.obj	835a3b948f9c82d7
+21	629	6733103849495584	CMakeFiles/Test2practice_seminar.dir/Person.cpp.obj	11a0d81a36b51a98
+17	360	6733105946196757	CMakeFiles/Test2practice_seminar.dir/UI.cpp.obj	5a5030998b2165ab
+3	447	6733105947056946	CMakeFiles/Test2practice_seminar.dir/Person.cpp.obj	11a0d81a36b51a98
+18	366	6733108006294601	CMakeFiles/Test2practice_seminar.dir/UI.cpp.obj	5a5030998b2165ab
+15	391	6733108006534584	CMakeFiles/Test2practice_seminar.dir/main.cpp.obj	86c88945da65d08d
+3	456	6733108007214891	CMakeFiles/Test2practice_seminar.dir/Person.cpp.obj	11a0d81a36b51a98
+457	589	6733108008507327	Test2practice_seminar.exe	fb466d9db01ef3a
+2	351	6733108273804482	CMakeFiles/Test2practice_seminar.dir/UI.cpp.obj	5a5030998b2165ab
+352	484	6733108275110271	Test2practice_seminar.exe	fb466d9db01ef3a
+3	386	6733111256737434	CMakeFiles/Test2practice_seminar.dir/main.cpp.obj	86c88945da65d08d
+386	542	6733111258272535	Test2practice_seminar.exe	fb466d9db01ef3a
+3	439	6733111957754102	CMakeFiles/Test2practice_seminar.dir/Person.cpp.obj	11a0d81a36b51a98
+440	573	6733111959054249	Test2practice_seminar.exe	fb466d9db01ef3a
+4	387	6733113931046869	CMakeFiles/Test2practice_seminar.dir/BP.cpp.obj	63cb7f744148bf3c
+387	538	6733113932507218	Test2practice_seminar.exe	fb466d9db01ef3a
