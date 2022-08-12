@@ -1,0 +1,5 @@
+C:/Users/Aurelian/CLionProjects/CourseExample/cmake-build-debug/CMakeFiles/CourseExample.dir
+C:/Users/Aurelian/CLionProjects/CourseExample/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Aurelian/CLionProjects/CourseExample/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Aurelian/CLionProjects/CourseExample/cmake-build-debug/CMakeFiles/CourseExample_autogen_timestamp_deps.dir
+C:/Users/Aurelian/CLionProjects/CourseExample/cmake-build-debug/CMakeFiles/CourseExample_autogen.dir
