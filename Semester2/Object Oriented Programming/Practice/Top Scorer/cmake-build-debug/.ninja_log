@@ -1,0 +1,13 @@
+# ninja log v5
+56	1027	6708730352844892	CMakeFiles/Test915.dir/repository.cpp.obj	5374d38c206ceda0
+2	253	6708803999396502	build.ninja	d48420d9af05e865
+31	1003	6708730352684897	CMakeFiles/Test915.dir/domain.cpp.obj	4ba43b64294a59b9
+64	974	6708730352204835	CMakeFiles/Test915.dir/dynamicVector.cpp.obj	e62df14120eda08f
+3	366	6708778118338885	CMakeFiles/Test915.dir/main.cpp.obj	a703901d71df85f9
+13	304	6708775989002854	CMakeFiles/Test915.dir/service.cpp.obj	e939fa0c72127e88
+22	531	6708774909604944	CMakeFiles/Test915.dir/ui.cpp.obj	de8b74f5270d5300
+321	450	6708779031741164	Test915.exe	e9da349f22ac2956
+2	320	6708779030446584	CMakeFiles/Test915.dir/tests.cpp.obj	817c5f2c9333bbbb
+11	331	6708963952978500	CMakeFiles/Test915.dir/tests.cpp.obj	817c5f2c9333bbbb
+3	332	6708963952978500	CMakeFiles/Test915.dir/service.cpp.obj	e939fa0c72127e88
+332	567	6708963955308135	Test915.exe	e9da349f22ac2956
