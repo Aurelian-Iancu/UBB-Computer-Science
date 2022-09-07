@@ -14,7 +14,7 @@ def verify_prime_number(n):
 if __name__ == "__main__" :
     n = int(input("Enter a number: "))
     ok = 0
-    counter = n + 1 #with counter we pass throw the numbers we want to check
+    counter = n + 1 #with counter we pass through the numbers we want to check
     p1 = 0 #we initialize the numbers we are trying to find with 0 so that we can see if they changed during our processes
     p2 = 0
     while ok != 1: #we search till we find the 2 numbers we need
