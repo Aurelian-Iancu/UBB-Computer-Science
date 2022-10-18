@@ -16,7 +16,7 @@ Here you can see all the work that I did for the university (UBB Computer Scienc
     * [ Operating Systems](Semester2/Operating%20Systems/)
 * [Semester 3](Semester3/)
     * [ Advanced Programming Methods](Semester3/Advanced%20Programming%20Methods/)
-    * [ Computer Networks](Semester3/Computer%Networks/)
+    * [ Computer Networks](Semester3/Computer%20Networks/)
     * [ Databases](Semester3/Databases/)
     * [ Functional & logic programming](Semester3/Functional%20&%20logic%20programming/)
     * [ Probabilities & statistics](Semester3/Probabilities%20&%20statistics/)
