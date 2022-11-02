@@ -1,4 +1,4 @@
-# R1
+# P1
 
 * Lists in Prolog.
     * Write a predicate to determine the difference of two sets.
