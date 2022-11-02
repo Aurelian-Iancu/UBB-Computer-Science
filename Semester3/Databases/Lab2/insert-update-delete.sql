@@ -110,11 +110,11 @@ update Positions set salary = 2500 where name = 'seller' -- usage of =
 update BeerRecipes set ingredients = 'Malt, Hamei, Drojdie, Zahar brun' where brid = 2 and ingredients = 'Malt, Hamei, Drojdie' -- usage of AND
 update BeerRecipes set ingredients = 'Malt, Hamei, Drojdie, Turmeric' where brid = 4 and ingredients = 'Malt, Hamei, Drojdie'
 update Addresses set number = 0 where number is null -- usage of is NULL
-update DistributorsOfBeers set quantity = 100 where did in (2,3)
+update DistributorsOfBeers set quantity = 100 where did in (2,3) --usage of in
 
 --Delete section 
 delete from Employees where name like 'Error%' -- usage of like
-delete from Beers where price between 7 and 10 -- usage of between
+delete from Beers where price between 7 and 20 -- usage of between
 
 
 
