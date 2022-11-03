@@ -44,18 +44,25 @@ insert into Employees values(8, 2, 1, 'Thalia Gilbert')
 insert into Employees values(9, 2, 2, 'Slade Humphrey')
 insert into Employees values(10, 2, 3, 'Marley Horne')
 insert into Employees values(11, 2, 2, 'Error Employee')
+--Third Store
+insert into Employees values(12, 3, 1, 'Jack Flecker')
 
 --Insert into ArtizanalBeers
 insert into ArtizanalBeers values(1, 'Porter American', 200, 0)
 insert into ArtizanalBeers values(2, 'Amăruie Belgiană', 125, 0)
 insert into ArtizanalBeers values(3, 'Leffe', 180, 0)
 insert into ArtizanalBeers values(4, 'India Pale Ale Speidel', 160, 0)
+insert into ArtizanalBeers values(5, 'Heineken, 0.4', 100, 0)
+insert into ArtizanalBeers values(6, 'Ursus Retro, 0.33', 100, 0)
+
 
 --Insert into BeerRecipes
 insert into BeerRecipes values(1, 'Malt, Hamei, Drojdie, Cafea macinata', 5.30)
 insert into BeerRecipes values(2, 'Malt, Hamei, Drojdie', 4.65)
 insert into BeerRecipes values(3, 'Malt, Hamei, Drojdie, Coriandru', 5.19)
 insert into BeerRecipes values(4, 'Malt, Hamei, Drojdie', 4.90)
+insert into BeerRecipes values(5, 'Malt, Hamei, Drojdie, Ovaz', 2.67)
+insert into BeerRecipes values(6, 'Malt, Hamei, Drojdie, Orz', 2.0) 
 
 --Insert into Beers
 insert into Beers values(1, 'Heineken, 0.33', 2.54)
@@ -101,10 +108,6 @@ insert into Earnings values(3, 0, 2, 1, 2, null)
 insert into Earnings values(4, 0, 2, 10, 3, null)
 insert into Earnings values(5, 0, 3, null, null, 1)
 
-
-
----------------------------------------------- Finish the insertion in the tables
-
 --Update section
 update Positions set salary = 2500 where name = 'seller' -- usage of =
 update BeerRecipes set ingredients = 'Malt, Hamei, Drojdie, Zahar brun' where brid = 2 and ingredients = 'Malt, Hamei, Drojdie' -- usage of AND
@@ -115,6 +118,32 @@ update DistributorsOfBeers set quantity = 100 where did in (2,3) --usage of in
 --Delete section 
 delete from Employees where name like 'Error%' -- usage of like
 delete from Beers where price between 7 and 20 -- usage of between
+
+--a)
+--union. Creates a table with all the beers and the artizanal beers.
+select name from Beers
+union
+select name from ArtizanalBeers
+--or. Creates a table with the employees that work in the first or the third store
+select E.stid, E.emid, E.name from Employees E where stid = 1 or stid = 3
+
+--b)
+--intersect. Creates a table with the beers that are also artizanal beers.
+select name from Beers
+intersect 
+select name from ArtizanalBeers
+--in. Selects all the employees that are sellers and work in the first shop
+select E.name from Employees E where E.poid = 1 and E.stid in (select S.stid from Stores S where S.stid = 1)
+
+--c)
+--except. Selects the beers that are not hand made
+select name from Beers
+except
+select name from ArtizanalBeers
+--not in. Same as above but using not in
+select name from Beers where name not in (select name from ArtizanalBeers)
+
+
 
 
 
