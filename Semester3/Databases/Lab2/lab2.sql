@@ -44,8 +44,10 @@ insert into Employees values(8, 2, 1, 'Thalia Gilbert')
 insert into Employees values(9, 2, 2, 'Slade Humphrey')
 insert into Employees values(10, 2, 3, 'Marley Horne')
 insert into Employees values(11, 2, 2, 'Error Employee')
+insert into Employees values(12, 2, 3, 'June Sanders')
 --Third Store
-insert into Employees values(12, 3, 1, 'Jack Flecker')
+insert into Employees values(13, 3, 1, 'Jack Flecker')
+insert into Employees values(14, 3, 3, 'June Sanders')
 
 --Insert into ArtizanalBeers
 insert into ArtizanalBeers values(1, 'Porter American', 200, 0)
@@ -120,18 +122,18 @@ delete from Employees where name like 'Error%' -- usage of like
 delete from Beers where price between 7 and 20 -- usage of between
 
 --a)
---union. Creates a table with all the beers and the artizanal beers.
-select name from Beers
+--union. Creates a table with all the types of Heineken and Ursus beers.
+select name from Beers where name like 'Heineken%'
 union
-select name from ArtizanalBeers
+select name from Beers where name like 'Ursus%'
 --or. Creates a table with the employees that work in the first or the third store
 select E.stid, E.emid, E.name from Employees E where stid = 1 or stid = 3
 
 --b)
 --intersect. Creates a table with the beers that are also artizanal beers.
-select name from Beers
-intersect 
-select name from ArtizanalBeers
+select E.name from Employees E where E.stid = 1
+intersect
+select E.name from Employees E where E.stid = 2
 --in. Selects all the employees that are sellers and work in the first shop
 select E.name from Employees E where E.poid = 1 and E.stid in (select S.stid from Stores S where S.stid = 1)
 
@@ -142,6 +144,8 @@ except
 select name from ArtizanalBeers
 --not in. Same as above but using not in
 select name from Beers where name not in (select name from ArtizanalBeers)
+
+
 
 
 
