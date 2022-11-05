@@ -108,11 +108,11 @@ insert into DistributorsOfBeers values(10,3, 200, 2.89,3.17)
 
 
 --Insert into Earnings
-insert into Earnings values(1, 0, 1, 1, 1, null)
-insert into Earnings values(2, 0, 1, 2, 1, null)
-insert into Earnings values(3, 0, 2, 1, 2, null)
-insert into Earnings values(4, 0, 2, 10, 3, null)
-insert into Earnings values(5, 0, 3, null, null, 1)
+insert into Earnings values(1, 1500, 1, 1, 1, null)
+insert into Earnings values(2, 2300, 1, 2, 1, null)
+insert into Earnings values(3, 3400, 2, 1, 2, null)
+insert into Earnings values(4, 1750, 2, 10, 3, null)
+insert into Earnings values(5, 2000, 3, null, null, 1)
 
 --Update section
 update Positions set salary = 2500 where name = 'seller' -- usage of =
@@ -170,6 +170,30 @@ select B.name, D.name,DB.buyingPrice, DB.sellingPrice, DB.quantity
 from DistributorsOfBeers DB
 full join Distributors D on DB.did = D.did
 full join Beers B on DB.bid = B.bid
+
+--e)
+--3 nested queries. Selects all the employees that have the salary higher than the average salary
+select distinct E.name
+from Employees E 
+where E.emid in
+	(
+	select E1.emid--, E1.name, P.salary
+	from Employees E1
+	inner join Stores S on E1.stid = S.stid
+	inner join Positions P on E1.poid = P.poid
+	where P.salary >
+		(select AVG(salary) from Positions)
+	)
+--2 nested queries. Selects only the Earnings that come from the selling of ArtizanalBeers
+select E.value, S.name
+from Earnings E
+inner join Stores S on E.stid = S.stid
+where E.eaid in
+	(select E.eaid
+	from Earnings E
+	inner join ArtizanalBeers AB on E.abid = AB.abid)
+	
+
 
 
 
