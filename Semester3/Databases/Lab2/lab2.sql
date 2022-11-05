@@ -16,6 +16,7 @@ delete from Earnings
 insert into Addresses values(1, 'Strada Florilor', 2, 'Cluj-Napoca', 'Romania')
 insert into Addresses values(2, 'Strada Pinilor', null, 'Cluj-Napoca', 'Romania')
 insert into Addresses values(3, 'Strada Aricilor', 15, 'Abrud', 'Romania')
+insert into Addresses values(4, 'Strada Porumbeilor', 1, 'Bucegi', 'Romania')
 
 --Insert into Stores table
 insert into Stores values(1, 1, 'Aurelian''s beers-Florilor')
@@ -43,6 +44,7 @@ insert into Employees values(7, 2, 1, 'Glenn Watkins')
 insert into Employees values(8, 2, 1, 'Thalia Gilbert')
 insert into Employees values(9, 2, 2, 'Slade Humphrey')
 insert into Employees values(10, 2, 3, 'Marley Horne')
+----here is for delete
 insert into Employees values(11, 2, 2, 'Error Employee')
 insert into Employees values(12, 2, 3, 'June Sanders')
 --Third Store
@@ -56,6 +58,7 @@ insert into ArtizanalBeers values(3, 'Leffe', 180, 0)
 insert into ArtizanalBeers values(4, 'India Pale Ale Speidel', 160, 0)
 insert into ArtizanalBeers values(5, 'Heineken, 0.4', 100, 0)
 insert into ArtizanalBeers values(6, 'Ursus Retro, 0.33', 100, 0)
+insert into ArtizanalBeers values(7, 'Caldera IPA, 0.5', 120, 0)
 
 
 --Insert into BeerRecipes
@@ -65,6 +68,7 @@ insert into BeerRecipes values(3, 'Malt, Hamei, Drojdie, Coriandru', 5.19)
 insert into BeerRecipes values(4, 'Malt, Hamei, Drojdie', 4.90)
 insert into BeerRecipes values(5, 'Malt, Hamei, Drojdie, Ovaz', 2.67)
 insert into BeerRecipes values(6, 'Malt, Hamei, Drojdie, Orz', 2.0) 
+
 
 --Insert into Beers
 insert into Beers values(1, 'Heineken, 0.33', 2.54)
@@ -130,7 +134,7 @@ select name from Beers where name like 'Ursus%'
 select E.stid, E.emid, E.name from Employees E where stid = 1 or stid = 3
 
 --b)
---intersect. Creates a table with the beers that are also artizanal beers.
+--intersect. Creates a table with the employees that can work both first and second store
 select E.name from Employees E where E.stid = 1
 intersect
 select E.name from Employees E where E.stid = 2
@@ -144,6 +148,29 @@ except
 select name from ArtizanalBeers
 --not in. Same as above but using not in
 select name from Beers where name not in (select name from ArtizanalBeers)
+
+--d)
+--inner join. Selects all the Employees from each store with their position and salary
+select E.name, S.name, P.name, P.salary
+from Employees E
+	inner join Stores S on E.stid = S.stid
+	inner join Positions P on E.poid = P.poid
+order by S.name
+
+--left join. Gets all the shops with their address
+select S.name, A.street, A.number, A.city, A.country
+from Stores S left join Addresses A on S.aid = A.aid
+
+--right join. Gets all the ArtizanalBeers with their recipe
+select BR.ingredients, AB.name
+from BeerRecipes BR right join ArtizanalBeers AB on BR.brid = AB.abid
+
+--full join. Takes all the beers with their distributors, sellingPrice, buyingPrice and quantity
+select B.name, D.name,DB.buyingPrice, DB.sellingPrice, DB.quantity
+from DistributorsOfBeers DB
+full join Distributors D on DB.did = D.did
+full join Beers B on DB.bid = B.bid
+
 
 
 
