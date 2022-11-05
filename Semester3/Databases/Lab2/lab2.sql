@@ -85,9 +85,9 @@ insert into Beers values(11, 'Custom Desperados, 0.4', 7.80)
 
 
 --Insert into Distributors
-insert into Distributors values(1, 'Distributor 1', 0, 0)
-insert into Distributors values(2, 'Distributor 2', 0, 0)
-insert into Distributors values(3, 'Distributor 3', 0, 0)
+insert into Distributors values(1, 'Distributor 1', 0)
+insert into Distributors values(2, 'Distributor 2', 0)
+insert into Distributors values(3, 'Distributor 3', 0)
 
 
 --Insert into DistributorsOfBeers
