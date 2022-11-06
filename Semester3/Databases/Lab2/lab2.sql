@@ -116,6 +116,7 @@ insert into Earnings values(4, 1750, 2, 10, 3, null)
 insert into Earnings values(5, 2000, 3, null, null, 1)
 insert into Earnings values (6, 3000, 1, null, null, 2)
 insert into Earnings values (7, 2200, 1, null,null, 3)
+insert into Earnings values(8, 2500, 3, 2, 1, null)
 insert into Earnings values (9, 4000, 1, null, null, 4)
 
 --Update section
@@ -247,6 +248,54 @@ from
 	inner join ArtizanalBeers AB on E.abid = AB.abid)
 )t
 where t.stid = 1
+
+--h)
+--selects the stores and the number of employees that have at least 3 employees(the bigger stores)
+--having clause
+select S.name, count(*) as employees
+from Stores S inner join Employees E on S.stid = E.stid
+group by S.name
+having count(*) > 2
+
+--select the stores with the maximum number of employees
+--subquery in having clause
+select S.name, count(*) as employees
+from Stores S inner join Employees E on S.stid = E.stid
+group by S.name
+having count(*) = (
+	select max(t.C)
+	from (select count(*) C
+		  from Stores S inner join Employees E on S.stid = E.stid
+		  group by S.name
+		  )t
+)
+
+--selects the shop with the highest average salary
+select top 1 t.name, avg(t.salary) as salaries
+from(select S.name, P.salary
+	from Employees E
+	inner join Stores S on E.stid = S.stid
+	inner join Positions P on E.poid = P.poid
+	)t
+group by t.name
+
+--select the distributors with the minimum number of sells
+select D.name, count(*) as sells
+from Earnings E inner join Distributors D on E.did = D.did
+group by D.name
+having count(*) = (
+	select min(t.C)
+	from
+	(select count(D1.did) as C
+	from Earnings E1 inner join Distributors D1 on E1.did = D1.did
+	group by D1.did)t
+	)
+
+
+
+	
+
+
 
 	
 
