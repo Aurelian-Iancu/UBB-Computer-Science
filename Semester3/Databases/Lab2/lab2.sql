@@ -113,6 +113,9 @@ insert into Earnings values(2, 2300, 1, 2, 1, null)
 insert into Earnings values(3, 3400, 2, 1, 2, null)
 insert into Earnings values(4, 1750, 2, 10, 3, null)
 insert into Earnings values(5, 2000, 3, null, null, 1)
+insert into Earnings values (6, 3000, 1, null, null, 2)
+insert into Earnings values (7, 2200, 1, null,null, 3)
+insert into Earnings values (9, 4000, 1, null, null, 4)
 
 --Update section
 update Positions set salary = 2500 where name = 'seller' -- usage of =
@@ -177,7 +180,7 @@ select distinct E.name
 from Employees E 
 where E.emid in
 	(
-	select E1.emid--, E1.name, P.salary
+	select E1.emid
 	from Employees E1
 	inner join Stores S on E1.stid = S.stid
 	inner join Positions P on E1.poid = P.poid
@@ -192,6 +195,42 @@ where E.eaid in
 	(select E.eaid
 	from Earnings E
 	inner join ArtizanalBeers AB on E.abid = AB.abid)
+
+--f)
+
+
+
+--g) 
+-- selects the employees and their increased salary by 150 if their salary is less than 4000
+-- usage o distinct
+-- order by
+-- not in the where clause
+select t.name, t.salary + 150 as increasedSalary
+from
+(
+	select E.emid, E.name, P.salary
+	from Employees E inner join Positions P on E.poid = P.poid
+	where not P.salary > 4000 
+)t where t.emid in (
+	select distinct E1.emid
+	from Employees E1
+)
+order by increasedSalary desc	
+
+--selects the total profit from the selling of ArtizanalaBeers in the first store
+select sum(t.value)
+from 
+(
+	select E.stid, E.value, S.name
+	from Earnings E
+	inner join Stores S on E.stid = S.stid
+	where E.eaid in
+	(select E.eaid
+	from Earnings E
+	inner join ArtizanalBeers AB on E.abid = AB.abid)
+)t
+where t.stid = 1
+
 	
 
 
