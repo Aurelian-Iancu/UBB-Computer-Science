@@ -88,6 +88,7 @@ insert into Beers values(11, 'Custom Desperados, 0.4', 7.80)
 insert into Distributors values(1, 'Distributor 1', 0)
 insert into Distributors values(2, 'Distributor 2', 0)
 insert into Distributors values(3, 'Distributor 3', 0)
+insert into Distributors values(4, 'Distributor 4', 0)
 
 
 --Insert into DistributorsOfBeers
@@ -197,8 +198,24 @@ where E.eaid in
 	inner join ArtizanalBeers AB on E.abid = AB.abid)
 
 --f)
+--selects the ArtizanalBeers that have a recipe
+select AB.name
+from ArtizanalBeers AB
+where exists
+(
+	select *
+	from BeerRecipes BR
+	where AB.abid = BR.brid
+	)
 
-
+--selects the Distributors that have at least 1 earning
+select D.name
+from Distributors D
+where exists(
+	select * 
+	from Earnings E 
+	where D.did = E.did
+)
 
 --g) 
 -- selects the employees and their increased salary by 150 if their salary is less than 4000
