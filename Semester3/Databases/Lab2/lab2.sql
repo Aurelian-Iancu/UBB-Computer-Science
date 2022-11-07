@@ -59,6 +59,7 @@ insert into ArtizanalBeers values(4, 'India Pale Ale Speidel', 160, 0)
 insert into ArtizanalBeers values(5, 'Heineken, 0.4', 100, 0)
 insert into ArtizanalBeers values(6, 'Ursus Retro, 0.33', 100, 0)
 insert into ArtizanalBeers values(7, 'Caldera IPA, 0.5', 120, 0)
+insert into ArtizanalBeers values(8, 'Anagram, 0.5', 50, 0)
 
 
 --Insert into BeerRecipes
@@ -68,6 +69,7 @@ insert into BeerRecipes values(3, 'Malt, Hamei, Drojdie, Coriandru', 5.19)
 insert into BeerRecipes values(4, 'Malt, Hamei, Drojdie', 4.90)
 insert into BeerRecipes values(5, 'Malt, Hamei, Drojdie, Ovaz', 2.67)
 insert into BeerRecipes values(6, 'Malt, Hamei, Drojdie, Orz', 2.0) 
+insert into BeerRecipes values(8, 'Malt, Hamei, Orz, Sofran', 9.25)
 
 
 --Insert into Beers
@@ -81,7 +83,7 @@ insert into Beers values(7, 'Neumarkt, 0.33', 1.23)
 insert into Beers values(8, 'Ursus, 0.33', 1.85)
 insert into Beers values(9, 'Ursus Retro, 0.33', 2.0)
 insert into Beers values(10, 'Desperados, 0.4', 3.17)
-insert into Beers values(11, 'Custom Desperados, 0.4', 7.80)
+insert into Beers values(11, 'Custom Desperados, 0.4', 4.25)
 
 
 --Insert into Distributors
@@ -120,7 +122,7 @@ insert into Earnings values(8, 2500, 3, 2, 1, null)
 insert into Earnings values (9, 4000, 1, null, null, 4)
 
 --Update section
-update Positions set salary = 2500 where name = 'seller' -- usage of =
+update Positions set salary = 2700 where name = 'seller' -- usage of =
 update BeerRecipes set ingredients = 'Malt, Hamei, Drojdie, Zahar brun' where brid = 2 and ingredients = 'Malt, Hamei, Drojdie' -- usage of AND
 update BeerRecipes set ingredients = 'Malt, Hamei, Drojdie, Turmeric' where brid = 4 and ingredients = 'Malt, Hamei, Drojdie'
 update Addresses set number = 0 where number is null -- usage of is NULL
@@ -128,7 +130,7 @@ update DistributorsOfBeers set quantity = 100 where did in (2,3) --usage of in
 
 --Delete section 
 delete from Employees where name like 'Error%' -- usage of like
-delete from Beers where price between 7 and 20 -- usage of between
+delete from Beers where price between 4 and 20 -- usage of between
 
 --a)
 --union. Creates a table with all the types of Heineken and Ursus beers.
@@ -290,6 +292,75 @@ having count(*) = (
 	from Earnings E1 inner join Distributors D1 on E1.did = D1.did
 	group by D1.did)t
 	)
+
+--i)
+--selects the positions that have a lower salary than a cicerone
+-- all
+select P.name, P.salary
+from Positions P
+where P.salary < all (
+	select P.salary
+	from Positions P
+	where P.name = 'cicerone'
+	)
+--selects the positions that have a lower salary than a cicerone(aggregation operator)
+select P.name, P.salary
+from Positions P
+where P.salary < (
+	select max(P.salary)
+	from Positions P
+	where P.name = 'cicerone'
+	)
+
+--selects ArtizanalBeers that are cheaper than at least one of the Beers
+--any
+select AB.name
+from ArtizanalBeers AB inner join BeerRecipes BR on AB.abid = BR.brid
+where BR.price < any (
+	select B.price
+	from Beers B
+)
+--select ArtizanalBeers that are cheaper than at least one of the Beers(aggregation operator)
+select AB.name
+from ArtizanalBeers AB inner join BeerRecipes BR on AB.abid = BR.brid
+where BR.price < (
+	select max(B.price)
+	from Beers B
+)
+
+--selects the Stores and their Addresses
+--any
+select S.name, A.street, A.number, A.city, A.country
+from Stores S left join Addresses A on S.aid = A.aid
+where S.aid = any(
+	select A.aid
+	from Addresses A
+	)
+--selects the Stores and their Addresses using in
+select S.name, A.street, A.number, A.city, A.country
+from Stores S left join Addresses A on S.aid = A.aid
+where S.aid in (
+	select A.aid
+	from Addresses A
+	)
+
+--selects all the Employees that are not in the first store
+--all
+select E.name
+from Employees E
+where E.stid <> all(
+	select S.stid
+	from Stores S
+	where S.stid = 1
+)
+--selects all the Employees that are not in the first store(not in)
+select E.name
+from Employees E
+where E.stid not in(
+	select S.stid
+	from Stores S
+	where S.stid = 1
+)
 
 
 
