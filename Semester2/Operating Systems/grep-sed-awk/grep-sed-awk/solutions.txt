@@ -1,0 +1,13 @@
+https://www.cs.ubbcluj.ro/~rares/course/os/res/practice/gsa/index.html
+
+ 1. cat last.fake | awk '{if($3 ~ /^economica/ && $4 == "Sun"){print $1}}' | sort | uniq
+ 2. cat last.fake | awk '{print $1, $7}' | sed 's/:/ /' | awk '{if($2 >= 23){print $1}}' | sort | uniq | head -n -1
+ 3. cat passwd.fake | awk -F ':' '{if($0 ~ /^m/ && $3 % 7 == 0){print $5}}'
+ 4. cat ps.fake | awk '{if($0 ~ /^root/){print $6}}' | sort | uniq
+ 5. cat passwd.fake | awk -F ':' '{if($1 ~ /88$/){print $5}}'
+ 6. cat passwd.fake | awk -F ':' '{if($1 ~ /023[0-9]$/){print $5}}'
+ 7. cat last.fake | awk '{if($1 ~ /^t/ && $2 == "pts/9"){print $1}}' | sort | uniq
+ 8. cat ps.fake | awk '{if($1 ~ /^r/){print $1}}' | sort | uniq | sed -E 's/([aeiou])/\1\1/'
+ 9. cat passwd.fake | sed -E 's/[ 0-9A-Za-z]//g' | sort | uniq
+10. cat passwd.fake | sed -E 's/[^r]//g' | sort | uniq
+11. cat ps.fake | awk '{print $2}' | awk '{sum+=$1}END{print sum/NR}'
