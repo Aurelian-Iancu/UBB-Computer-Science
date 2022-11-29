@@ -18,7 +18,7 @@ public class PrintStatement implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
         MyIList<Value> out = state.getOut();
-        out.add(expression.eval(state.getSymTable()));
+        out.add(expression.eval(state.getSymTable(), state.getHeap()));
         state.setOut(out);
         return state;
     }

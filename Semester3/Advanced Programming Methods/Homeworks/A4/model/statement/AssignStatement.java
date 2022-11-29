@@ -25,7 +25,7 @@ public class AssignStatement implements IStatement{
         MyIDictionary<String, Value> symbolTable = state.getSymTable();
 
         if(symbolTable.containsKey(key)){
-            Value value = expression.eval(symbolTable);
+            Value value = expression.eval(symbolTable, state.getHeap());
             Type type = (symbolTable.lookUp(key)).getType();
             if(value.getType().equals(type)){
                 symbolTable.update(key, value);

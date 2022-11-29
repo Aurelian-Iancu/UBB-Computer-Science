@@ -3,6 +3,7 @@ package model.expression;
 import exceptions.ADTExceptions;
 import exceptions.ExpressionEvaluationExceptions;
 import model.ADT.Dictionary.MyIDictionary;
+import model.ADT.Heap.MyIHeap;
 import model.type.IntType;
 import model.value.BoolValue;
 import model.value.IntValue;
@@ -22,11 +23,11 @@ public class RelationalExpression implements IExpression{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> symTable) throws ADTExceptions, ExpressionEvaluationExceptions {
+    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions {
         Value value1, value2;
-        value1 = this.expression1.eval(symTable);
+        value1 = this.expression1.eval(symTable, heap);
         if (value1.getType().equals(new IntType())){
-            value2 = this.expression2.eval(symTable);
+            value2 = this.expression2.eval(symTable, heap);
             if (value2.getType().equals(new IntType())){
                 IntValue val1 = (IntValue) value1;
                 IntValue val2 = (IntValue) value2;

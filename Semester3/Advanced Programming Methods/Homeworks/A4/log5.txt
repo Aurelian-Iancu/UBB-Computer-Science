@@ -1,86 +1,97 @@
 Execution stack: 
-(int a|(int b|(a = 5|(b = 12|if(a < b){Print(a)}else{Print(b)}))))
+(int a|(int b|(a = 5|(b = 7|if(a > b){Print(a)}else{Print(b)}))))
 Symbol table: 
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 int a
-(int b|(a = 5|(b = 12|if(a < b){Print(a)}else{Print(b)})))
+(int b|(a = 5|(b = 7|if(a > b){Print(a)}else{Print(b)})))
 Symbol table: 
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
-(int b|(a = 5|(b = 12|if(a < b){Print(a)}else{Print(b)})))
+(int b|(a = 5|(b = 7|if(a > b){Print(a)}else{Print(b)})))
 Symbol table: 
 a -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 int b
-(a = 5|(b = 12|if(a < b){Print(a)}else{Print(b)}))
+(a = 5|(b = 7|if(a > b){Print(a)}else{Print(b)}))
 Symbol table: 
 a -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
-(a = 5|(b = 12|if(a < b){Print(a)}else{Print(b)}))
+(a = 5|(b = 7|if(a > b){Print(a)}else{Print(b)}))
 Symbol table: 
 a -> 0
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 a = 5
-(b = 12|if(a < b){Print(a)}else{Print(b)})
+(b = 7|if(a > b){Print(a)}else{Print(b)})
 Symbol table: 
 a -> 0
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
-(b = 12|if(a < b){Print(a)}else{Print(b)})
+(b = 7|if(a > b){Print(a)}else{Print(b)})
 Symbol table: 
 a -> 5
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
-b = 12
-if(a < b){Print(a)}else{Print(b)}
+b = 7
+if(a > b){Print(a)}else{Print(b)}
 Symbol table: 
 a -> 5
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
-if(a < b){Print(a)}else{Print(b)}
+if(a > b){Print(a)}else{Print(b)}
 Symbol table: 
 a -> 5
-b -> 12
+b -> 7
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
-Print(a)
+Print(b)
 Symbol table: 
 a -> 5
-b -> 12
+b -> 7
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 Symbol table: 
 a -> 5
-b -> 12
+b -> 7
 Output list: 
-5
+7
 File table:
+Heap: 
 

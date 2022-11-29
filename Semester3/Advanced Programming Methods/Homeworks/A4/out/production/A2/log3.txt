@@ -3,6 +3,7 @@ Execution stack:
 Symbol table: 
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 boolean a
@@ -10,6 +11,7 @@ boolean a
 Symbol table: 
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 (int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
@@ -17,6 +19,7 @@ Symbol table:
 a -> false
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 int v
@@ -25,6 +28,7 @@ Symbol table:
 a -> false
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 (a = true|(if(a){v = 2}else{v = 3}|Print(v)))
@@ -33,6 +37,7 @@ a -> false
 v -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 a = true
@@ -42,6 +47,7 @@ a -> false
 v -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 (if(a){v = 2}else{v = 3}|Print(v))
@@ -50,6 +56,7 @@ a -> true
 v -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 if(a){v = 2}else{v = 3}
@@ -59,6 +66,7 @@ a -> true
 v -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 v = 2
@@ -68,6 +76,7 @@ a -> true
 v -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 Print(v)
@@ -76,6 +85,7 @@ a -> true
 v -> 2
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 Symbol table: 
@@ -84,4 +94,5 @@ v -> 2
 Output list: 
 2
 File table:
+Heap: 
 

@@ -3,6 +3,7 @@ Execution stack:
 Symbol table: 
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 int a
@@ -10,6 +11,7 @@ int a
 Symbol table: 
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 (int b|(a = 2 + 3 * 5|(b = a + 1|Print(b))))
@@ -17,6 +19,7 @@ Symbol table:
 a -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 int b
@@ -25,6 +28,7 @@ Symbol table:
 a -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 (a = 2 + 3 * 5|(b = a + 1|Print(b)))
@@ -33,6 +37,7 @@ a -> 0
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 a = 2 + 3 * 5
@@ -42,6 +47,7 @@ a -> 0
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 (b = a + 1|Print(b))
@@ -50,6 +56,7 @@ a -> 17
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 b = a + 1
@@ -59,6 +66,7 @@ a -> 17
 b -> 0
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 Print(b)
@@ -67,6 +75,7 @@ a -> 17
 b -> 18
 Output list: 
 File table:
+Heap: 
 
 Execution stack: 
 Symbol table: 
@@ -75,4 +84,5 @@ b -> 18
 Output list: 
 18
 File table:
+Heap: 
 

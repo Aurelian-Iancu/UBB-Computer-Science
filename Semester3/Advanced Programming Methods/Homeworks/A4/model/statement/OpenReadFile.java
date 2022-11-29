@@ -23,7 +23,7 @@ public class OpenReadFile implements IStatement{
 
     @Override
     public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
-        Value value = expression.eval(state.getSymTable());
+        Value value = expression.eval(state.getSymTable(), state.getHeap());
         if(value.getType().equals(new StringType())){
             StringValue filename = (StringValue) value;
             MyIDictionary<String, BufferedReader> fileTable = state.getFileTable();

@@ -26,7 +26,7 @@ public class IfStatement implements IStatement{
 
     @Override
     public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
-        Value result = this.expression.eval(state.getSymTable());
+        Value result = this.expression.eval(state.getSymTable(), state.getHeap());
         if (result.getType().equals(new BoolType())){
             BoolValue condition = (BoolValue) result;
             IStatement statement;

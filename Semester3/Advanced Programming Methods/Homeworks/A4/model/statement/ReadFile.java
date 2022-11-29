@@ -31,7 +31,7 @@ public class ReadFile implements IStatement{
         if(symbolTable.containsKey(variableName)){
             Value value = symbolTable.lookUp(variableName);
             if(value.getType().equals(new IntType())){
-                value = expression.eval(symbolTable);
+                value = expression.eval(symbolTable, state.getHeap());
                 if(value.getType().equals(new StringType())){
                     StringValue castValue = (StringValue) value;
                     if(fileTable.containsKey(castValue.getValue())){

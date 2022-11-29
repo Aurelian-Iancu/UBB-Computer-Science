@@ -3,6 +3,7 @@ package model.expression;
 import exceptions.ADTExceptions;
 import exceptions.ExpressionEvaluationExceptions;
 import model.ADT.Dictionary.MyIDictionary;
+import model.ADT.Heap.MyIHeap;
 import model.value.Value;
 import org.jetbrains.annotations.NotNull;
 
@@ -14,7 +15,7 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> symTable) throws ADTExceptions, ExpressionEvaluationExceptions {
+    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions {
         return symTable.lookUp(key);
     }
 

@@ -10,8 +10,8 @@ public class MyHeap implements MyIHeap{
     HashMap<Integer, Value> heap;
     Integer freeLocationValue;
 
-    public MyHeap(HashMap<Integer, Value> heap, Integer freeLocationValue) {
-        this.heap = heap;
+    public MyHeap() {
+        this.heap = new HashMap<>();
         this.freeLocationValue = 1;
     }
 

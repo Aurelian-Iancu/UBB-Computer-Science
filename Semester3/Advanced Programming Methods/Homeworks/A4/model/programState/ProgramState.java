@@ -2,6 +2,8 @@ package model.programState;
 
 import exceptions.ADTExceptions;
 import model.ADT.Dictionary.MyIDictionary;
+import model.ADT.Heap.MyHeap;
+import model.ADT.Heap.MyIHeap;
 import model.ADT.List.MyIList;
 import model.ADT.Stack.MyIStack;
 import model.ADT.Stack.MyStack;
@@ -19,6 +21,17 @@ public class ProgramState {
     private MyIList<Value> out;
     private MyIDictionary<String, BufferedReader> fileTable;
     private IStatement originalProgram;
+    private MyIHeap heap;
+
+    public ProgramState(@NotNull MyIStack<IStatement> exeStack, MyIDictionary<String, Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap, IStatement originalProgram) {
+        this.exeStack = exeStack;
+        this.symTable = symTable;
+        this.out = out;
+        this.originalProgram = originalProgram;
+        this.fileTable = fileTable;
+        this.heap = heap;
+        this.exeStack.push(originalProgram);
+    }
 
     public MyIDictionary<String, BufferedReader> getFileTable() {
         return fileTable;
@@ -26,15 +39,6 @@ public class ProgramState {
 
     public void setFileTable(MyIDictionary<String, BufferedReader> fileTable) {
         this.fileTable = fileTable;
-    }
-
-    public ProgramState(@NotNull MyIStack<IStatement> exeStack, MyIDictionary<String, Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, IStatement originalProgram) {
-        this.exeStack = exeStack;
-        this.symTable = symTable;
-        this.out = out;
-        this.originalProgram = originalProgram;
-        this.fileTable = fileTable;
-        this.exeStack.push(originalProgram);
     }
     public MyIStack<IStatement> getExeStack() {
         return exeStack;
@@ -66,6 +70,14 @@ public class ProgramState {
 
     public void setOriginalProgram(IStatement originalProgram) {
         this.originalProgram = originalProgram;
+    }
+
+    public MyIHeap getHeap() {
+        return heap;
+    }
+
+    public void setHeap(MyIHeap heap) {
+        this.heap = heap;
     }
 
     public String exeStackToString() {
@@ -101,18 +113,28 @@ public class ProgramState {
         return fileTableStringBuilder.toString();
     }
 
+    public String heapToString() throws ADTExceptions {
+        StringBuilder heapStringBuilder = new StringBuilder();
+        for (int key: heap.keySet()) {
+            heapStringBuilder.append(String.format("%d -> %s\n", key, heap.get(key)));
+        }
+        return heapStringBuilder.toString();
+    }
+
     public String toString() {
         return "Execution stack: \n" + exeStack.toString() +
                 "\nSymbol table: \n" + symTable.toString() +
                 "\nOutput list: \n" + out.toString() +
-                "\nFile table: \n" + fileTable.toString();
+                "\nFile table: \n" + fileTable.toString() +
+                "\nHeap: \n" + heap.toString();
     }
 
     public String programStateToString() throws ADTExceptions {
         return "Execution stack: \n" + exeStackToString() +
                 "Symbol table: \n" + symTableToString() +
                 "Output list: \n" + outToString() +
-                "File table:\n" + fileTableToString();
+                "File table:\n" + fileTableToString() +
+                "Heap: \n" + heapToString();
     }
 
 
