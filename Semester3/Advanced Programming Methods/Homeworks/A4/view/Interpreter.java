@@ -74,6 +74,8 @@ public class Interpreter {
         IRepository repo5 = new Repository(prg5, "log5.txt");
         Controller controller5 = new Controller(repo5);
 
+
+        ///While statement
         IStatement ex6 = new CompoundStatement(new VariableDeclarationStatement("v", new IntType()),
                 new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(4))),
                         new CompoundStatement(new WhileStatement(new RelationalExpression(">", new VariableExpression("v"), new ValueExpression(new IntValue(0))),
@@ -84,6 +86,7 @@ public class Interpreter {
         IRepository repo6 = new Repository(prg6, "log6.txt");
         Controller controller6 = new Controller(repo6);
 
+        ///Heap use
         IStatement ex7 = new CompoundStatement(new VariableDeclarationStatement("v", new RefType(new IntType())),
                 new CompoundStatement(new NewStatement("v", new ValueExpression(new IntValue(20))),
                         new CompoundStatement(new VariableDeclarationStatement("a", new RefType(new RefType(new IntType()))),
@@ -93,6 +96,7 @@ public class Interpreter {
         IRepository repo7 = new Repository(prg7, "log7.txt");
         Controller controller7 = new Controller(repo7);
 
+        ///ReadHeapExpression
         IStatement ex8 = new CompoundStatement(new VariableDeclarationStatement("v", new RefType(new IntType())),
                 new CompoundStatement(new NewStatement("v", new ValueExpression(new IntValue(20))),
                         new CompoundStatement(new VariableDeclarationStatement("a", new RefType(new RefType(new IntType()))),
@@ -103,6 +107,7 @@ public class Interpreter {
         IRepository repo8 = new Repository(prg8, "log8.txt");
         Controller controller8 = new Controller(repo8);
 
+        ///WriteHeapStatement
         IStatement ex9 = new CompoundStatement(new VariableDeclarationStatement("v", new RefType(new IntType())),
                 new CompoundStatement(new NewStatement("v", new ValueExpression(new IntValue(20))),
                         new CompoundStatement(new PrintStatement(new ReadHeapExpression(new VariableExpression("v"))),
@@ -111,6 +116,18 @@ public class Interpreter {
         ProgramState prg9 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex9);
         IRepository repo9 = new Repository(prg9, "log9.txt");
         Controller controller9 = new Controller(repo9);
+
+        ///Garbage Collector
+        IStatement ex10 = new CompoundStatement(new VariableDeclarationStatement("v", new RefType(new IntType())),
+                new CompoundStatement(new NewStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(new VariableDeclarationStatement("a", new RefType(new RefType(new IntType()))),
+                                new CompoundStatement(new NewStatement("a", new VariableExpression("v")),
+                                        new CompoundStatement(new NewStatement("v", new ValueExpression(new IntValue(30))),
+                                                new PrintStatement(new ReadHeapExpression(new ReadHeapExpression(new VariableExpression("a")))))))));
+
+        ProgramState prg10 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>() , new MyDictionary<>(), new MyHeap(), ex10);
+        IRepository repo10 = new Repository(prg10, "log10.txt");
+        Controller controller10 = new Controller(repo10);
 
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
@@ -123,6 +140,7 @@ public class Interpreter {
         menu.addCommand(new RunExampleCommand("7", ex7.toString(), controller7));
         menu.addCommand(new RunExampleCommand("8", ex8.toString(), controller8));
         menu.addCommand(new RunExampleCommand("9", ex9.toString(), controller9));
+        menu.addCommand(new RunExampleCommand("10", ex10.toString(), controller10));
         menu.show();
 
 
