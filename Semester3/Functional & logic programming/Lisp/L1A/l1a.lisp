@@ -74,8 +74,24 @@
     (= (mod (myLength l) 2) 1)
 )
 
-; firstElem(l1l2...ln, f) =
-; = nil, if n = 0
+; firstElem(l1l2...ln, f) = 
+; = nil , if n = 0
+; = myAppend(firstElem(l1, 0), firstElem(l2...ln, f)) , if l1 is a list
+; = {l1} U firstElem(l2...ln, 1) , if checkOddLength(l1l2...ln) is true and f = 0
+; = firstElem(l2...ln, 1) , otherwise
+
+(defun firstElem(l f)
+  (cond
+    ((null l) nil)
+    ((listp (car l)) (myAppend (firstElem (car l) 0) (firstElem (cdr l) f)))
+    ((and (checkOddLength l) (= f 0)) (cons (car l) (firstElem (cdr l) 1)))
+    (t (firstElem(cdr l) 1))
+  )
+)
+
+(defun mainC(l)
+  (firstElem l 0)
+)
 
 
 
@@ -90,5 +106,58 @@
         ((null l) 0)
         ((numberp (car l)) (+ (car l) (mySum (cdr l))))
         (t (mySum (cdr l)))
+    )
+)
+
+;-----------------------------------------------------
+;---------------------------TESTS---------------------
+
+(defun report-result (result form)
+  (format t "~:[FAIL~;pass~] ... ~a~%" result form)
+  result)
+
+
+(defun testa ()
+    (progn
+        (report-result (equal (diffSet '(1 2 3 4) '(1 2)) '(3 4)) '(= (diffSet '(1 2 3 4) '(1 2)) '(3 4)))
+        (report-result (equal (diffSet '() '(1 2)) '()) '(= (diffSet '() '(1 2)) '()))
+        (report-result (equal (diffSet '(1 2 3 4) '(4 5 6)) '(1 2 3)) '(= (diffSet '(1 2 3 4) '(4 5 6)) '(1 2 3)))
+        (report-result (equal (diffSet '(1 2 3) '(1 2 3)) '()) '(= (diffSet '(1 2 3) '(1 2 3)) '()))
+    )
+
+)
+
+(defun testb ()
+    (progn
+        (report-result (equal (myReverse '(1 2 3 4)) '(4 3 2 1)) '(= (myReverse '(1 2 3 4)) '(4 3 2 1)))
+        (report-result (equal (myReverse '(1 2 (3 4) 5 6 (7 8))) '((8 7) 6 5 (4 3) 2 1)) '(= (myReverse '(1 2 (3 4) 5 6 (7 8))) '((8 7) 6 5 (4 3) 2 1)))
+        (report-result (equal (myReverse '((1 2) (3 4))) '((4 3) (2 1))) '(= (myReverse '((1 2) (3 4))) '((4 3) (2 1))))
+    )
+)
+
+(defun testc()
+    (progn
+        (report-result (equal (mainC '(1 2 3 4)) '()) '(= (mainC '(1 2 3 4)) '()))
+        (report-result (equal (mainC '(1 2 3)) '(1)) '(= (mainC '(1 2 3)) '(1)))
+        (report-result (equal (mainC '(1 2 3 (4 5 6) (7 8))) '(1 4)) '(= (mainC '(1 2 3 (4 5 6) (7 8))) '(1 4)))
+        (report-result (equal (mainC '(1 2 3 (4 5 6) (7 8 (9)))) '(1 4 7 9)) '(= (mainC '(1 2 3 (4 5 6) (7 8 (9)))) '(1 4 7 9)))
+        (report-result (equal (mainC '(1 2 3 (4 5 6) (7 8 (9)) (10 11) (12 (13)))) '(1 4 7 9 13)) '(= (mainC '(1 2 3 (4 5 6) (7 8 (9)) (10 11) (12 (13)))) '(1 4 7 9 13)))
+    )
+)
+
+(defun testd()
+    (progn
+        (report-result (equal (mySum '(1 2 3 4)) 10) '(= (mySum '(1 2 3 4)) 10))
+        (report-result (equal (mySum '(1 2 3 (4 5 6) (7 8))) 6) '(= (mySum '(1 2 3 (4 5 6) (7 8))) 6))
+        (report-result (equal (mySum '(1 2 a 3 (1 2 3))) 6) '(= (mySum '(1 2 a 3 (1 2 3))) 6))
+    )
+)
+
+(defun testall ()
+    (and
+        (testa)
+        (testb)
+        (testc)
+        (testd)
     )
 )

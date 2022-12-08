@@ -85,3 +85,37 @@
     ((checkExistenceRight l elem) (cons (car l) (path (drept l) elem)))
   )
 )
+
+
+;-----------------------------------------------------
+;---------------------------TESTS---------------------
+
+(defun report-result (result form)
+  (format t "~:[FAIL~;pass~] ... ~a~%" result form)
+  result)
+
+;(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0)
+;                         THE TREE
+;         a
+;        / \
+;       b   d
+;      / \  / \
+;     c  f e   h
+;    /  /
+;   i  g
+
+(defun testTree ()
+  (progn
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'a) '(a)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'a) '(a)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'b) '(a b)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'b) '(a b)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'c) '(a b c)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'c) '(a b c)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'd) '(a d)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'd) '(a d)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'e) '(a d e)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'e) '(a d e)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'f) '(a b f)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'f) '(a b f)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'g) '(a b f g)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'g) '(a b f g)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'h) '(a d h)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'h) '(a d h)))
+    (report-result (equal (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'i) '(a b c i)) '(= (path '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 'i) '(a b c i)))
+    )
+
+)
+

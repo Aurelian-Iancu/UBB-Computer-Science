@@ -1,4 +1,4 @@
-Execution stack:
+Execution stack: 
 (int v|(v = 2|Print(v)))
 Symbol table: 
 Output list: 
