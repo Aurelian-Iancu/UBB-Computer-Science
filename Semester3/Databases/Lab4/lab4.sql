@@ -28,13 +28,13 @@ end
 
 execute addAddresses 100
 
-create or alter procedure deleteAddresses
+create or alter procedure removeAddresses
 as
 begin
 	delete from Addresses where aid <= 0
 end	
 
-execute deleteAddresses
+execute removeAddresses
 ----------------------first table
 create or alter procedure addDistributors
 @n int
@@ -146,17 +146,140 @@ insert into TestViews([TestId], [ViewId]) values (7,2)
 insert into TestViews([TestId], [ViewId]) values (7,3)
 
 
-insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (1, 1, 500, 1)
-insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (2, 1, 500, 3)
+insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (1, 1, 100, 1)
+insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (2, 1, 100, 3)
 insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (3, 2, 100, 2)
 insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (4, 2, 100, 2)
-insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (5, 3, 200, 3)
-insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (6, 3, 200, 1)
+insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (5, 3, 100, 3)
+insert into TestTables([TestId], [TableId], [NoOfRows], [Position]) values (6, 3, 100, 1)
+
+delete from TestTables
+
+create or alter procedure runDeleteTests
+as
+begin
+	declare @testId int
+	declare @cmd varchar(max)
+
+	declare fetchDeleteTests cursor
+	for select TT.TestID, T.Name from TestTables TT join Tests T on TT.TestID = T.TestID where T.Name like 'remove%' order by TT.Position asc
+
+	open fetchDeleteTests
+	fetch fetchDeleteTests into @testId, @cmd
+	while @@FETCH_STATUS = 0
+	begin
+		exec @cmd
+
+		fetch fetchDeleteTests into @testId, @cmd
+	end
+	close fetchDeleteTests
+	deallocate fetchDeleteTests
+end
+go
+
+create or alter procedure runInsertTests
+(@runTestId int)
+as
+begin
+	declare @testId int
+	declare @tableId int
+	declare @numOfRows int
+	declare @cmd varchar(max)
+
+	declare fetchInsertTests cursor
+	for select TT.TestID, TT.TableID, TT.NoOfRows, T.Name from TestTables TT join Tests T on TT.TestID = T.TestID where T.Name like 'add%' order by TT.Position asc
+
+	open fetchInsertTests
+	fetch fetchInsertTests into @testId, @tableId, @numOfRows, @cmd
+	while @@FETCH_STATUS = 0
+	begin
+		declare @startTime datetime = GETDATE()
+
+		exec (@cmd + ' ' + @numOfRows)
+
+		declare @endTime datetime = GETDATE()
+		insert into TestRunTables(TestRunID, TableID, StartAt, EndAt) values (@runTestId, @tableId, @startTime, @endTime)
+
+		fetch fetchInsertTests into @testId, @tableId, @numOfRows, @cmd
+	end
+
+	close fetchInsertTests
+	deallocate fetchInsertTests
+end
+go
+
+create or alter procedure runViewTests
+(@runTestId int)
+as
+begin
+	declare @testId int
+	declare @viewId int
+
+	declare fetchViewTests cursor for
+	select * from TestViews
+
+	open fetchViewTests
+	fetch fetchViewTests into @testId, @viewId
+	while @@FETCH_STATUS = 0
+	begin
+		declare @cmd varchar(MAX) = (select Name from Tests where TestID = @testId)
+		declare @args varchar(MAX) = (select Name from Views where ViewID = @viewId)
+		declare @startTime datetime = GETDATE()
+		
+		exec (@cmd + ' ' + @args)
+
+		declare @endTime datetime = GETDATE()
+		insert into TestRunViews(TestRunID, ViewID, StartAt, EndAt) values (@runTestId, @viewId, @startTime, @endTime)
+
+		fetch fetchViewTests into @testId, @viewId
+	end
+
+	close fetchViewTests
+	deallocate fetchViewTests
+end
+go
 
 
+create or alter procedure main
+as 
+begin 
+	insert into TestRuns(startAt) values(getdate())
+	declare @testId int = SCOPE_IDENTITY()
+	exec runDeleteTests
+	exec runInsertTests @testId
+	exec runViewTests @testId
 
+	update TestRuns set Description = 'delete + insert + view', EndAt = GETDATE() where TestRunID = @testId
 
+	select * from TestRunTables
+	select * from TestRunViews
+	select * from TestRuns
 
+end
+go
+
+create or alter procedure runTests
+(@n int)
+as
+begin
+	declare @i int = 0
+	while @i < @n
+	begin
+		exec main
+		set @i = @i + 1
+	end
+
+	select * from TestRunTables
+	select * from TestRunViews
+	select * from TestRuns
+end
+go
+
+exec runTests 10
+
+delete from TestRuns
+delete from TestRunViews
+delete from TestRunTables
 
 
 
