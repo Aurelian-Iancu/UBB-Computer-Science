@@ -8,4 +8,5 @@ import model.value.Value;
 
 public interface IExpression {
     Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions;
+    IExpression deepCopy();
 }

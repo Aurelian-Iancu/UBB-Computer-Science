@@ -20,6 +20,11 @@ public class ValueExpression implements IExpression{
     }
 
     @Override
+    public IExpression deepCopy() {
+        return new ValueExpression(value.deepCopy());
+    }
+
+    @Override
     public String toString(){
         return this.value.toString();
     }

@@ -24,6 +24,11 @@ public class ReadHeapExpression implements IExpression{
     }
 
     @Override
+    public IExpression deepCopy() {
+        return new ReadHeapExpression(expression.deepCopy());
+    }
+
+    @Override
     public String toString() {
         return String.format("ReadHeap(%s)", expression);
     }

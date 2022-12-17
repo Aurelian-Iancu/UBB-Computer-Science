@@ -20,6 +20,11 @@ public class BoolValue implements Value{
     }
 
     @Override
+    public Value deepCopy() {
+        return new BoolValue(val);
+    }
+
+    @Override
     public String toString(){
         return this.val ? "true" : "false";
     }

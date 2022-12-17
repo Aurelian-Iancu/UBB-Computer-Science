@@ -40,6 +40,11 @@ public class AssignStatement implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new AssignStatement(key, expression.deepCopy());
+    }
+
+    @Override
     public String toString(){
         return String.format("%s = %s", key, expression.toString());
     }

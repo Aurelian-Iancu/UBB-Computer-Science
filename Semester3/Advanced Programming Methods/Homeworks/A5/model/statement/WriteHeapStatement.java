@@ -38,6 +38,11 @@ public class WriteHeapStatement implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new WriteHeapStatement(varName, expression.deepCopy());
+    }
+
+    @Override
     public String toString() {
         return String.format("WriteHeap(%s, %s)", varName, expression);
     }

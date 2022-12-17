@@ -29,6 +29,11 @@ public class VariableDeclarationStatement implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new VariableDeclarationStatement(name, type.deepCopy());
+    }
+
+    @Override
     public String toString() {
         return String.format("%s %s", type.toString(), name);
     }

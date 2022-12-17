@@ -43,6 +43,11 @@ public class CloseReadFile implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new CloseReadFile(expression.deepCopy());
+    }
+
+    @Override
     public String toString(){
         return "close(" + expression.toString() + ")";
     }

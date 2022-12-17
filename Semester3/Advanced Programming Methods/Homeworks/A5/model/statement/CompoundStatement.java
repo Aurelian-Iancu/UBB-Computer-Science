@@ -28,6 +28,11 @@ public class CompoundStatement implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new CompoundStatement(firstStatement.deepCopy(), secondStatement.deepCopy());
+    }
+
+    @Override
     public String toString() {
         return String.format("(%s|%s)", firstStatement.toString(), secondStatement.toString());
     }

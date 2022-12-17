@@ -10,6 +10,12 @@ public class NopStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
         return null;
     }
+
+    @Override
+    public IStatement deepCopy() {
+        return new NopStatement();
+    }
+
     @Override
     public String toString() {
         return "NopStatement";

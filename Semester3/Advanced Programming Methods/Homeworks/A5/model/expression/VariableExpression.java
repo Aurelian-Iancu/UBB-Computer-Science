@@ -20,6 +20,11 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
+    public IExpression deepCopy() {
+        return new VariableExpression(key);
+    }
+
+    @Override
     public String toString(){
         return this.key;
     }

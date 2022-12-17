@@ -7,4 +7,5 @@ import model.programState.ProgramState;
 
 public interface IStatement {
     ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions;
+    IStatement deepCopy();
 }

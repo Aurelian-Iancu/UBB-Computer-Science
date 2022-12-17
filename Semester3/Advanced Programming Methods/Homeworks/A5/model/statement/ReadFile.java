@@ -58,4 +58,9 @@ public class ReadFile implements IStatement{
         }
         return state;
     }
+
+    @Override
+    public IStatement deepCopy() {
+        return new ReadFile(expression.deepCopy(), variableName);
+    }
 }

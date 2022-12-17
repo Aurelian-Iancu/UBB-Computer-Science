@@ -44,6 +44,12 @@ public class LogicExpression implements IExpression{
             throw new ExpressionEvaluationExceptions("The first operand is not of boolean type!");
         return null;
     }
+
+    @Override
+    public IExpression deepCopy() {
+        return new LogicExpression(expression1.deepCopy(), expression2.deepCopy(), operation);
+    }
+
     @Override
     public String toString(){
         return expression1.toString() + " " + operation + " " + expression2.toString();

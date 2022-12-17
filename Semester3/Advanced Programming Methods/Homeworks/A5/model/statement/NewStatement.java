@@ -42,6 +42,11 @@ public class NewStatement implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new NewStatement(varName, expression.deepCopy());
+    }
+
+    @Override
     public String toString() {
         return String.format("New(%s, %s)", varName, expression);
     }

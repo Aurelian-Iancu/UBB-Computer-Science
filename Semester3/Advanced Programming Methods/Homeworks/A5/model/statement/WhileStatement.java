@@ -35,6 +35,11 @@ public class WhileStatement implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new WhileStatement(expression.deepCopy(), statement.deepCopy());
+    }
+
+    @Override
     public String toString() {
         return String.format("while(%s){%s}", expression, statement);
     }

@@ -46,6 +46,11 @@ public class OpenReadFile implements IStatement{
     }
 
     @Override
+    public IStatement deepCopy() {
+        return new OpenReadFile(expression.deepCopy());
+    }
+
+    @Override
     public String toString(){
         return "open(" + expression.toString() + ")";
     }
