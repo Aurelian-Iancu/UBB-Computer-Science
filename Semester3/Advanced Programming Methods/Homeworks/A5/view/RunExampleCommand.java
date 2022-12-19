@@ -24,9 +24,11 @@ public class RunExampleCommand extends Command{
             Scanner option = new Scanner(System.in);
             String optionString = option.next();
             controller.setDisplayFlag(Objects.equals(optionString, "yes"));
-            controller.allSteps();
+            controller.allStep();
         }catch(ExpressionEvaluationExceptions | ADTExceptions | StatementExecutionExceptions | IOException exception){
             System.out.println(exception.getMessage());
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }

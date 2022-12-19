@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface IRepository {
     List<ProgramState> getProgramStates();
-    void addProgram(ProgramState programState);
-    ProgramState getCurrentState();
     void setProgramStates(List<ProgramState> programStates);
-    void logPrgStateExec() throws IOException, ADTExceptions;
+    void addProgram(ProgramState program);
+    void logPrgStateExec(ProgramState programState) throws IOException, ADTExceptions;
+    void emptyLogFile() throws IOException;
 }

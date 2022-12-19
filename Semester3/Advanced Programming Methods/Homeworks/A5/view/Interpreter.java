@@ -18,8 +18,10 @@ import model.value.StringValue;
 import repository.IRepository;
 import repository.Repository;
 
+import java.io.IOException;
+
 public class Interpreter {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         IStatement ex1 = new CompoundStatement(new VariableDeclarationStatement("v", new IntType()),
                 new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(2))),
                         new PrintStatement(new VariableExpression("v"))));
@@ -129,6 +131,21 @@ public class Interpreter {
         IRepository repo10 = new Repository(prg10, "log10.txt");
         Controller controller10 = new Controller(repo10);
 
+        ///Fork
+        IStatement ex11 = new CompoundStatement(new VariableDeclarationStatement("v", new IntType()),
+                new CompoundStatement(new VariableDeclarationStatement("a", new RefType(new IntType())),
+                        new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(10))),
+                                new CompoundStatement(new NewStatement("a", new ValueExpression(new IntValue(22))),
+                                        new CompoundStatement(new ForkStatement(new CompoundStatement(new WriteHeapStatement("a", new ValueExpression(new IntValue(30))),
+                                                new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(32))),
+                                                        new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression(new VariableExpression("a"))))))),
+                                                new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))))))));
+
+        ProgramState prg11 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex11);
+        IRepository repo11;
+        repo11 = new Repository(prg11, "log11.txt");
+        Controller controller11 = new Controller(repo11);
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand(new RunExampleCommand("1", ex1.toString(), controller1));
@@ -141,6 +158,7 @@ public class Interpreter {
         menu.addCommand(new RunExampleCommand("8", ex8.toString(), controller8));
         menu.addCommand(new RunExampleCommand("9", ex9.toString(), controller9));
         menu.addCommand(new RunExampleCommand("10", ex10.toString(), controller10));
+        menu.addCommand(new RunExampleCommand("11", ex11.toString(), controller11));
         menu.show();
 
 

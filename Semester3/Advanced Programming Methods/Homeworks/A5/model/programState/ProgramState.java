@@ -1,6 +1,8 @@
 package model.programState;
 
 import exceptions.ADTExceptions;
+import exceptions.ExpressionEvaluationExceptions;
+import exceptions.StatementExecutionExceptions;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Heap.MyHeap;
 import model.ADT.Heap.MyIHeap;
@@ -23,14 +25,32 @@ public class ProgramState {
     private IStatement originalProgram;
     private MyIHeap heap;
 
-    public ProgramState(@NotNull MyIStack<IStatement> exeStack, MyIDictionary<String, Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap, IStatement originalProgram) {
-        this.exeStack = exeStack;
+    private int id;
+    private static int lastId = 0;
+
+    public ProgramState(MyIStack<IStatement> stack, MyIDictionary<String,Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap, IStatement program) {
+        this.exeStack = stack;
         this.symTable = symTable;
         this.out = out;
-        this.originalProgram = originalProgram;
         this.fileTable = fileTable;
         this.heap = heap;
-        this.exeStack.push(originalProgram);
+        this.originalProgram = program.deepCopy();
+        this.exeStack.push(this.originalProgram);
+        this.id = setId();
+    }
+
+    public ProgramState(MyIStack<IStatement> stack, MyIDictionary<String,Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap) {
+        this.exeStack = stack;
+        this.symTable = symTable;
+        this.out = out;
+        this.fileTable = fileTable;
+        this.heap = heap;
+        this.id = setId();
+    }
+
+    public synchronized int setId() {
+        lastId++;
+        return lastId;
     }
 
     public MyIDictionary<String, BufferedReader> getFileTable() {
@@ -78,6 +98,19 @@ public class ProgramState {
 
     public void setHeap(MyIHeap heap) {
         this.heap = heap;
+    }
+
+    public boolean isNotCompleted() {
+        return exeStack.isEmpty();
+    }
+
+    public ProgramState oneStep() throws StatementExecutionExceptions, ADTExceptions, ExpressionEvaluationExceptions {
+        if (!exeStack.isEmpty()) {
+            //throw new MyException("Program state stack is empty");
+            IStatement crtStmt = exeStack.pop();
+            return crtStmt.execute(this);
+        }
+        return null;
     }
 
     public String exeStackToString() {

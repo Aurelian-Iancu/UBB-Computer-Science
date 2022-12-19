@@ -14,10 +14,11 @@ public class Repository implements IRepository{
     private final String logFilePath;
     private List<ProgramState> programStates;
 
-    public Repository(ProgramState programState, String logFilePath){
+    public Repository(ProgramState programState, String logFilePath) throws IOException {
         this.logFilePath = logFilePath;
         this.programStates = new ArrayList<>();
         this.addProgram(programState);
+        this.emptyLogFile();
     }
 
     @Override
@@ -26,25 +27,27 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public void addProgram(ProgramState programState) {
-        this.programStates.add(programState);
-    }
-
-    @Override
-    public ProgramState getCurrentState() {
-        return this.programStates.get(0);
-    }
-
-    @Override
     public void setProgramStates(List<ProgramState> programStates) {
         this.programStates = programStates;
     }
 
     @Override
-    public void logPrgStateExec() throws IOException, ADTExceptions {
+    public void addProgram(ProgramState program) {
+        this.programStates.add(program);
+    }
+
+    @Override
+    public void logPrgStateExec(ProgramState programState) throws IOException, ADTExceptions {
         PrintWriter logFile;
         logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
-        logFile.println(this.programStates.get(0).programStateToString());
+        logFile.println(programState.programStateToString());
+        logFile.close();
+    }
+
+    @Override
+    public void emptyLogFile() throws IOException {
+        PrintWriter logFile;
+        logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, false)));
         logFile.close();
     }
 
