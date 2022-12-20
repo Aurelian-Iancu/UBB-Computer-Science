@@ -3,10 +3,7 @@ package controller;
 import exceptions.ADTExceptions;
 import exceptions.ExpressionEvaluationExceptions;
 import exceptions.StatementExecutionExceptions;
-import model.ADT.Stack.MyIStack;
 import model.programState.ProgramState;
-import model.statement.IStatement;
-import model.statement.IfStatement;
 import model.value.RefValue;
 import model.value.Value;
 import repository.IRepository;
@@ -60,7 +57,7 @@ public class Controller {
                 repository.logPrgStateExec(programState);
                 display(programState);
             } catch (IOException | ADTExceptions e) {
-                System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
+                System.out.println(e.getMessage());
             }
         });
         List<Callable<ProgramState>> callList = programStates.stream()
@@ -72,7 +69,7 @@ public class Controller {
                     try {
                         return future.get();
                     } catch (ExecutionException | InterruptedException e) {
-                        System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
+                        System.out.println(e.getMessage());
                     }
                     return null;
                 })
@@ -85,7 +82,7 @@ public class Controller {
             try {
                 repository.logPrgStateExec(programState);
             } catch (IOException | ADTExceptions e) {
-                System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
+                System.out.println(e.getMessage());
             }
         });
         repository.setProgramStates(programStates);

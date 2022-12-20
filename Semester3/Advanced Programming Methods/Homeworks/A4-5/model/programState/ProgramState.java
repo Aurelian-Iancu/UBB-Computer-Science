@@ -106,7 +106,6 @@ public class ProgramState {
 
     public ProgramState oneStep() throws StatementExecutionExceptions, ADTExceptions, ExpressionEvaluationExceptions {
         if (!exeStack.isEmpty()) {
-            //throw new MyException("Program state stack is empty");
             IStatement crtStmt = exeStack.pop();
             return crtStmt.execute(this);
         }
@@ -155,7 +154,8 @@ public class ProgramState {
     }
 
     public String toString() {
-        return "Execution stack: \n" + exeStack.toString() +
+        return  "Id: " + id +
+                "\nExecution stack: \n" + exeStack.toString() +
                 "\nSymbol table: \n" + symTable.toString() +
                 "\nOutput list: \n" + out.toString() +
                 "\nFile table: \n" + fileTable.toString() +
@@ -163,7 +163,8 @@ public class ProgramState {
     }
 
     public String programStateToString() throws ADTExceptions {
-        return "Execution stack: \n" + exeStackToString() +
+        return  "Id: " + id +
+                "\nExecution stack: \n" + exeStackToString() +
                 "Symbol table: \n" + symTableToString() +
                 "Output list: \n" + outToString() +
                 "File table:\n" + fileTableToString() +
