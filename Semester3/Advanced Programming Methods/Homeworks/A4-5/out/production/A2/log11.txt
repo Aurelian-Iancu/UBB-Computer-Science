@@ -1,3 +1,4 @@
+Id: 11
 Execution stack: 
 (int v|(Ref(int) a|(v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))))
 Symbol table: 
@@ -5,6 +6,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 int v
 (Ref(int) a|(v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a)))))))
@@ -13,6 +15,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 int v
 (Ref(int) a|(v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a)))))))
@@ -21,6 +24,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 int v
 (Ref(int) a|(v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a)))))))
@@ -29,6 +33,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 int v
 (Ref(int) a|(v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a)))))))
@@ -37,6 +42,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -46,6 +52,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -55,6 +62,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -64,6 +72,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -73,6 +82,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -82,6 +92,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -91,6 +102,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -100,6 +112,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 Ref(int) a
 (v = 10|(New(a, 22)|(Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))))
@@ -109,6 +122,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -119,6 +133,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -129,6 +144,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -139,6 +155,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -149,6 +166,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -159,6 +177,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -169,6 +188,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -179,6 +199,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -189,6 +210,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -199,6 +221,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -209,6 +232,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -219,6 +243,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -229,6 +254,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -239,6 +265,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -249,6 +276,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -259,6 +287,7 @@ Output list:
 File table:
 Heap: 
 
+Id: 11
 Execution stack: 
 New(a, 22)
 (Fork((WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a))))))|(Print(v)|Print(ReadHeap(a))))
@@ -268,431 +297,4 @@ v -> 10
 Output list: 
 File table:
 Heap: 
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-(WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a)))))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-(WriteHeap(a, 30)|(v = 32|(Print(v)|Print(ReadHeap(a)))))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-WriteHeap(a, 30)
-(v = 32|(Print(v)|Print(ReadHeap(a))))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-WriteHeap(a, 30)
-(v = 32|(Print(v)|Print(ReadHeap(a))))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-WriteHeap(a, 30)
-(v = 32|(Print(v)|Print(ReadHeap(a))))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-WriteHeap(a, 30)
-(v = 32|(Print(v)|Print(ReadHeap(a))))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 22
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-v = 32
-(Print(v)|Print(ReadHeap(a)))
-Symbol table: 
-a -> (1, int)
-v -> 10
-Output list: 
-10
-22
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
-
-Execution stack: 
-Symbol table: 
-a -> (1, int)
-v -> 32
-Output list: 
-10
-22
-32
-30
-File table:
-Heap: 
-1 -> 30
 

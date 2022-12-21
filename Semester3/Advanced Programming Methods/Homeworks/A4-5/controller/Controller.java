@@ -81,6 +81,7 @@ public class Controller {
         programStates.forEach(programState -> {
             try {
                 repository.logPrgStateExec(programState);
+                display(programState);
             } catch (IOException | ADTExceptions e) {
                 System.out.println(e.getMessage());
             }

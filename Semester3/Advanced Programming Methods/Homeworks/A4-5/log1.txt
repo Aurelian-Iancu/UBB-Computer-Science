@@ -1,0 +1,178 @@
+Id: 1
+Execution stack: 
+(int v|(v = 2|Print(v)))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+int v
+(v = 2|Print(v))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+int v
+(v = 2|Print(v))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+int v
+(v = 2|Print(v))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+int v
+(v = 2|Print(v))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+v = 2
+Print(v)
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+Symbol table: 
+v -> 2
+Output list: 
+0
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+Symbol table: 
+v -> 2
+Output list: 
+0
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+Symbol table: 
+v -> 2
+Output list: 
+0
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+Symbol table: 
+v -> 2
+Output list: 
+0
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+Symbol table: 
+v -> 2
+Output list: 
+0
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+Symbol table: 
+v -> 2
+Output list: 
+0
+File table:
+Heap: 
+
