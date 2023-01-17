@@ -1,7 +1,6 @@
 package model.expression;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Heap.MyIHeap;
 import model.type.RefType;
@@ -17,10 +16,10 @@ public class ReadHeapExpression implements IExpression{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions {
+    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws InterpreterException{
         Value value = expression.eval(symTable, heap);
         if (!(value instanceof RefValue))
-            throw new ExpressionEvaluationExceptions(String.format("%s not of RefType", value));
+            throw new InterpreterException(String.format("%s not of RefType", value));
         RefValue refValue = (RefValue) value;
         return heap.get(refValue.getAddress());
     }
@@ -31,14 +30,14 @@ public class ReadHeapExpression implements IExpression{
     }
 
     @Override
-    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws ExpressionEvaluationExceptions, ADTExceptions {
+    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException{
         Type type = expression.typeCheck(typeEnv);
         if (type instanceof RefType){
             RefType refType = (RefType) type;
             return refType.getInner();
         }
         else
-            throw new ExpressionEvaluationExceptions("The rH argument is not a RefType!");
+            throw new InterpreterException("The rH argument is not a RefType!");
     }
 
     @Override

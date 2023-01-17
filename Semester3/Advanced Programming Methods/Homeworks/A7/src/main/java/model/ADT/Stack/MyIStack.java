@@ -1,7 +1,5 @@
 package model.ADT.Stack;
 
-import exceptions.ADTExceptions;
-
 import java.util.List;
 
 public interface MyIStack<T> {

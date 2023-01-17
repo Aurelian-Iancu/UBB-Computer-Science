@@ -1,8 +1,6 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyDictionary;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Stack.MyIStack;
@@ -21,7 +19,7 @@ public class ForkStatement implements IStatement {
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIStack<IStatement> newStack = new MyStack<>();
         newStack.push(statement);
         MyIDictionary<String, Value> newSymTable = new MyDictionary<>();
@@ -38,7 +36,7 @@ public class ForkStatement implements IStatement {
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         statement.typeCheck(typeEnv.deepCopy());
         return typeEnv;
     }

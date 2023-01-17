@@ -1,8 +1,6 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Stack.MyIStack;
 import model.expression.IExpression;
@@ -11,8 +9,6 @@ import model.type.BoolType;
 import model.type.Type;
 import model.value.BoolValue;
 import model.value.Value;
-
-import java.util.Stack;
 
 public class IfStatement implements IStatement{
     IExpression expression;
@@ -27,7 +23,7 @@ public class IfStatement implements IStatement{
 
 
     @Override
-    public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         Value result = this.expression.eval(state.getSymTable(), state.getHeap());
         if (result.getType().equals(new BoolType())){
             BoolValue condition = (BoolValue) result;
@@ -42,7 +38,7 @@ public class IfStatement implements IStatement{
             state.setExeStack(stack);
             return state;
         } else{
-            throw new StatementExecutionExceptions("The expression cannot be evaluated as true or false!");
+            throw new InterpreterException("The expression cannot be evaluated as true or false!");
         }
     }
 
@@ -52,14 +48,14 @@ public class IfStatement implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         Type typeExp = expression.typeCheck(typeEnv);
         if (typeExp.equals(new BoolType())){
             thenStatement.typeCheck(typeEnv.deepCopy());
             elseStatement.typeCheck(typeEnv.deepCopy());
             return typeEnv;
         } else
-            throw new StatementExecutionExceptions("The condition of if was not of type bool!");
+            throw new InterpreterException("The condition of if was not of type bool!");
     }
 
     @Override

@@ -1,8 +1,6 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Stack.MyIStack;
 import model.expression.IExpression;
@@ -22,11 +20,11 @@ public class WhileStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         Value value = expression.eval(state.getSymTable(), state.getHeap());
         MyIStack<IStatement> stack = state.getExeStack();
         if(!value.getType().equals(new BoolType()))
-            throw new StatementExecutionExceptions(String.format("%s is not of BoolType", value));
+            throw new InterpreterException(String.format("%s is not of BoolType", value));
         BoolValue boolValue = (BoolValue) value;
         if(boolValue.getVal()) {
             stack.push(this);
@@ -42,13 +40,13 @@ public class WhileStatement implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         Type typeExpr = expression.typeCheck(typeEnv);
         if (typeExpr.equals(new BoolType())) {
             statement.typeCheck(typeEnv.deepCopy());
             return typeEnv;
         } else
-            throw new StatementExecutionExceptions("The condition of WHILE does not have the type Bool.");
+            throw new InterpreterException("The condition of WHILE does not have the type Bool.");
     }
 
     @Override

@@ -1,14 +1,10 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Stack.MyIStack;
 import model.programState.ProgramState;
 import model.type.Type;
-
-import java.util.Stack;
 
 public class CompoundStatement implements IStatement{
     IStatement firstStatement;
@@ -21,7 +17,7 @@ public class CompoundStatement implements IStatement{
 
 
     @Override
-    public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIStack<IStatement> stack = state.getExeStack();
         stack.push(secondStatement);
         stack.push(firstStatement);
@@ -35,7 +31,7 @@ public class CompoundStatement implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         return secondStatement.typeCheck(firstStatement.typeCheck(typeEnv));
     }
 

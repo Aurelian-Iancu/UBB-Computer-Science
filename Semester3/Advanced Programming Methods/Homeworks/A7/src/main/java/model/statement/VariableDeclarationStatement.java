@@ -1,8 +1,6 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.programState.ProgramState;
 import model.type.Type;
@@ -18,10 +16,10 @@ public class VariableDeclarationStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIDictionary<String, Value> symTable = state.getSymTable();
         if(symTable.containsKey(name)){
-            throw new StatementExecutionExceptions("Variable " + name + " is already declared!");
+            throw new InterpreterException("Variable " + name + " is already declared!");
         }
         symTable.put(name, type.defaultValue());
         state.setSymTable(symTable);
@@ -34,7 +32,7 @@ public class VariableDeclarationStatement implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         typeEnv.put(name, type);
         return typeEnv;
     }

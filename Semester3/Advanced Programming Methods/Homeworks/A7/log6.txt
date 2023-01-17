@@ -1,0 +1,1028 @@
+Id: 3
+Execution stack: 
+(int v|(v = 4|(while(v > 0){(Print(v)|v = v - 1)}|Print(v))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+int v
+(v = 4|(while(v > 0){(Print(v)|v = v - 1)}|Print(v)))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+int v
+(v = 4|(while(v > 0){(Print(v)|v = v - 1)}|Print(v)))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+int v
+(v = 4|(while(v > 0){(Print(v)|v = v - 1)}|Print(v)))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+int v
+(v = 4|(while(v > 0){(Print(v)|v = v - 1)}|Print(v)))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+v = 4
+(while(v > 0){(Print(v)|v = v - 1)}|Print(v))
+Symbol table: 
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 4
+Output list: 
+4
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v - 1)
+while(v > 0){(Print(v)|v = v - 1)}
+Symbol table: 
+v -> 2
+Output list: 
+4
+4
+3
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+
+Id: 3
+Execution stack: 
+Symbol table: 
+v -> 0
+Output list: 
+4
+4
+3
+2
+1
+File table:
+Heap: 
+

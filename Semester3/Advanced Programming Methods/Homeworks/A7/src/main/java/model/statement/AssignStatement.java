@@ -1,14 +1,11 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.expression.IExpression;
 import model.programState.ProgramState;
 import model.type.Type;
 import model.value.Value;
-import org.jetbrains.annotations.NotNull;
 
 public class AssignStatement implements IStatement{
     private String key;
@@ -21,7 +18,7 @@ public class AssignStatement implements IStatement{
 
 
     @Override
-    public ProgramState execute(@NotNull ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIDictionary<String, Value> symbolTable = state.getSymTable();
 
         if(symbolTable.containsKey(key)){
@@ -30,10 +27,10 @@ public class AssignStatement implements IStatement{
             if(value.getType().equals(type)){
                 symbolTable.update(key, value);
             } else{
-                throw new StatementExecutionExceptions("Declared type of variable " + key + " and the type of the assigned expression do not match!");
+                throw new InterpreterException("Declared type of variable " + key + " and the type of the assigned expression do not match!");
             }
         } else {
-            throw new StatementExecutionExceptions("The used variable " + key + " was not declared before!");
+            throw new InterpreterException("The used variable " + key + " was not declared before!");
         }
         state.setSymTable(symbolTable);
         return state;
@@ -45,13 +42,13 @@ public class AssignStatement implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         Type typeVar = typeEnv.lookUp(key);
         Type typeExp = expression.typeCheck(typeEnv);
         if(typeVar.equals(typeExp))
             return typeEnv;
         else
-            throw new StatementExecutionExceptions("Assignment: right hand side and left hand side have different types ");
+            throw new InterpreterException("Assignment: right hand side and left hand side have different types ");
     }
 
     @Override

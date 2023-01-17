@@ -1,6 +1,6 @@
 package view;
 
-import exceptions.ADTExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyDictionary;
 import model.ADT.Dictionary.MyIDictionary;
 
@@ -33,7 +33,7 @@ public class TextMenu {
             try{
                 Command command = commands.lookUp(key);
                 command.execute();
-            }catch(ADTExceptions exception){
+            }catch(InterpreterException exception){
                 System.out.println("Invalid option");
             }
         }

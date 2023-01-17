@@ -1,7 +1,6 @@
 package model.expression;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Heap.MyIHeap;
 import model.type.Type;
@@ -16,7 +15,7 @@ public class ValueExpression implements IExpression{
 
 
     @Override
-    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions {
+    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws InterpreterException {
         return this.value;
     }
 
@@ -26,7 +25,7 @@ public class ValueExpression implements IExpression{
     }
 
     @Override
-    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws ExpressionEvaluationExceptions, ADTExceptions {
+    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         return value.getType();
     }
 

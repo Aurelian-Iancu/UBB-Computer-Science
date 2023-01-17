@@ -1,8 +1,6 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.expression.IExpression;
 import model.programState.ProgramState;
@@ -23,7 +21,7 @@ public class OpenReadFile implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         Value value = expression.eval(state.getSymTable(), state.getHeap());
         if(value.getType().equals(new StringType())){
             StringValue filename = (StringValue) value;
@@ -33,15 +31,15 @@ public class OpenReadFile implements IStatement{
                 try{
                     br = new BufferedReader(new FileReader(filename.getValue()));
                 }catch(FileNotFoundException e){
-                    throw new StatementExecutionExceptions("The file could not be opened");
+                    throw new InterpreterException("The file could not be opened");
                 }
                 fileTable.put(filename.getValue(), br);
                 state.setFileTable(fileTable);
             }else{
-                throw new StatementExecutionExceptions("The file is already open");
+                throw new InterpreterException("The file is already open");
             }
         }else{
-            throw new StatementExecutionExceptions("The expression is not a string");
+            throw new InterpreterException("The expression is not a string");
         }
         return state;
     }
@@ -52,11 +50,11 @@ public class OpenReadFile implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws  InterpreterException {
         if (expression.typeCheck(typeEnv).equals(new StringType()))
             return typeEnv;
         else
-            throw new StatementExecutionExceptions("OpenReadFile requires a string expression.");
+            throw new InterpreterException("OpenReadFile requires a string expression.");
     }
 
     @Override

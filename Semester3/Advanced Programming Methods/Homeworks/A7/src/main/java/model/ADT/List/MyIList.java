@@ -1,7 +1,5 @@
 package model.ADT.List;
 
-import exceptions.ADTExceptions;
-
 import java.util.List;
 
 public interface MyIList<T> {

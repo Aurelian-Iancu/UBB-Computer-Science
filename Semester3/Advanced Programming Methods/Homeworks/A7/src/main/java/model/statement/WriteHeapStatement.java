@@ -1,8 +1,6 @@
 package model.statement;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Heap.MyIHeap;
 import model.expression.IExpression;
@@ -22,18 +20,18 @@ public class WriteHeapStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws ADTExceptions, ExpressionEvaluationExceptions, StatementExecutionExceptions {
+    public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIDictionary<String, Value> symTable = state.getSymTable();
         MyIHeap heap = state.getHeap();
         if (!symTable.containsKey(varName))
-            throw new StatementExecutionExceptions(String.format("%s not present in the symTable", varName));
+            throw new InterpreterException(String.format("%s not present in the symTable", varName));
         Value value = symTable.lookUp(varName);
         if (!(value instanceof RefValue))
-            throw new StatementExecutionExceptions(String.format("%s not of RefType", value));
+            throw new InterpreterException(String.format("%s not of RefType", value));
         RefValue refValue = (RefValue) value;
         Value evaluated = expression.eval(symTable, heap);
         if (!evaluated.getType().equals(refValue.getLocationType()))
-            throw new StatementExecutionExceptions(String.format("%s not of %s", evaluated, refValue.getLocationType()));
+            throw new InterpreterException(String.format("%s not of %s", evaluated, refValue.getLocationType()));
         heap.update(refValue.getAddress(), evaluated);
         state.setHeap(heap);
         return state;
@@ -45,11 +43,11 @@ public class WriteHeapStatement implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws StatementExecutionExceptions, ExpressionEvaluationExceptions, ADTExceptions {
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         if (typeEnv.lookUp(varName).equals(new RefType(expression.typeCheck(typeEnv))))
             return typeEnv;
         else
-            throw new StatementExecutionExceptions("WriteHeap: right hand side and left hand side have different types.");
+            throw new InterpreterException("WriteHeap: right hand side and left hand side have different types.");
     }
 
     @Override

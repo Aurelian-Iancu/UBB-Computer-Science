@@ -1,6 +1,6 @@
 package model.ADT.Heap;
 
-import exceptions.ADTExceptions;
+import exceptions.InterpreterException;
 import model.value.Value;
 
 import java.util.HashMap;
@@ -46,16 +46,16 @@ public class MyHeap implements MyIHeap{
     }
 
     @Override
-    public void update(Integer position, Value value) throws ADTExceptions {
+    public void update(Integer position, Value value) throws InterpreterException {
         if(!heap.containsKey(position))
-            throw new ADTExceptions(String.format("%d is not present in the heap", position));
+            throw new InterpreterException(String.format("%d is not present in the heap", position));
         heap.put(position, value);
     }
 
     @Override
-    public Value get(Integer position) throws ADTExceptions {
+    public Value get(Integer position) throws InterpreterException {
         if(!heap.containsKey(position))
-            throw new ADTExceptions(String.format("%d is not present in the heap", position));
+            throw new InterpreterException(String.format("%d is not present in the heap", position));
         return heap.get(position);
     }
 
@@ -65,9 +65,9 @@ public class MyHeap implements MyIHeap{
     }
 
     @Override
-    public void remove(Integer key) throws ADTExceptions {
+    public void remove(Integer key) throws InterpreterException {
         if (!containsKey(key))
-            throw new ADTExceptions(key + " is not defined.");
+            throw new InterpreterException(key + " is not defined.");
         freeLocationValue = key;
         this.heap.remove(key);
     }

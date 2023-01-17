@@ -1,10 +1,45 @@
-module com.example.a7 {
+module gui {
+    requires javafx.base;
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
+    exports gui;
+    opens gui to javafx.fxml;
 
-    opens com.example.a7 to javafx.fxml;
-    exports com.example.a7;
+    exports controller;
+    opens controller to javafx.fxml;
+
+    exports exceptions;
+    opens exceptions to javafx.fxml;
+
+    exports  model.expression;
+    opens model.expression to javafx.fxml;
+
+    exports model.programState;
+    opens model.programState to javafx.fxml;
+
+    exports model.statement;
+    opens model.statement to javafx.fxml;
+
+    exports model.type;
+    opens model.type to javafx.fxml;
+
+    exports model.ADT.Heap;
+    opens model.ADT.Heap to javafx.fxml;
+
+    exports model.ADT.Dictionary;
+    opens model.ADT.Dictionary to javafx.fxml;
+
+    exports model.ADT.List;
+    opens model.ADT.List to javafx.fxml;
+
+    exports model.ADT.Stack;
+    opens model.ADT.Stack to javafx.fxml;
+
+    exports model.value;
+    opens model.value to javafx.fxml;
+
+    exports repository;
+    opens repository to javafx.fxml;
 }

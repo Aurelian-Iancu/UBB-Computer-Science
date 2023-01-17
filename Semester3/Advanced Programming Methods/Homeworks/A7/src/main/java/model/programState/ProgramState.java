@@ -1,21 +1,15 @@
 package model.programState;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
-import model.ADT.Heap.MyHeap;
 import model.ADT.Heap.MyIHeap;
 import model.ADT.List.MyIList;
 import model.ADT.Stack.MyIStack;
-import model.ADT.Stack.MyStack;
 import model.statement.IStatement;
 import model.value.Value;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedReader;
 import java.util.List;
-import java.util.Stack;
 
 public class ProgramState {
     private MyIStack<IStatement> exeStack;
@@ -24,6 +18,10 @@ public class ProgramState {
     private MyIDictionary<String, BufferedReader> fileTable;
     private IStatement originalProgram;
     private MyIHeap heap;
+
+    public int getId() {
+        return id;
+    }
 
     private int id;
     private static int lastId = 0;
@@ -104,7 +102,7 @@ public class ProgramState {
         return exeStack.isEmpty();
     }
 
-    public ProgramState oneStep() throws StatementExecutionExceptions, ADTExceptions, ExpressionEvaluationExceptions {
+    public ProgramState oneStep() throws InterpreterException {
         if (!exeStack.isEmpty()) {
             IStatement crtStmt = exeStack.pop();
             return crtStmt.execute(this);
@@ -121,7 +119,7 @@ public class ProgramState {
         return exeStackStringBuilder.toString();
     }
 
-    public String symTableToString() throws ADTExceptions {
+    public String symTableToString() throws InterpreterException {
         StringBuilder symTableStringBuilder = new StringBuilder();
         for (String key: symTable.keySet()) {
             symTableStringBuilder.append(String.format("%s -> %s\n", key, symTable.lookUp(key).toString()));
@@ -145,7 +143,7 @@ public class ProgramState {
         return fileTableStringBuilder.toString();
     }
 
-    public String heapToString() throws ADTExceptions {
+    public String heapToString() throws InterpreterException {
         StringBuilder heapStringBuilder = new StringBuilder();
         for (int key: heap.keySet()) {
             heapStringBuilder.append(String.format("%d -> %s\n", key, heap.get(key)));
@@ -162,7 +160,7 @@ public class ProgramState {
                 "\nHeap: \n" + heap.toString();
     }
 
-    public String programStateToString() throws ADTExceptions {
+    public String programStateToString() throws InterpreterException {
         return  "Id: " + id +
                 "\nExecution stack: \n" + exeStackToString() +
                 "Symbol table: \n" + symTableToString() +

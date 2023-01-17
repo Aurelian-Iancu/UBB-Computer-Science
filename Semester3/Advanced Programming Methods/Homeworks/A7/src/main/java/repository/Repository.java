@@ -1,6 +1,6 @@
 package repository;
 
-import exceptions.ADTExceptions;
+import exceptions.InterpreterException;
 import model.programState.ProgramState;
 
 import java.io.BufferedWriter;
@@ -37,7 +37,7 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public void logPrgStateExec(ProgramState programState) throws IOException, ADTExceptions {
+    public void logPrgStateExec(ProgramState programState) throws IOException, InterpreterException {
         PrintWriter logFile;
         logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
         logFile.println(programState.programStateToString());

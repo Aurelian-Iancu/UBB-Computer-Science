@@ -1,7 +1,6 @@
 package model.expression;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Heap.MyIHeap;
 import model.type.IntType;
@@ -21,7 +20,7 @@ public class ArithmeticExpression implements IExpression{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions {
+    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws InterpreterException {
         Value value1, value2;
         value1 = this.expression1.eval(symTable, heap);
         if(value1.getType().equals(new IntType())){
@@ -45,14 +44,14 @@ public class ArithmeticExpression implements IExpression{
                     if(n2 != 0)
                         return new IntValue(n1/n2);
                     else
-                        throw new ExpressionEvaluationExceptions("Division by 0!");
+                        throw new InterpreterException("Division by 0!");
                 }
             } else {
-                throw new ExpressionEvaluationExceptions("Second operand is not an integer!");
+                throw new InterpreterException("Second operand is not an integer!");
             }
         }
         else {
-            throw new ExpressionEvaluationExceptions("First operand is not an integer!");
+            throw new InterpreterException("First operand is not an integer!");
         }
         return null;
     }
@@ -63,7 +62,7 @@ public class ArithmeticExpression implements IExpression{
     }
 
     @Override
-    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws ExpressionEvaluationExceptions, ADTExceptions {
+    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         Type type1, type2;
         type1 = expression1.typeCheck(typeEnv);
         type2 = expression2.typeCheck(typeEnv);
@@ -71,9 +70,9 @@ public class ArithmeticExpression implements IExpression{
             if(type2.equals(new IntType())){
                 return new IntType();
             }
-            throw new ExpressionEvaluationExceptions("Second operand is not an integer!");
+            throw new InterpreterException("Second operand is not an integer!");
         }
-        throw new ExpressionEvaluationExceptions("First operand is not an integer!");
+        throw new InterpreterException("First operand is not an integer!");
     }
 
     @Override

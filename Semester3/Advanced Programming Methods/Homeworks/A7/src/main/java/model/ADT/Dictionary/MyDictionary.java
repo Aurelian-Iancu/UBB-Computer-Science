@@ -1,9 +1,8 @@
 package model.ADT.Dictionary;
 
-import exceptions.ADTExceptions;
+import exceptions.InterpreterException;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class MyDictionary<T1, T2> implements MyIDictionary<T1, T2> {
@@ -44,16 +43,16 @@ public class MyDictionary<T1, T2> implements MyIDictionary<T1, T2> {
     }
 
     @Override
-    public T2 lookUp(T1 key) throws ADTExceptions {
+    public T2 lookUp(T1 key) throws InterpreterException {
         if (!containsKey(key))
-            throw new ADTExceptions(key + " is not defined.");
+            throw new InterpreterException(key + " is not defined.");
         return this.dictionary.get(key);
     }
 
     @Override
-    public void update(T1 key, T2 value) throws ADTExceptions {
+    public void update(T1 key, T2 value) throws InterpreterException {
         if (!containsKey(key))
-            throw new ADTExceptions(key + " is not defined.");
+            throw new InterpreterException(key + " is not defined.");
         this.dictionary.put(key, value);
     }
 
@@ -63,7 +62,7 @@ public class MyDictionary<T1, T2> implements MyIDictionary<T1, T2> {
     }
 
     @Override
-    public MyIDictionary<T1, T2> deepCopy() throws ADTExceptions {
+    public MyIDictionary<T1, T2> deepCopy() throws InterpreterException {
         MyIDictionary<T1, T2> toReturn = new MyDictionary<>();
         for (T1 key: keySet())
             toReturn.put(key, lookUp(key));

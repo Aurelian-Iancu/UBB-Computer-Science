@@ -5,16 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f872d34e-9b8c-45c5-a0be-dfc0de759475" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/a7/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/a7/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/ADTExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/ExpressionEvaluationExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/StatementExecutionExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/a7/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/InterpreterException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/ProgramChooserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/ProgramExecutorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gui/ProgramChooserController.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gui/ProgramExecutorController.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gui/button_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a7/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/a7/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/ADTExceptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/ExpressionEvaluationExceptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/StatementExecutionExceptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/Dictionary/MyDictionary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/Dictionary/MyIDictionary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/Heap/MyHeap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/Heap/MyIHeap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/List/MyIList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/List/MyList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/Stack/MyIStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ADT/Stack/MyStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/expression/ArithmeticExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/expression/ArithmeticExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/expression/IExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/expression/IExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/expression/LogicExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/expression/LogicExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/expression/ReadHeapExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/expression/ReadHeapExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/expression/RelationalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/expression/RelationalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/expression/ValueExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/expression/ValueExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/expression/VariableExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/expression/VariableExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/programState/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/programState/ProgramState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/AssignStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/AssignStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/CloseReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/CloseReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/CompoundStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/CompoundStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/ForkStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/ForkStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/IStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/IStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/NewStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/NewStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/NopStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/NopStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/OpenReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/OpenReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/VariableDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/WriteHeapStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/WriteHeapStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/IRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/IRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/RunExampleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/RunExampleCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/TextMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/TextMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/a7/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +68,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -44,13 +88,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester3/Advanced Programming Methods/Homeworks/A7",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.a7.HelloApplication" />
       <module name="A7" />
@@ -64,8 +110,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.Main" />
+      <module name="A7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gui.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.HelloApplication" />
+      <module name="A7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.gui.HelloApplication" />
         <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
@@ -78,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673905949610</updated>
-      <workItem from="1673905950859" duration="319000" />
+      <workItem from="1673905950859" duration="5409000" />
     </task>
     <servers />
   </component>
@@ -95,5 +169,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

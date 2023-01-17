@@ -1,8 +1,6 @@
 package controller;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 import model.programState.ProgramState;
 import model.value.RefValue;
 import model.value.Value;
@@ -17,46 +15,55 @@ import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+class Pair {
+    final ProgramState first;
+    final InterpreterException second;
+
+    public Pair(ProgramState first, InterpreterException second) {
+        this.first = first;
+        this.second = second;
+    }
+}
+
 public class Controller {
     IRepository repository;
     boolean displayFlag = false;
     ExecutorService executorService;
 
-    public void setDisplayFlag(boolean displayFlag) {
-        this.displayFlag = displayFlag;
+    public void setDisplayFlag(boolean value) {
+        this.displayFlag = value;
     }
 
     public Controller(IRepository repository) {
         this.repository = repository;
     }
 
-    public List<Integer> getAddrFromSymTable(Collection<Value> symTableValues) {
+    public List<Integer> getAddressesFromSymTable(Collection<Value> symTableValues) {
         return symTableValues.stream()
                 .filter(v -> v instanceof RefValue)
                 .map(v -> {RefValue v1 = (RefValue) v; return v1.getAddress();})
                 .collect(Collectors.toList());
     }
 
-    public List<Integer> getAddrFromHeap(Collection<Value> heapValues) {
+    public List<Integer> getAddressesFromHeap(Collection<Value> heapValues) {
         return heapValues.stream()
                 .filter(v -> v instanceof RefValue)
                 .map(v -> {RefValue v1 = (RefValue) v; return v1.getAddress();})
                 .collect(Collectors.toList());
     }
 
-
-    public Map<Integer, Value> safeGarbageCollector(List<Integer> symTableAddr, List<Integer> heapAddr, Map<Integer, Value> heap) {
+    public Map<Integer, Value> safeGarbageCollector(List<Integer> symTableAddresses, List<Integer> heapAddresses, Map<Integer, Value> heap) {
         return heap.entrySet().stream()
-                .filter(e -> ( symTableAddr.contains(e.getKey()) || heapAddr.contains(e.getKey())))
+                .filter(e -> ( symTableAddresses.contains(e.getKey()) || heapAddresses.contains(e.getKey())))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    public void oneStepForAllPrograms(List<ProgramState> programStates) throws InterruptedException, ExpressionEvaluationExceptions, ADTExceptions, StatementExecutionExceptions, IOException{
+    public void oneStepForAllPrograms(List<ProgramState> programStates) throws InterpreterException, InterruptedException {
         programStates.forEach(programState -> {
             try {
                 repository.logPrgStateExec(programState);
                 display(programState);
-            } catch (IOException | ADTExceptions e) {
+            } catch (IOException | InterpreterException e) {
                 System.out.println(e.getMessage());
             }
         });
@@ -64,54 +71,68 @@ public class Controller {
                 .map((ProgramState p) -> (Callable<ProgramState>) (p::oneStep))
                 .collect(Collectors.toList());
 
-        List<ProgramState> newProgramList = executorService.invokeAll(callList).stream()
+        List<Pair> newProgramList;
+        newProgramList = executorService.invokeAll(callList).stream()
                 .map(future -> {
                     try {
-                        return future.get();
+                        return new Pair(future.get(), null);
                     } catch (ExecutionException | InterruptedException e) {
+                        if (e.getCause() instanceof InterpreterException)
+                            return new Pair(null, (InterpreterException) e.getCause());
                         System.out.println(e.getMessage());
+                        return null;
                     }
-                    return null;
-                })
-                .filter(Objects::nonNull)
+                }).filter(Objects::nonNull)
+                .filter(pair -> pair.first != null || pair.second != null)
                 .collect(Collectors.toList());
 
-        programStates.addAll(newProgramList);
+        for (Pair error: newProgramList)
+            if (error.second != null)
+                throw error.second;
+        programStates.addAll(newProgramList.stream().map(pair -> pair.first).collect(Collectors.toList()));
 
         programStates.forEach(programState -> {
             try {
                 repository.logPrgStateExec(programState);
-                display(programState);
-            } catch (IOException | ADTExceptions e) {
+            } catch (IOException e) {
                 System.out.println(e.getMessage());
+            } catch (InterpreterException e) {
+                throw new RuntimeException(e);
             }
         });
         repository.setProgramStates(programStates);
     }
 
-    public void allStep() throws InterruptedException, ExpressionEvaluationExceptions, ADTExceptions, StatementExecutionExceptions, IOException {
+    public void oneStep() throws InterpreterException, InterruptedException {
+        executorService = Executors.newFixedThreadPool(2);
+        List<ProgramState> programStates = removeCompletedPrg(repository.getProgramStates());
+        oneStepForAllPrograms(programStates);
+        conservativeGarbageCollector(programStates);
+        //programStates = removeCompletedPrg(repository.getProgramList());
+        executorService.shutdownNow();
+        //repository.setProgramStates(programStates);
+    }
+
+    public void allStep() throws InterpreterException, InterruptedException {
         executorService = Executors.newFixedThreadPool(2);
         List<ProgramState> programStates = removeCompletedPrg(repository.getProgramStates());
         while (programStates.size() > 0) {
-            conservativeGarbageCollector(programStates);
             oneStepForAllPrograms(programStates);
-            programStates = removeCompletedPrg(repository.getProgramStates());
+            conservativeGarbageCollector(programStates);
+            //programStates = removeCompletedPrg(repository.getProgramList());
         }
         executorService.shutdownNow();
-        repository.setProgramStates(programStates);
+        //repository.setProgramStates(programStates);
     }
 
     public void conservativeGarbageCollector(List<ProgramState> programStates) {
         List<Integer> symTableAddresses = Objects.requireNonNull(programStates.stream()
-                        .map(p -> getAddrFromSymTable(p.getSymTable().getContent().values()))
+                        .map(p -> getAddressesFromSymTable(p.getSymTable().getContent().values()))
                         .map(Collection::stream)
                         .reduce(Stream::concat).orElse(null))
                 .collect(Collectors.toList());
-        programStates.forEach(p -> {
-            p.getHeap().setHeap((HashMap<Integer, Value>) safeGarbageCollector(symTableAddresses, getAddrFromHeap(p.getHeap().getHeap().values()), p.getHeap().getHeap()));
-        });
+        programStates.forEach(p -> p.getHeap().setHeap((HashMap<Integer, Value>) safeGarbageCollector(symTableAddresses, getAddressesFromHeap(p.getHeap().getHeap().values()), p.getHeap().getHeap())));
     }
-
 
     private void display(ProgramState programState) {
         if (displayFlag) {
@@ -121,5 +142,12 @@ public class Controller {
 
     public List<ProgramState> removeCompletedPrg(List<ProgramState> inPrgList) {
         return inPrgList.stream().filter(p -> !p.isNotCompleted()).collect(Collectors.toList());
+    }
+
+    public void setProgramStates(List<ProgramState> programStates) {
+        this.repository.setProgramStates(programStates);
+    }
+    public List<ProgramState> getProgramStates() {
+        return this.repository.getProgramStates();
     }
 }

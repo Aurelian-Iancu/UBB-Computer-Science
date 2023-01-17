@@ -1,12 +1,10 @@
 package model.expression;
 
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Heap.MyIHeap;
 import model.type.Type;
 import model.value.Value;
-import org.jetbrains.annotations.NotNull;
 
 public class VariableExpression implements IExpression{
     String key;
@@ -16,7 +14,7 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions {
+    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws InterpreterException {
         return symTable.lookUp(key);
     }
 
@@ -26,7 +24,7 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
-    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws ExpressionEvaluationExceptions, ADTExceptions {
+    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         return typeEnv.lookUp(key);
     }
 

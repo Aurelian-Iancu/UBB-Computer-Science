@@ -1,0 +1,374 @@
+Id: 2
+Execution stack: 
+(boolean a|(int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v)))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+boolean a
+(int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+boolean a
+(int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+boolean a
+(int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+boolean a
+(int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+int v
+(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+Symbol table: 
+a -> false
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+(if(a){v = 2}else{v = 3}|Print(v))
+Symbol table: 
+a -> true
+v -> 0
+Output list: 
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> true
+v -> 2
+Output list: 
+2
+File table:
+Heap: 
+

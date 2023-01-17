@@ -1,9 +1,7 @@
 package view;
 
 import controller.Controller;
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
-import exceptions.StatementExecutionExceptions;
+import exceptions.InterpreterException;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -25,7 +23,7 @@ public class RunExampleCommand extends Command{
             String optionString = option.next();
             controller.setDisplayFlag(Objects.equals(optionString, "yes"));
             controller.allStep();
-        }catch(ExpressionEvaluationExceptions | ADTExceptions | StatementExecutionExceptions | IOException exception){
+        }catch(InterpreterException exception){
             System.out.println(exception.getMessage());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);

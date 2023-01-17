@@ -1,6 +1,6 @@
 package repository;
 
-import exceptions.ADTExceptions;
+import exceptions.InterpreterException;
 import model.programState.ProgramState;
 
 import java.io.IOException;
@@ -10,6 +10,6 @@ public interface IRepository {
     List<ProgramState> getProgramStates();
     void setProgramStates(List<ProgramState> programStates);
     void addProgram(ProgramState program);
-    void logPrgStateExec(ProgramState programState) throws IOException, ADTExceptions;
+    void logPrgStateExec(ProgramState programState) throws IOException, InterpreterException;
     void emptyLogFile() throws IOException;
 }

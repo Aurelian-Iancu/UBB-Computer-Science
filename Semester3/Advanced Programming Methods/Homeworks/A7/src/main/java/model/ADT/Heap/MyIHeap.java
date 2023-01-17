@@ -1,6 +1,6 @@
 package model.ADT.Heap;
 
-import exceptions.ADTExceptions;
+import exceptions.InterpreterException;
 import model.value.Value;
 
 import java.util.HashMap;
@@ -11,9 +11,9 @@ public interface MyIHeap {
     HashMap<Integer, Value> getHeap();
     void setHeap(HashMap<Integer, Value> newHeap);
     int add(Value value);
-    void update(Integer position, Value value) throws ADTExceptions;
-    Value get(Integer position) throws ADTExceptions;
+    void update(Integer position, Value value) throws InterpreterException;
+    Value get(Integer position) throws InterpreterException;
     boolean containsKey(Integer position);
-    void remove(Integer key) throws ADTExceptions;
+    void remove(Integer key) throws InterpreterException;
     Set<Integer> keySet();
 }

@@ -1,8 +1,6 @@
 package model.expression;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import exceptions.ADTExceptions;
-import exceptions.ExpressionEvaluationExceptions;
+import exceptions.InterpreterException;
 import model.ADT.Dictionary.MyIDictionary;
 import model.ADT.Heap.MyIHeap;
 import model.type.BoolType;
@@ -25,7 +23,7 @@ public class LogicExpression implements IExpression{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws ADTExceptions, ExpressionEvaluationExceptions {
+    public Value eval(MyIDictionary<String, Value> symTable, MyIHeap heap) throws InterpreterException {
         Value value1, value2;
         value1 = this.expression1.eval(symTable, heap);
         if(value1.getType().equals(new BoolType())){
@@ -42,9 +40,9 @@ public class LogicExpression implements IExpression{
                     return new BoolValue(b1 || b2);
                 }
             } else
-                throw new ExpressionEvaluationExceptions("Second operand is not of boolean type!");
+                throw new InterpreterException("Second operand is not of boolean type!");
         } else
-            throw new ExpressionEvaluationExceptions("The first operand is not of boolean type!");
+            throw new InterpreterException("The first operand is not of boolean type!");
         return null;
     }
 
@@ -54,7 +52,7 @@ public class LogicExpression implements IExpression{
     }
 
     @Override
-    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws ExpressionEvaluationExceptions, ADTExceptions {
+    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         Type type1, type2;
         type1 = expression1.typeCheck(typeEnv);
         type2 = expression2.typeCheck(typeEnv);
@@ -62,9 +60,9 @@ public class LogicExpression implements IExpression{
             if(type2.equals(new BoolType())){
                 return new IntType();
             }
-            throw new ExpressionEvaluationExceptions("Second operand is not a boolean!");
+            throw new InterpreterException("Second operand is not a boolean!");
         }
-        throw new ExpressionEvaluationExceptions("First operand is not a boolean!");
+        throw new InterpreterException("First operand is not a boolean!");
     }
 
     @Override
