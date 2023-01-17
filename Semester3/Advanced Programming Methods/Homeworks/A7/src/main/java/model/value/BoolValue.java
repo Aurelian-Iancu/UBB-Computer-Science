@@ -4,14 +4,10 @@ import model.type.BoolType;
 import model.type.Type;
 
 public class BoolValue implements Value{
-    private final boolean val;
+    private final boolean value;
 
-    public BoolValue(boolean val) {
-        this.val = val;
-    }
-
-    public boolean getVal(){
-        return this.val;
+    public BoolValue(boolean value) {
+        this.value = value;
     }
 
     @Override
@@ -20,12 +16,24 @@ public class BoolValue implements Value{
     }
 
     @Override
-    public Value deepCopy() {
-        return new BoolValue(val);
+    public boolean equals(Object anotherValue) {
+        if (!(anotherValue instanceof BoolValue))
+            return false;
+        BoolValue castValue = (BoolValue) anotherValue;
+        return this.value == castValue.value;
     }
 
     @Override
-    public String toString(){
-        return this.val ? "true" : "false";
+    public Value deepCopy() {
+        return new BoolValue(value);
+    }
+
+    public boolean getValue() {
+        return this.value;
+    }
+
+    @Override
+    public String toString() {
+        return this.value ? "true" : "false";
     }
 }

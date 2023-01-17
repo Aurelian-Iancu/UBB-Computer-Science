@@ -1,4 +1,5 @@
-package model.ADT.Heap;
+package model.utils;
+
 
 import exceptions.InterpreterException;
 import model.value.Value;
@@ -6,10 +7,10 @@ import model.value.Value;
 import java.util.HashMap;
 import java.util.Set;
 
-public interface MyIHeap {
+public interface MyIHeap{
     int getFreeValue();
-    HashMap<Integer, Value> getHeap();
-    void setHeap(HashMap<Integer, Value> newHeap);
+    HashMap<Integer, Value> getContent();
+    void setContent(HashMap<Integer, Value> newMap);
     int add(Value value);
     void update(Integer position, Value value) throws InterpreterException;
     Value get(Integer position) throws InterpreterException;

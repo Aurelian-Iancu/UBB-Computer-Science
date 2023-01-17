@@ -1,18 +1,19 @@
 package model.statement;
 
+
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyIDictionary;
-import model.ADT.Stack.MyIStack;
 import model.expression.IExpression;
 import model.programState.ProgramState;
 import model.type.BoolType;
 import model.type.Type;
+import model.utils.MyIDictionary;
+import model.utils.MyIStack;
 import model.value.BoolValue;
 import model.value.Value;
 
 public class WhileStatement implements IStatement{
-    private IExpression expression;
-    private IStatement statement;
+    private final IExpression expression;
+    private final IStatement statement;
 
     public WhileStatement(IExpression expression, IStatement statement) {
         this.expression = expression;
@@ -23,20 +24,16 @@ public class WhileStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws InterpreterException {
         Value value = expression.eval(state.getSymTable(), state.getHeap());
         MyIStack<IStatement> stack = state.getExeStack();
-        if(!value.getType().equals(new BoolType()))
+        if (!value.getType().equals(new BoolType()))
             throw new InterpreterException(String.format("%s is not of BoolType", value));
+        if (!(value instanceof BoolValue))
+            throw new InterpreterException(String.format("%s is not a BoolValue", value));
         BoolValue boolValue = (BoolValue) value;
-        if(boolValue.getVal()) {
-            stack.push(this);
+        if (boolValue.getValue()) {
+            stack.push(this.deepCopy());
             stack.push(statement);
         }
-        return state;
-
-    }
-
-    @Override
-    public IStatement deepCopy() {
-        return new WhileStatement(expression.deepCopy(), statement.deepCopy());
+        return null;
     }
 
     @Override
@@ -47,6 +44,11 @@ public class WhileStatement implements IStatement{
             return typeEnv;
         } else
             throw new InterpreterException("The condition of WHILE does not have the type Bool.");
+    }
+
+    @Override
+    public IStatement deepCopy() {
+        return new WhileStatement(expression.deepCopy(), statement.deepCopy());
     }
 
     @Override

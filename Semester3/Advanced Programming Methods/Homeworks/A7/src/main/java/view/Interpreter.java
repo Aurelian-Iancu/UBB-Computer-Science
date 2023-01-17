@@ -2,10 +2,10 @@ package view;
 
 import controller.Controller;
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyDictionary;
-import model.ADT.Heap.MyHeap;
-import model.ADT.List.MyList;
-import model.ADT.Stack.MyStack;
+import model.utils.MyDictionary;
+import model.utils.MyHeap;
+import model.utils.MyList;
+import model.utils.MyStack;
 import model.expression.*;
 import model.programState.ProgramState;
 import model.statement.*;

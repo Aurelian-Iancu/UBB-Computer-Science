@@ -1,11 +1,11 @@
 package model.programState;
 
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyIDictionary;
-import model.ADT.Heap.MyIHeap;
-import model.ADT.List.MyIList;
-import model.ADT.Stack.MyIStack;
 import model.statement.IStatement;
+import model.utils.MyIDictionary;
+import model.utils.MyIHeap;
+import model.utils.MyIList;
+import model.utils.MyIStack;
 import model.value.Value;
 
 import java.io.BufferedReader;
@@ -16,8 +16,8 @@ public class ProgramState {
     private MyIDictionary<String, Value> symTable;
     private MyIList<Value> out;
     private MyIDictionary<String, BufferedReader> fileTable;
-    private IStatement originalProgram;
     private MyIHeap heap;
+    private IStatement originalProgram;
 
     public int getId() {
         return id;
@@ -51,51 +51,44 @@ public class ProgramState {
         return lastId;
     }
 
-    public MyIDictionary<String, BufferedReader> getFileTable() {
-        return fileTable;
+    public void setExeStack(MyIStack<IStatement> newStack) {
+        this.exeStack = newStack;
     }
 
-    public void setFileTable(MyIDictionary<String, BufferedReader> fileTable) {
-        this.fileTable = fileTable;
+    public void setSymTable(MyIDictionary<String, Value> newSymTable) {
+        this.symTable = newSymTable;
     }
+
+    public void setOut(MyIList<Value> newOut) {
+        this.out = newOut;
+    }
+
+    public void setFileTable(MyIDictionary<String, BufferedReader> newFileTable) {
+        this.fileTable = newFileTable;
+    }
+
+    public void setHeap(MyIHeap newHeap) {
+        this.heap = newHeap;
+    }
+
     public MyIStack<IStatement> getExeStack() {
         return exeStack;
-    }
-
-    public void setExeStack(MyIStack<IStatement> exeStack) {
-        this.exeStack = exeStack;
     }
 
     public MyIDictionary<String, Value> getSymTable() {
         return symTable;
     }
 
-    public void setSymTable(MyIDictionary<String, Value> symTable) {
-        this.symTable = symTable;
-    }
-
     public MyIList<Value> getOut() {
         return out;
     }
 
-    public void setOut(MyIList<Value> out) {
-        this.out = out;
-    }
-
-    public IStatement getOriginalProgram() {
-        return originalProgram;
-    }
-
-    public void setOriginalProgram(IStatement originalProgram) {
-        this.originalProgram = originalProgram;
+    public MyIDictionary<String, BufferedReader> getFileTable() {
+        return fileTable;
     }
 
     public MyIHeap getHeap() {
         return heap;
-    }
-
-    public void setHeap(MyIHeap heap) {
-        this.heap = heap;
     }
 
     public boolean isNotCompleted() {
@@ -103,11 +96,10 @@ public class ProgramState {
     }
 
     public ProgramState oneStep() throws InterpreterException {
-        if (!exeStack.isEmpty()) {
-            IStatement crtStmt = exeStack.pop();
-            return crtStmt.execute(this);
-        }
-        return null;
+        if (exeStack.isEmpty())
+            throw new InterpreterException("Program state stack is empty!");
+        IStatement currentStatement = exeStack.pop();
+        return currentStatement.execute(this);
     }
 
     public String exeStackToString() {
@@ -151,23 +143,12 @@ public class ProgramState {
         return heapStringBuilder.toString();
     }
 
+    @Override
     public String toString() {
-        return  "Id: " + id +
-                "\nExecution stack: \n" + exeStack.toString() +
-                "\nSymbol table: \n" + symTable.toString() +
-                "\nOutput list: \n" + out.toString() +
-                "\nFile table: \n" + fileTable.toString() +
-                "\nHeap: \n" + heap.toString();
+        return "Id: " + id + "\nExecution stack: \n" + exeStack.getReversed() + "\nSymbol table: \n" + symTable.toString() + "\nOutput list: \n" + out.toString() + "\nFile table:\n" + fileTable.toString() + "\nHeap memory:\n" + heap.toString() + "\n";
     }
 
     public String programStateToString() throws InterpreterException {
-        return  "Id: " + id +
-                "\nExecution stack: \n" + exeStackToString() +
-                "Symbol table: \n" + symTableToString() +
-                "Output list: \n" + outToString() +
-                "File table:\n" + fileTableToString() +
-                "Heap: \n" + heapToString();
+        return "Id: " + id + "\nExecution stack: \n" + exeStackToString() + "Symbol table: \n" + symTableToString() + "Output list: \n" + outToString() + "File table:\n" + fileTableToString() + "Heap memory:\n" + heapToString();
     }
-
-
 }

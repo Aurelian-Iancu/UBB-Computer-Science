@@ -1,0 +1,373 @@
+Id: 1
+Execution stack: 
+(string varf|(varf = "test.in"|(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+string varf
+(varf = "test.in"|(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+string varf
+(varf = "test.in"|(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))))
+Symbol table: 
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+(varf = "test.in"|(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))))
+Symbol table: 
+varf -> ""
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+(varf = "test.in"|(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))))
+Symbol table: 
+varf -> ""
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+varf = "test.in"
+(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))))
+Symbol table: 
+varf -> ""
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+varf = "test.in"
+(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))))
+Symbol table: 
+varf -> ""
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+(open(varf)|(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+open(varf)
+(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+open(varf)
+(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+Heap: 
+
+Id: 1
+Execution stack: 
+(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(int varc|(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+int varc
+(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+int varc
+(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))
+Symbol table: 
+varf -> "test.in"
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))
+Symbol table: 
+varf -> "test.in"
+varc -> 0
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(model.statement.ReadFile@4fa4e7f0|(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))))
+Symbol table: 
+varf -> "test.in"
+varc -> 0
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+model.statement.ReadFile@4fa4e7f0
+(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))
+Symbol table: 
+varf -> "test.in"
+varc -> 0
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+model.statement.ReadFile@4fa4e7f0
+(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))
+Symbol table: 
+varf -> "test.in"
+varc -> 0
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(Print(varc)|(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf))))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+Print(varc)
+(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+Print(varc)
+(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(model.statement.ReadFile@6c6fe790|(Print(varc)|close(varf)))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+model.statement.ReadFile@6c6fe790
+(Print(varc)|close(varf))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+model.statement.ReadFile@6c6fe790
+(Print(varc)|close(varf))
+Symbol table: 
+varf -> "test.in"
+varc -> 15
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(Print(varc)|close(varf))
+Symbol table: 
+varf -> "test.in"
+varc -> 50
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+(Print(varc)|close(varf))
+Symbol table: 
+varf -> "test.in"
+varc -> 50
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+Print(varc)
+close(varf)
+Symbol table: 
+varf -> "test.in"
+varc -> 50
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+Print(varc)
+close(varf)
+Symbol table: 
+varf -> "test.in"
+varc -> 50
+Output list: 
+15
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+close(varf)
+Symbol table: 
+varf -> "test.in"
+varc -> 50
+Output list: 
+15
+50
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+close(varf)
+Symbol table: 
+varf -> "test.in"
+varc -> 50
+Output list: 
+15
+50
+File table:
+test.in
+Heap: 
+
+Id: 1
+Execution stack: 
+Symbol table: 
+varf -> "test.in"
+varc -> 50
+Output list: 
+15
+50
+File table:
+Heap: 
+

@@ -1,48 +1,48 @@
-Id: 4
+Id: 2
 Execution stack: 
 (int a|(int b|(a = 2 + 3 * 5|(b = a + 1|Print(b)))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
 int a
 (int b|(a = 2 + 3 * 5|(b = a + 1|Print(b))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
 int a
 (int b|(a = 2 + 3 * 5|(b = a + 1|Print(b))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int a
 (int b|(a = 2 + 3 * 5|(b = a + 1|Print(b))))
 Symbol table: 
+a -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int a
 (int b|(a = 2 + 3 * 5|(b = a + 1|Print(b))))
 Symbol table: 
+a -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
 int b
 (a = 2 + 3 * 5|(b = a + 1|Print(b)))
@@ -50,9 +50,9 @@ Symbol table:
 a -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
 int b
 (a = 2 + 3 * 5|(b = a + 1|Print(b)))
@@ -60,69 +60,71 @@ Symbol table:
 a -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int b
 (a = 2 + 3 * 5|(b = a + 1|Print(b)))
 Symbol table: 
 a -> 0
+b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int b
 (a = 2 + 3 * 5|(b = a + 1|Print(b)))
 Symbol table: 
 a -> 0
+b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int b
-(a = 2 + 3 * 5|(b = a + 1|Print(b)))
+a = 2 + 3 * 5
+(b = a + 1|Print(b))
 Symbol table: 
 a -> 0
+b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int b
-(a = 2 + 3 * 5|(b = a + 1|Print(b)))
+a = 2 + 3 * 5
+(b = a + 1|Print(b))
 Symbol table: 
 a -> 0
+b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int b
-(a = 2 + 3 * 5|(b = a + 1|Print(b)))
+(b = a + 1|Print(b))
 Symbol table: 
-a -> 0
+a -> 17
+b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-int b
-(a = 2 + 3 * 5|(b = a + 1|Print(b)))
+(b = a + 1|Print(b))
 Symbol table: 
-a -> 0
+a -> 17
+b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
 b = a + 1
 Print(b)
@@ -131,9 +133,9 @@ a -> 17
 b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
 b = a + 1
 Print(b)
@@ -142,163 +144,29 @@ a -> 17
 b -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-b = a + 1
 Print(b)
 Symbol table: 
 a -> 17
-b -> 0
+b -> 18
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
+Id: 2
 Execution stack: 
-b = a + 1
 Print(b)
 Symbol table: 
 a -> 17
-b -> 0
+b -> 18
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-b = a + 1
-Print(b)
-Symbol table: 
-a -> 17
-b -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 4
+Id: 2
 Execution stack: 
 Symbol table: 
 a -> 17
@@ -306,95 +174,5 @@ b -> 18
 Output list: 
 18
 File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
-
-Id: 4
-Execution stack: 
-Symbol table: 
-a -> 17
-b -> 18
-Output list: 
-18
-File table:
-Heap: 
+Heap memory:
 

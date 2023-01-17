@@ -25,17 +25,8 @@ module gui {
     exports model.type;
     opens model.type to javafx.fxml;
 
-    exports model.ADT.Heap;
-    opens model.ADT.Heap to javafx.fxml;
-
-    exports model.ADT.Dictionary;
-    opens model.ADT.Dictionary to javafx.fxml;
-
-    exports model.ADT.List;
-    opens model.ADT.List to javafx.fxml;
-
-    exports model.ADT.Stack;
-    opens model.ADT.Stack to javafx.fxml;
+    exports model.utils;
+    opens model.utils to javafx.fxml;
 
     exports model.value;
     opens model.value to javafx.fxml;

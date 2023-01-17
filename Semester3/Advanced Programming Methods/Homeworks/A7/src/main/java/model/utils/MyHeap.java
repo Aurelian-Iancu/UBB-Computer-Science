@@ -1,25 +1,27 @@
-package model.ADT.Heap;
+package model.utils;
 
 import exceptions.InterpreterException;
 import model.value.Value;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 public class MyHeap implements MyIHeap{
     HashMap<Integer, Value> heap;
     Integer freeLocationValue;
 
-    public MyHeap() {
-        this.heap = new HashMap<>();
-        this.freeLocationValue = 1;
-    }
-
-    public int newValue(){
+    public int newValue() {
         freeLocationValue += 1;
-        while(freeLocationValue == 0 || heap.containsKey(freeLocationValue))
+        while (freeLocationValue == 0 || heap.containsKey(freeLocationValue))
             freeLocationValue += 1;
         return freeLocationValue;
+    }
+
+    public MyHeap() {
+        this.heap = new HashMap<>();
+        freeLocationValue = 1;
     }
 
     @Override
@@ -28,13 +30,13 @@ public class MyHeap implements MyIHeap{
     }
 
     @Override
-    public HashMap<Integer, Value> getHeap() {
+    public HashMap<Integer, Value> getContent() {
         return heap;
     }
 
     @Override
-    public void setHeap(HashMap<Integer, Value> newHeap) {
-        this.heap = newHeap;
+    public void setContent(HashMap<Integer, Value> newMap) {
+        this.heap = newMap;
     }
 
     @Override
@@ -47,14 +49,14 @@ public class MyHeap implements MyIHeap{
 
     @Override
     public void update(Integer position, Value value) throws InterpreterException {
-        if(!heap.containsKey(position))
+        if (!heap.containsKey(position))
             throw new InterpreterException(String.format("%d is not present in the heap", position));
         heap.put(position, value);
     }
 
     @Override
     public Value get(Integer position) throws InterpreterException {
-        if(!heap.containsKey(position))
+        if (!heap.containsKey(position))
             throw new InterpreterException(String.format("%d is not present in the heap", position));
         return heap.get(position);
     }
@@ -76,9 +78,9 @@ public class MyHeap implements MyIHeap{
     public Set<Integer> keySet() {
         return heap.keySet();
     }
-
     @Override
-    public String toString(){
+    public String toString() {
         return this.heap.toString();
     }
+
 }

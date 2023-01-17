@@ -4,20 +4,19 @@ import model.value.RefValue;
 import model.value.Value;
 
 public class RefType implements Type{
-    Type inner;
-
+    private final Type inner;
 
     public RefType(Type inner) {
         this.inner = inner;
     }
 
-    public Type getInner(){
+    public Type getInner() {
         return this.inner;
     }
 
     @Override
     public boolean equals(Type anotherType) {
-        if(anotherType instanceof RefType)
+        if (anotherType instanceof RefType)
             return inner.equals(((RefType) anotherType).getInner());
         else
             return false;
@@ -33,5 +32,8 @@ public class RefType implements Type{
         return new RefType(inner.deepCopy());
     }
 
-    public String toString() { return "Ref(" +inner.toString()+")";}
+    @Override
+    public String toString() {
+        return String.format("Ref(%s)", inner);
+    }
 }

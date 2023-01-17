@@ -1,12 +1,13 @@
 package model.statement;
 
+
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyIDictionary;
 import model.programState.ProgramState;
 import model.type.Type;
+import model.utils.MyIDictionary;
 import model.value.Value;
 
-public class VariableDeclarationStatement implements IStatement{
+public class VariableDeclarationStatement implements IStatement {
     String name;
     Type type;
 
@@ -18,23 +19,23 @@ public class VariableDeclarationStatement implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
         MyIDictionary<String, Value> symTable = state.getSymTable();
-        if(symTable.containsKey(name)){
-            throw new InterpreterException("Variable " + name + " is already declared!");
+        if (symTable.isDefined(name)) {
+            throw new InterpreterException("Variable " + name + " already exists in the symTable.");
         }
         symTable.put(name, type.defaultValue());
         state.setSymTable(symTable);
-        return state;
-    }
-
-    @Override
-    public IStatement deepCopy() {
-        return new VariableDeclarationStatement(name, type.deepCopy());
+        return null;
     }
 
     @Override
     public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         typeEnv.put(name, type);
         return typeEnv;
+    }
+
+    @Override
+    public IStatement deepCopy() {
+        return new VariableDeclarationStatement(name, type);
     }
 
     @Override

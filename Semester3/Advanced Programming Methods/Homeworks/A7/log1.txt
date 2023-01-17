@@ -4,7 +4,7 @@ Execution stack:
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
@@ -13,7 +13,7 @@ int v
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
@@ -22,25 +22,25 @@ int v
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
-int v
 (v = 2|Print(v))
 Symbol table: 
+v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
-int v
 (v = 2|Print(v))
 Symbol table: 
+v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
@@ -50,7 +50,7 @@ Symbol table:
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
@@ -60,67 +60,25 @@ Symbol table:
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
-v = 2
 Print(v)
 Symbol table: 
-v -> 0
+v -> 2
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
-v = 2
 Print(v)
 Symbol table: 
-v -> 0
+v -> 2
 Output list: 
 File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-v = 2
-Print(v)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-v = 2
-Print(v)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-v = 2
-Print(v)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-v = 2
-Print(v)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap: 
+Heap memory:
 
 Id: 1
 Execution stack: 
@@ -129,50 +87,5 @@ v -> 2
 Output list: 
 2
 File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-Symbol table: 
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-Symbol table: 
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-Symbol table: 
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-Symbol table: 
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 1
-Execution stack: 
-Symbol table: 
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
+Heap memory:
 

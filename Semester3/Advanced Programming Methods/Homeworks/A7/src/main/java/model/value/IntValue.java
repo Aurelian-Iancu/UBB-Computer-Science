@@ -4,14 +4,10 @@ import model.type.IntType;
 import model.type.Type;
 
 public class IntValue implements Value{
-    private final int val;
+    private final int value;
 
-    public IntValue(int v){
-        val = v;
-    }
-
-    public int getVal(){
-        return this.val;
+    public IntValue(int value) {
+        this.value = value;
     }
 
     @Override
@@ -20,14 +16,24 @@ public class IntValue implements Value{
     }
 
     @Override
-    public Value deepCopy() {
-        return new IntValue(val);
+    public boolean equals(Object anotherValue) {
+        if (!(anotherValue instanceof IntValue))
+            return false;
+        IntValue castValue = (IntValue) anotherValue;
+        return this.value == castValue.value;
     }
 
     @Override
-    public String toString(){
-        return String.format("%d", this.val);
+    public Value deepCopy() {
+        return new IntValue(value);
     }
 
+    public int getValue() {
+        return this.value;
+    }
 
+    @Override
+    public String toString() {
+        return String.format("%d", this.value);
+    }
 }

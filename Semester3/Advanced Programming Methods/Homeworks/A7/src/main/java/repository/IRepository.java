@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.List;
 
 public interface IRepository {
-    List<ProgramState> getProgramStates();
+    List<ProgramState> getProgramList();
     void setProgramStates(List<ProgramState> programStates);
     void addProgram(ProgramState program);
     void logPrgStateExec(ProgramState programState) throws IOException, InterpreterException;

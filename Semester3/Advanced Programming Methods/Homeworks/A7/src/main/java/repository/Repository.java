@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Repository implements IRepository{
-    private final String logFilePath;
     private List<ProgramState> programStates;
+    private final String logFilePath;
 
     public Repository(ProgramState programState, String logFilePath) throws IOException {
         this.logFilePath = logFilePath;
@@ -22,7 +22,7 @@ public class Repository implements IRepository{
     }
 
     @Override
-    public List<ProgramState> getProgramStates() {
+    public List<ProgramState> getProgramList() {
         return this.programStates;
     }
 
@@ -50,5 +50,4 @@ public class Repository implements IRepository{
         logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, false)));
         logFile.close();
     }
-
 }

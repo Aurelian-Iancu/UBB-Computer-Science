@@ -1,14 +1,14 @@
 package model.statement;
 
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyIDictionary;
-import model.ADT.List.MyIList;
 import model.expression.IExpression;
 import model.programState.ProgramState;
 import model.type.Type;
+import model.utils.MyIDictionary;
+import model.utils.MyIList;
 import model.value.Value;
 
-public class PrintStatement implements IStatement{
+public class PrintStatement implements IStatement {
     IExpression expression;
 
     public PrintStatement(IExpression expression) {
@@ -20,18 +20,18 @@ public class PrintStatement implements IStatement{
         MyIList<Value> out = state.getOut();
         out.add(expression.eval(state.getSymTable(), state.getHeap()));
         state.setOut(out);
-        return state;
-    }
-
-    @Override
-    public IStatement deepCopy() {
-        return new PrintStatement(expression.deepCopy());
+        return null;
     }
 
     @Override
     public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
         expression.typeCheck(typeEnv);
         return typeEnv;
+    }
+
+    @Override
+    public IStatement deepCopy() {
+        return new PrintStatement(expression.deepCopy());
     }
 
     @Override

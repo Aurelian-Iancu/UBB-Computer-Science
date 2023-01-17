@@ -8,10 +8,10 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import model.ADT.Dictionary.MyIDictionary;
-import model.ADT.Heap.MyIHeap;
 import model.programState.ProgramState;
 import model.statement.IStatement;
+import model.utils.MyIDictionary;
+import model.utils.MyIHeap;
 import model.value.Value;
 
 import java.util.ArrayList;
@@ -119,7 +119,7 @@ public class ProgramExecutorController {
         ProgramState programState = getCurrentProgramState();
         MyIHeap heap = Objects.requireNonNull(programState).getHeap();
         ArrayList<Pair<Integer, Value>> heapEntries = new ArrayList<>();
-        for(Map.Entry<Integer, Value> entry: heap.getHeap().entrySet()) {
+        for(Map.Entry<Integer, Value> entry: heap.getContent().entrySet()) {
             heapEntries.add(new Pair<>(entry.getKey(), entry.getValue()));
         }
         heapTableView.setItems(FXCollections.observableArrayList(heapEntries));

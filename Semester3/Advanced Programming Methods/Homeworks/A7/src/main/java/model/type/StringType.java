@@ -5,7 +5,7 @@ import model.value.Value;
 
 public class StringType implements Type{
     @Override
-    public boolean equals(Type anotherType){
+    public boolean equals(Type anotherType) {
         return anotherType instanceof StringType;
     }
 
@@ -19,7 +19,8 @@ public class StringType implements Type{
         return new StringType();
     }
 
-    public String toString(){
+    @Override
+    public String toString() {
         return "string";
     }
 }

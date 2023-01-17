@@ -1,11 +1,11 @@
 package model.statement;
 
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyIDictionary;
 import model.expression.IExpression;
 import model.programState.ProgramState;
 import model.type.StringType;
 import model.type.Type;
+import model.utils.MyIDictionary;
 import model.value.StringValue;
 import model.value.Value;
 
@@ -23,25 +23,33 @@ public class OpenReadFile implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
         Value value = expression.eval(state.getSymTable(), state.getHeap());
-        if(value.getType().equals(new StringType())){
-            StringValue filename = (StringValue) value;
+        if (value.getType().equals(new StringType())) {
+            StringValue fileName = (StringValue) value;
             MyIDictionary<String, BufferedReader> fileTable = state.getFileTable();
-            if(!fileTable.containsKey(filename.getValue())){
+            if (!fileTable.isDefined(fileName.getValue())) {
                 BufferedReader br;
-                try{
-                    br = new BufferedReader(new FileReader(filename.getValue()));
-                }catch(FileNotFoundException e){
-                    throw new InterpreterException("The file could not be opened");
+                try {
+                    br = new BufferedReader(new FileReader(fileName.getValue()));
+                } catch (FileNotFoundException e) {
+                    throw new InterpreterException(String.format("%s could not be opened", fileName.getValue()));
                 }
-                fileTable.put(filename.getValue(), br);
+                fileTable.put(fileName.getValue(), br);
                 state.setFileTable(fileTable);
-            }else{
-                throw new InterpreterException("The file is already open");
+            } else {
+                throw new InterpreterException(String.format("%s is already opened", fileName.getValue()));
             }
-        }else{
-            throw new InterpreterException("The expression is not a string");
+        } else {
+            throw new InterpreterException(String.format("%s does not evaluate to StringType", expression.toString()));
         }
-        return state;
+        return null;
+    }
+
+    @Override
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException{
+        if (expression.typeCheck(typeEnv).equals(new StringType()))
+            return typeEnv;
+        else
+            throw new InterpreterException("OpenReadFile requires a string expression.");
     }
 
     @Override
@@ -50,15 +58,7 @@ public class OpenReadFile implements IStatement{
     }
 
     @Override
-    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws  InterpreterException {
-        if (expression.typeCheck(typeEnv).equals(new StringType()))
-            return typeEnv;
-        else
-            throw new InterpreterException("OpenReadFile requires a string expression.");
-    }
-
-    @Override
-    public String toString(){
-        return "open(" + expression.toString() + ")";
+    public String toString() {
+        return String.format("OpenReadFile(%s)", expression.toString());
     }
 }

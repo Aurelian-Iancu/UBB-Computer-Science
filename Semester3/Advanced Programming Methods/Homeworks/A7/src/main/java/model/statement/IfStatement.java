@@ -1,16 +1,16 @@
 package model.statement;
 
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyIDictionary;
-import model.ADT.Stack.MyIStack;
 import model.expression.IExpression;
 import model.programState.ProgramState;
 import model.type.BoolType;
 import model.type.Type;
+import model.utils.MyIDictionary;
+import model.utils.MyIStack;
 import model.value.BoolValue;
 import model.value.Value;
 
-public class IfStatement implements IStatement{
+public class IfStatement implements IStatement {
     IExpression expression;
     IStatement thenStatement;
     IStatement elseStatement;
@@ -21,14 +21,13 @@ public class IfStatement implements IStatement{
         this.elseStatement = elseStatement;
     }
 
-
     @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
         Value result = this.expression.eval(state.getSymTable(), state.getHeap());
         if (result.getType().equals(new BoolType())){
             BoolValue condition = (BoolValue) result;
             IStatement statement;
-            if(condition.getVal())
+            if(condition.getValue())
                 statement = thenStatement;
             else
                 statement = elseStatement;
@@ -43,19 +42,19 @@ public class IfStatement implements IStatement{
     }
 
     @Override
-    public IStatement deepCopy() {
-        return new IfStatement(expression.deepCopy(), thenStatement.deepCopy(), elseStatement.deepCopy());
-    }
-
-    @Override
     public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
-        Type typeExp = expression.typeCheck(typeEnv);
-        if (typeExp.equals(new BoolType())){
+        Type typeExpr = expression.typeCheck(typeEnv);
+        if (typeExpr.equals(new BoolType())) {
             thenStatement.typeCheck(typeEnv.deepCopy());
             elseStatement.typeCheck(typeEnv.deepCopy());
             return typeEnv;
         } else
-            throw new InterpreterException("The condition of if was not of type bool!");
+            throw new InterpreterException("The condition of IF does not have the type Bool.");
+    }
+
+    @Override
+    public IStatement deepCopy() {
+        return new IfStatement(expression.deepCopy(), thenStatement.deepCopy(), elseStatement.deepCopy());
     }
 
     @Override

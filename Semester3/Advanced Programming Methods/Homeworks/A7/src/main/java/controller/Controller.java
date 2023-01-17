@@ -64,7 +64,7 @@ public class Controller {
                 repository.logPrgStateExec(programState);
                 display(programState);
             } catch (IOException | InterpreterException e) {
-                System.out.println(e.getMessage());
+                System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
             }
         });
         List<Callable<ProgramState>> callList = programStates.stream()
@@ -79,7 +79,7 @@ public class Controller {
                     } catch (ExecutionException | InterruptedException e) {
                         if (e.getCause() instanceof InterpreterException)
                             return new Pair(null, (InterpreterException) e.getCause());
-                        System.out.println(e.getMessage());
+                        System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
                         return null;
                     }
                 }).filter(Objects::nonNull)
@@ -94,10 +94,8 @@ public class Controller {
         programStates.forEach(programState -> {
             try {
                 repository.logPrgStateExec(programState);
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            } catch (InterpreterException e) {
-                throw new RuntimeException(e);
+            } catch (IOException | InterpreterException e) {
+                System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
             }
         });
         repository.setProgramStates(programStates);
@@ -105,7 +103,7 @@ public class Controller {
 
     public void oneStep() throws InterpreterException, InterruptedException {
         executorService = Executors.newFixedThreadPool(2);
-        List<ProgramState> programStates = removeCompletedPrg(repository.getProgramStates());
+        List<ProgramState> programStates = removeCompletedPrg(repository.getProgramList());
         oneStepForAllPrograms(programStates);
         conservativeGarbageCollector(programStates);
         //programStates = removeCompletedPrg(repository.getProgramList());
@@ -115,7 +113,7 @@ public class Controller {
 
     public void allStep() throws InterpreterException, InterruptedException {
         executorService = Executors.newFixedThreadPool(2);
-        List<ProgramState> programStates = removeCompletedPrg(repository.getProgramStates());
+        List<ProgramState> programStates = removeCompletedPrg(repository.getProgramList());
         while (programStates.size() > 0) {
             oneStepForAllPrograms(programStates);
             conservativeGarbageCollector(programStates);
@@ -127,11 +125,11 @@ public class Controller {
 
     public void conservativeGarbageCollector(List<ProgramState> programStates) {
         List<Integer> symTableAddresses = Objects.requireNonNull(programStates.stream()
-                        .map(p -> getAddressesFromSymTable(p.getSymTable().getContent().values()))
+                        .map(p -> getAddressesFromSymTable(p.getSymTable().values()))
                         .map(Collection::stream)
                         .reduce(Stream::concat).orElse(null))
                 .collect(Collectors.toList());
-        programStates.forEach(p -> p.getHeap().setHeap((HashMap<Integer, Value>) safeGarbageCollector(symTableAddresses, getAddressesFromHeap(p.getHeap().getHeap().values()), p.getHeap().getHeap())));
+        programStates.forEach(p -> p.getHeap().setContent((HashMap<Integer, Value>) safeGarbageCollector(symTableAddresses, getAddressesFromHeap(p.getHeap().getContent().values()), p.getHeap().getContent())));
     }
 
     private void display(ProgramState programState) {
@@ -148,6 +146,6 @@ public class Controller {
         this.repository.setProgramStates(programStates);
     }
     public List<ProgramState> getProgramStates() {
-        return this.repository.getProgramStates();
+        return this.repository.getProgramList();
     }
 }

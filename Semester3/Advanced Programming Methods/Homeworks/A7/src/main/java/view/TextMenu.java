@@ -1,8 +1,8 @@
 package view;
 
 import exceptions.InterpreterException;
-import model.ADT.Dictionary.MyDictionary;
-import model.ADT.Dictionary.MyIDictionary;
+import model.utils.MyDictionary;
+import model.utils.MyIDictionary;
 
 import java.util.Scanner;
 

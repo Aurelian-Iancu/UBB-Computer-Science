@@ -1,48 +1,48 @@
-Id: 2
+Id: 4
 Execution stack: 
-(boolean a|(int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v)))))
+(bool a|(int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v)))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-boolean a
+bool a
 (int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-boolean a
+bool a
 (int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-boolean a
 (int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
 Symbol table: 
+a -> false
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-boolean a
 (int v|(a = true|(if(a){v = 2}else{v = 3}|Print(v))))
 Symbol table: 
+a -> false
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
 int v
 (a = true|(if(a){v = 2}else{v = 3}|Print(v)))
@@ -50,9 +50,9 @@ Symbol table:
 a -> false
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
 int v
 (a = true|(if(a){v = 2}else{v = 3}|Print(v)))
@@ -60,69 +60,51 @@ Symbol table:
 a -> false
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-int v
 (a = true|(if(a){v = 2}else{v = 3}|Print(v)))
 Symbol table: 
 a -> false
+v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-int v
 (a = true|(if(a){v = 2}else{v = 3}|Print(v)))
 Symbol table: 
 a -> false
+v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-int v
-(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+a = true
+(if(a){v = 2}else{v = 3}|Print(v))
 Symbol table: 
 a -> false
+v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-int v
-(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
+a = true
+(if(a){v = 2}else{v = 3}|Print(v))
 Symbol table: 
 a -> false
+v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
-Execution stack: 
-int v
-(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
-Symbol table: 
-a -> false
-Output list: 
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-int v
-(a = true|(if(a){v = 2}else{v = 3}|Print(v)))
-Symbol table: 
-a -> false
-Output list: 
-File table:
-Heap: 
-
-Id: 2
+Id: 4
 Execution stack: 
 (if(a){v = 2}else{v = 3}|Print(v))
 Symbol table: 
@@ -130,9 +112,9 @@ a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
 (if(a){v = 2}else{v = 3}|Print(v))
 Symbol table: 
@@ -140,129 +122,75 @@ a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
+if(a){v = 2}else{v = 3}
+Print(v)
 Symbol table: 
 a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
+if(a){v = 2}else{v = 3}
+Print(v)
 Symbol table: 
 a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
+v = 2
+Print(v)
 Symbol table: 
 a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
+v = 2
+Print(v)
 Symbol table: 
 a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
+v = 2
+Print(v)
 Symbol table: 
 a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
+v = 2
+Print(v)
 Symbol table: 
 a -> true
 v -> 0
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
-Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
-Symbol table: 
-a -> true
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
-Symbol table: 
-a -> true
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
-Symbol table: 
-a -> true
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
-Symbol table: 
-a -> true
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
-Symbol table: 
-a -> true
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-(if(a){v = 2}else{v = 3}|Print(v))
-Symbol table: 
-a -> true
-v -> 0
-Output list: 
-File table:
-Heap: 
-
-Id: 2
+Id: 4
 Execution stack: 
 Symbol table: 
 a -> true
@@ -270,9 +198,9 @@ v -> 2
 Output list: 
 2
 File table:
-Heap: 
+Heap memory:
 
-Id: 2
+Id: 4
 Execution stack: 
 Symbol table: 
 a -> true
@@ -280,95 +208,5 @@ v -> 2
 Output list: 
 2
 File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
-
-Id: 2
-Execution stack: 
-Symbol table: 
-a -> true
-v -> 2
-Output list: 
-2
-File table:
-Heap: 
+Heap memory:
 
