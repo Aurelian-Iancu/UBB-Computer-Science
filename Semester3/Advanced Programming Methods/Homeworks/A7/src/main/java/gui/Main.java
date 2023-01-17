@@ -15,7 +15,6 @@ public class Main extends Application {
         programListLoader.setLocation(Main.class.getResource("ProgramChooserController.fxml"));
         Parent programListRoot = programListLoader.load();
         Scene programListScene = new Scene(programListRoot, 500, 550);
-        programListScene.getStylesheets().add(Objects.requireNonNull(Main.class.getResource("button_style.css")).toExternalForm());
         ProgramChooserController programChooserController = programListLoader.getController();
         primaryStage.setTitle("Select a program");
         primaryStage.setScene(programListScene);
@@ -25,7 +24,6 @@ public class Main extends Application {
         programExecutorLoader.setLocation(Main.class.getResource("ProgramExecutorController.fxml"));
         Parent programExecutorRoot = programExecutorLoader.load();
         Scene programExecutorScene = new Scene(programExecutorRoot, 700, 500);
-        programExecutorScene.getStylesheets().add(Objects.requireNonNull(Main.class.getResource("button_style.css")).toExternalForm());
         ProgramExecutorController programExecutorController = programExecutorLoader.getController();
         programChooserController.setProgramExecutorController(programExecutorController);
         Stage secondaryStage = new Stage();

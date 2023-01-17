@@ -1,48 +1,48 @@
-Id: 7
+Id: 1
 Execution stack: 
 (Ref(int) v|(New(v, 20)|(Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a))))))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 7
+Id: 1
 Execution stack: 
 Ref(int) v
 (New(v, 20)|(Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 7
+Id: 1
 Execution stack: 
 Ref(int) v
 (New(v, 20)|(Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))))
 Symbol table: 
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 7
+Id: 1
 Execution stack: 
 (New(v, 20)|(Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))))
 Symbol table: 
 v -> (0, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 7
+Id: 1
 Execution stack: 
 (New(v, 20)|(Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))))
 Symbol table: 
 v -> (0, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 7
+Id: 1
 Execution stack: 
 New(v, 20)
 (Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a))))))
@@ -50,9 +50,9 @@ Symbol table:
 v -> (0, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 7
+Id: 1
 Execution stack: 
 New(v, 20)
 (Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a))))))
@@ -60,29 +60,29 @@ Symbol table:
 v -> (0, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 
-Id: 7
+Id: 1
 Execution stack: 
 (Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a))))))
 Symbol table: 
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 (Ref(Ref(int)) a|(New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a))))))
 Symbol table: 
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 Ref(Ref(int)) a
 (New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))
@@ -90,10 +90,10 @@ Symbol table:
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 Ref(Ref(int)) a
 (New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))
@@ -101,10 +101,10 @@ Symbol table:
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 (New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))
 Symbol table: 
@@ -112,10 +112,10 @@ a -> (0, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 (New(a, v)|(New(v, 30)|Print(ReadHeap(ReadHeap(a)))))
 Symbol table: 
@@ -123,10 +123,10 @@ a -> (0, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 New(a, v)
 (New(v, 30)|Print(ReadHeap(ReadHeap(a))))
@@ -135,10 +135,10 @@ a -> (0, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 New(a, v)
 (New(v, 30)|Print(ReadHeap(ReadHeap(a))))
@@ -147,10 +147,10 @@ a -> (0, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 
-Id: 7
+Id: 1
 Execution stack: 
 (New(v, 30)|Print(ReadHeap(ReadHeap(a))))
 Symbol table: 
@@ -158,11 +158,11 @@ a -> (2, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 2 -> (1, int)
 
-Id: 7
+Id: 1
 Execution stack: 
 (New(v, 30)|Print(ReadHeap(ReadHeap(a))))
 Symbol table: 
@@ -170,11 +170,11 @@ a -> (2, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 2 -> (1, int)
 
-Id: 7
+Id: 1
 Execution stack: 
 New(v, 30)
 Print(ReadHeap(ReadHeap(a)))
@@ -183,11 +183,11 @@ a -> (2, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 2 -> (1, int)
 
-Id: 7
+Id: 1
 Execution stack: 
 New(v, 30)
 Print(ReadHeap(ReadHeap(a)))
@@ -196,11 +196,11 @@ a -> (2, Ref(int))
 v -> (1, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 2 -> (1, int)
 
-Id: 7
+Id: 1
 Execution stack: 
 Print(ReadHeap(ReadHeap(a)))
 Symbol table: 
@@ -208,12 +208,12 @@ a -> (2, Ref(int))
 v -> (3, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 2 -> (1, int)
 3 -> 30
 
-Id: 7
+Id: 1
 Execution stack: 
 Print(ReadHeap(ReadHeap(a)))
 Symbol table: 
@@ -221,12 +221,12 @@ a -> (2, Ref(int))
 v -> (3, int)
 Output list: 
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 2 -> (1, int)
 3 -> 30
 
-Id: 7
+Id: 1
 Execution stack: 
 Symbol table: 
 a -> (2, Ref(int))
@@ -234,7 +234,7 @@ v -> (3, int)
 Output list: 
 20
 File table:
-Heap: 
+Heap memory:
 1 -> 20
 2 -> (1, int)
 3 -> 30

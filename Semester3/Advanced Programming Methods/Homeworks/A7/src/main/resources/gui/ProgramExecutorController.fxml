@@ -7,9 +7,9 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProgramExecutorController">
     <children>
-        <VBox alignment="TOP_CENTER" style="-fx-background-color: #CDACA1;">
+        <VBox alignment="TOP_CENTER">
             <children>
-                <Label alignment="CENTER" lineSpacing="1.0" text="~Number of program states~" textAlignment="CENTER" textFill="#6b2737">
+                <Label alignment="CENTER" lineSpacing="1.0" text="~Number of program states~" textAlignment="CENTER" >
                     <font>
                         <Font name="Berlin Sans FB" size="14.0" />
                     </font></Label>
@@ -24,12 +24,12 @@
                     <children>
                         <VBox alignment="TOP_CENTER">
                             <children>
-                                <Label text="Heap" textFill="#6b2737">
+                                <Label text="Heap">
                                     <font>
                                         <Font name="Berlin Sans FB" size="12.0" />
                                     </font>
                                 </Label>
-                                <TableView fx:id="heapTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;">
+                                <TableView fx:id="heapTableView" prefHeight="200.0" prefWidth="200.0">
                                     <columns>
                                         <TableColumn fx:id="addressColumn" editable="false" prefWidth="101.20001375675201" text="Address" />
                                         <TableColumn fx:id="valueColumn" editable="false" prefWidth="97.99999237060547" text="Value" />
@@ -42,22 +42,22 @@
                                 <Insets left="5.0" right="5.0" />
                             </HBox.margin>
                             <children>
-                                <Label text="Output" textFill="#6b2737">
+                                <Label text="Output">
                                     <font>
                                         <Font name="Berlin Sans FB" size="12.0" />
                                     </font>
                                 </Label>
-                                <ListView fx:id="outputListView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;" />
+                                <ListView fx:id="outputListView" prefHeight="200.0" prefWidth="200.0" />
                             </children>
                         </VBox>
                         <VBox alignment="TOP_CENTER">
                             <children>
-                                <Label text="Files" textFill="#6b2737">
+                                <Label text="Files">
                                     <font>
                                         <Font name="Berlin Sans FB" size="12.0" />
                                     </font>
                                 </Label>
-                                <ListView fx:id="fileTableListView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;">
+                                <ListView fx:id="fileTableListView" prefHeight="200.0" prefWidth="200.0" >
                                     <VBox.margin>
                                         <Insets />
                                     </VBox.margin></ListView>
@@ -72,12 +72,12 @@
                     <children>
                         <VBox alignment="TOP_CENTER">
                             <children>
-                                <Label text="ProgramState IDs" textFill="#6b2737">
+                                <Label text="ProgramState IDs" >
                                     <font>
                                         <Font name="Berlin Sans FB" size="12.0" />
                                     </font>
                                 </Label>
-                                <ListView fx:id="programStateIdentifiersListView" onMouseClicked="#changeProgramState" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;" />
+                                <ListView fx:id="programStateIdentifiersListView" onMouseClicked="#changeProgramState" prefHeight="200.0" prefWidth="200.0"  />
                             </children>
                             <HBox.margin>
                                 <Insets />
@@ -85,12 +85,12 @@
                         </VBox>
                         <VBox alignment="TOP_CENTER">
                             <children>
-                                <Label text="Symbol Table" textFill="#6b2737">
+                                <Label text="Symbol Table">
                                     <font>
                                         <Font name="Berlin Sans FB" size="12.0" />
                                     </font>
                                 </Label>
-                                <TableView fx:id="symbolTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;">
+                                <TableView fx:id="symbolTableView" prefHeight="200.0" prefWidth="200.0" >
                                     <columns>
                                         <TableColumn fx:id="variableNameColumn" editable="false" prefWidth="99.20001524686813" text="Variable Name" />
                                         <TableColumn fx:id="variableValueColumn" editable="false" prefWidth="100.0" text="Value" />
@@ -106,12 +106,12 @@
                         </VBox>
                         <VBox alignment="TOP_CENTER">
                             <children>
-                                <Label text="Execution Stack" textFill="#6b2737">
+                                <Label text="Execution Stack">
                                     <font>
                                         <Font name="Berlin Sans FB" size="12.0" />
                                     </font>
                                 </Label>
-                                <ListView fx:id="executionStackListView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;" />
+                                <ListView fx:id="executionStackListView" prefHeight="200.0" prefWidth="200.0"  />
                             </children>
                             <HBox.margin>
                                 <Insets />
@@ -122,7 +122,7 @@
                         <Insets left="5.0" right="5.0" />
                     </VBox.margin>
                 </HBox>
-                <Button fx:id="runOneStepButton" alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#runOneStep" style="-fx-background-color: #CD8987; -fx-border-color: #6B2737; -fx-background-radius: 15px; -fx-border-radius: 15px;" text="Run one step" textFill="#6b2737">
+                <Button fx:id="runOneStepButton" alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#runOneStep"  text="Run one step">
                     <font>
                         <Font name="Berlin Sans FB" size="12.0" />
                     </font>
