@@ -1,646 +1,856 @@
 Id: 1
 Execution stack: 
-(int v|(v = 20|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10))))
+(Ref(int) a|(New(a, 20)|(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a))))))
 Symbol table: 
 Output list: 
 File table:
 Heap memory:
+Lock Table:
+
+Id: 1
+Execution stack: 
+Ref(int) a
+(New(a, 20)|(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))))
+Symbol table: 
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 1
+Execution stack: 
+Ref(int) a
+(New(a, 20)|(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))))
+Symbol table: 
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 1
+Execution stack: 
+(New(a, 20)|(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))))
+Symbol table: 
+a -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 1
+Execution stack: 
+(New(a, 20)|(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))))
+Symbol table: 
+a -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 1
+Execution stack: 
+New(a, 20)
+(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a))))
+Symbol table: 
+a -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 1
+Execution stack: 
+New(a, 20)
+(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a))))
+Symbol table: 
+a -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 1
+Execution stack: 
+(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a))))
+Symbol table: 
+a -> (1, int)
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+(int v|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a))))
+Symbol table: 
+a -> (1, int)
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
 int v
-(v = 20|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10)))
+(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))
 Symbol table: 
+a -> (1, int)
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
 int v
-(v = 20|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10)))
+(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))
 Symbol table: 
+a -> (1, int)
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-(v = 20|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10)))
+(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))
 Symbol table: 
+a -> (1, int)
 v -> 0
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-(v = 20|(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10)))
+(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}|Print(ReadHeap(a)))
 Symbol table: 
+a -> (1, int)
 v -> 0
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-v = 20
-(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10))
+for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 0
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-v = 20
-(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10))
+for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v * ReadHeap(a)))}
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 0
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10))
+(v = 0|while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)})
+Print(ReadHeap(a))
 Symbol table: 
-v -> 20
+a -> (1, int)
+v -> 0
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-(for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}|Print(v * 10))
+(v = 0|while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)})
+Print(ReadHeap(a))
 Symbol table: 
-v -> 20
+a -> (1, int)
+v -> 0
 Output list: 
 File table:
 Heap memory:
-
-Id: 1
-Execution stack: 
-for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}
-Print(v * 10)
-Symbol table: 
-v -> 20
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-for(v=0; v<3; v=v + 1) {Fork((Print(v)|v = v + 1))}
-Print(v * 10)
-Symbol table: 
-v -> 20
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(v = 0|while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)})
-Print(v * 10)
-Symbol table: 
-v -> 20
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(v = 0|while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)})
-Print(v * 10)
-Symbol table: 
-v -> 20
-Output list: 
-File table:
-Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
 v = 0
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
 Symbol table: 
-v -> 20
+a -> (1, int)
+v -> 0
 Output list: 
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
 v = 0
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+Fork((Print(v)|v = v * ReadHeap(a)))
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+Fork((Print(v)|v = v * ReadHeap(a)))
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+(Print(v)|v = v * ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+(Print(v)|v = v * ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+Print(v)
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+Print(v)
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+Fork((Print(v)|v = v * ReadHeap(a)))
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+Symbol table: 
+a -> (1, int)
+v -> 0
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+Fork((Print(v)|v = v * ReadHeap(a)))
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v * ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 3
+Execution stack: 
+(Print(v)|v = v * ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 2
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 3
+Execution stack: 
+Print(v)
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 2
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 3
+Execution stack: 
+Print(v)
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 2
+Output list: 
+0
+1
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 3
+Execution stack: 
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+1
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 2
+Output list: 
+0
+1
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 3
+Execution stack: 
+v = v * ReadHeap(a)
+Symbol table: 
+a -> (1, int)
+v -> 1
+Output list: 
+0
+1
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 1
+Execution stack: 
+Fork((Print(v)|v = v * ReadHeap(a)))
+v = v + 1
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
+Symbol table: 
+a -> (1, int)
+v -> 2
+Output list: 
+0
+1
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 3
+Execution stack: 
+Symbol table: 
+a -> (1, int)
 v -> 20
 Output list: 
+0
+1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(Fork((Print(v)|v = v + 1))|v = v + 1)
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(Fork((Print(v)|v = v + 1))|v = v + 1)
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-Fork((Print(v)|v = v + 1))
+Fork((Print(v)|v = v * ReadHeap(a)))
 v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
 Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-Fork((Print(v)|v = v + 1))
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 2
-Execution stack: 
-(Print(v)|v = v + 1)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 2
-Execution stack: 
-(Print(v)|v = v + 1)
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-File table:
-Heap memory:
-
-Id: 2
-Execution stack: 
-Print(v)
-v = v + 1
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-File table:
-Heap memory:
-
-Id: 2
-Execution stack: 
-Print(v)
-v = v + 1
-Symbol table: 
-v -> 0
-Output list: 
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(Fork((Print(v)|v = v + 1))|v = v + 1)
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 2
-Execution stack: 
-v = v + 1
-Symbol table: 
-v -> 0
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(Fork((Print(v)|v = v + 1))|v = v + 1)
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 2
-Execution stack: 
-v = v + 1
-Symbol table: 
-v -> 0
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-Fork((Print(v)|v = v + 1))
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 2
-Execution stack: 
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-Fork((Print(v)|v = v + 1))
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 3
-Execution stack: 
-(Print(v)|v = v + 1)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 3
-Execution stack: 
-(Print(v)|v = v + 1)
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 2
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 3
-Execution stack: 
-Print(v)
-v = v + 1
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 2
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 3
-Execution stack: 
-Print(v)
-v = v + 1
-Symbol table: 
-v -> 1
-Output list: 
-0
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(Fork((Print(v)|v = v + 1))|v = v + 1)
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
 1
 File table:
 Heap memory:
-
-Id: 3
-Execution stack: 
-v = v + 1
-Symbol table: 
-v -> 1
-Output list: 
-0
-1
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-(Fork((Print(v)|v = v + 1))|v = v + 1)
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 2
-Output list: 
-0
-1
-File table:
-Heap memory:
-
-Id: 3
-Execution stack: 
-v = v + 1
-Symbol table: 
-v -> 1
-Output list: 
-0
-1
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-Fork((Print(v)|v = v + 1))
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 2
-Output list: 
-0
-1
-File table:
-Heap memory:
-
-Id: 3
-Execution stack: 
-Symbol table: 
-v -> 2
-Output list: 
-0
-1
-File table:
-Heap memory:
-
-Id: 1
-Execution stack: 
-Fork((Print(v)|v = v + 1))
-v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
-Symbol table: 
-v -> 2
-Output list: 
-0
-1
-File table:
-Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
 v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 4
 Execution stack: 
-(Print(v)|v = v + 1)
+(Print(v)|v = v * ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
 v = v + 1
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 4
 Execution stack: 
-(Print(v)|v = v + 1)
+(Print(v)|v = v * ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 3
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 4
 Execution stack: 
 Print(v)
-v = v + 1
+v = v * ReadHeap(a)
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-while(v < 3){(Fork((Print(v)|v = v + 1))|v = v + 1)}
-Print(v * 10)
+while(v < 3){(Fork((Print(v)|v = v * ReadHeap(a)))|v = v + 1)}
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 3
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 4
 Execution stack: 
 Print(v)
-v = v + 1
+v = v * ReadHeap(a)
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
 1
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-Print(v * 10)
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 3
 Output list: 
 0
@@ -648,11 +858,14 @@ Output list:
 2
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 4
 Execution stack: 
-v = v + 1
+v = v * ReadHeap(a)
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
@@ -660,11 +873,14 @@ Output list:
 2
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
-Print(v * 10)
+Print(ReadHeap(a))
 Symbol table: 
+a -> (1, int)
 v -> 3
 Output list: 
 0
@@ -672,11 +888,14 @@ Output list:
 2
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 4
 Execution stack: 
-v = v + 1
+v = v * ReadHeap(a)
 Symbol table: 
+a -> (1, int)
 v -> 2
 Output list: 
 0
@@ -684,28 +903,36 @@ Output list:
 2
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 1
 Execution stack: 
 Symbol table: 
+a -> (1, int)
 v -> 3
 Output list: 
 0
 1
 2
-30
+20
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 
 Id: 4
 Execution stack: 
 Symbol table: 
-v -> 3
+a -> (1, int)
+v -> 40
 Output list: 
 0
 1
 2
-30
+20
 File table:
 Heap memory:
+1 -> 20
+Lock Table:
 

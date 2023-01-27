@@ -122,6 +122,23 @@
                         <Insets left="5.0" right="5.0" />
                     </VBox.margin>
                 </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Label text="Lock Table">
+
+                                </Label>
+                                <TableView fx:id="lockTableView" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="locationColumn" prefWidth="100.0" text="Location" />
+                                        <TableColumn fx:id="lockValueColumn" prefWidth="100.0" text="Value" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
                 <Button fx:id="runOneStepButton" alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#runOneStep"  text="Run one step">
                     <font>
                         <Font name="Berlin Sans FB" size="12.0" />

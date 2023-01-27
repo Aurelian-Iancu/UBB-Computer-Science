@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f872d34e-9b8c-45c5-a0be-dfc0de759475" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/statement/ForStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/statement/LockStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/statement/NewLockStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/statement/UnlockStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/utils/MyILockTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/utils/MyLockTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log9.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/ProgramChooserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ProgramChooserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/ProgramExecutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ProgramExecutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/programState/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/programState/ProgramState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/statement/ForkStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/statement/ForkStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gui/ProgramExecutorController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gui/ProgramExecutorController.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -41,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Aurelian/Documents/GitHub/Personal/UBB-Computer-Science/Semester3/Advanced Programming Methods/Homeworks/A7",
+    "last_opened_file_path": "C:/Aurelian/Informatica/University/Year2-Semester1/Advanced Programming Methods/Exam",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -111,7 +131,7 @@
       <workItem from="1674028746293" duration="205000" />
       <workItem from="1674468685213" duration="638000" />
       <workItem from="1674754919399" duration="596000" />
-      <workItem from="1674803121992" duration="1483000" />
+      <workItem from="1674803121992" duration="8783000" />
     </task>
     <servers />
   </component>

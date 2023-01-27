@@ -1,12 +1,13 @@
-Id: 1
+Id: 6
 Execution stack: 
 (int v|(v = 2|Print(v)))
 Symbol table: 
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 int v
 (v = 2|Print(v))
@@ -14,8 +15,9 @@ Symbol table:
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 int v
 (v = 2|Print(v))
@@ -23,8 +25,9 @@ Symbol table:
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 (v = 2|Print(v))
 Symbol table: 
@@ -32,8 +35,9 @@ v -> 0
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 (v = 2|Print(v))
 Symbol table: 
@@ -41,8 +45,9 @@ v -> 0
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 v = 2
 Print(v)
@@ -51,8 +56,9 @@ v -> 0
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 v = 2
 Print(v)
@@ -61,8 +67,9 @@ v -> 0
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 Print(v)
 Symbol table: 
@@ -70,8 +77,9 @@ v -> 2
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 Print(v)
 Symbol table: 
@@ -79,8 +87,9 @@ v -> 2
 Output list: 
 File table:
 Heap memory:
+Lock Table:
 
-Id: 1
+Id: 6
 Execution stack: 
 Symbol table: 
 v -> 2
@@ -88,4 +97,5 @@ Output list:
 2
 File table:
 Heap memory:
+Lock Table:
 

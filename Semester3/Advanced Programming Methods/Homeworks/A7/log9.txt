@@ -1,0 +1,203 @@
+Id: 2
+Execution stack: 
+(Ref(int) v|(New(v, 20)|(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5)))))
+Symbol table: 
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 2
+Execution stack: 
+Ref(int) v
+(New(v, 20)|(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))))
+Symbol table: 
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 2
+Execution stack: 
+Ref(int) v
+(New(v, 20)|(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))))
+Symbol table: 
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 2
+Execution stack: 
+(New(v, 20)|(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))))
+Symbol table: 
+v -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 2
+Execution stack: 
+(New(v, 20)|(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))))
+Symbol table: 
+v -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 2
+Execution stack: 
+New(v, 20)
+(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5)))
+Symbol table: 
+v -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 2
+Execution stack: 
+New(v, 20)
+(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5)))
+Symbol table: 
+v -> (0, int)
+Output list: 
+File table:
+Heap memory:
+Lock Table:
+
+Id: 2
+Execution stack: 
+(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5)))
+Symbol table: 
+v -> (1, int)
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+(Print(ReadHeap(v))|(WriteHeap(v, 30)|Print(ReadHeap(v) + 5)))
+Symbol table: 
+v -> (1, int)
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+Print(ReadHeap(v))
+(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))
+Symbol table: 
+v -> (1, int)
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+Print(ReadHeap(v))
+(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))
+Symbol table: 
+v -> (1, int)
+Output list: 
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))
+Symbol table: 
+v -> (1, int)
+Output list: 
+20
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+(WriteHeap(v, 30)|Print(ReadHeap(v) + 5))
+Symbol table: 
+v -> (1, int)
+Output list: 
+20
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+WriteHeap(v, 30)
+Print(ReadHeap(v) + 5)
+Symbol table: 
+v -> (1, int)
+Output list: 
+20
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+WriteHeap(v, 30)
+Print(ReadHeap(v) + 5)
+Symbol table: 
+v -> (1, int)
+Output list: 
+20
+File table:
+Heap memory:
+1 -> 20
+Lock Table:
+
+Id: 2
+Execution stack: 
+Print(ReadHeap(v) + 5)
+Symbol table: 
+v -> (1, int)
+Output list: 
+20
+File table:
+Heap memory:
+1 -> 30
+Lock Table:
+
+Id: 2
+Execution stack: 
+Print(ReadHeap(v) + 5)
+Symbol table: 
+v -> (1, int)
+Output list: 
+20
+File table:
+Heap memory:
+1 -> 30
+Lock Table:
+
+Id: 2
+Execution stack: 
+Symbol table: 
+v -> (1, int)
+Output list: 
+20
+35
+File table:
+Heap memory:
+1 -> 30
+Lock Table:
+
