@@ -1,0 +1,15 @@
+.blue-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    color: yellow;
+    transition: 5s left;
+}
+
+.blue-div:hover {
+    transform: rotate(90deg);
+    left: 89.7%;
+}

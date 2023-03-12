@@ -1,0 +1,10 @@
+.my-div{
+    width: 1100px;
+    height: 650px;
+    background-image: url("Images/1Corgi.jpg");
+    background-size: cover;
+}
+
+.my-div:hover{
+    background-image: url("Images/2Corgi.jpg");
+}
