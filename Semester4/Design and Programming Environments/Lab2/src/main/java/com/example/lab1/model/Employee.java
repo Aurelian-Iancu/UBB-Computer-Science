@@ -1,13 +1,10 @@
 package com.example.lab1.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
-import java.util.Set;
 
 
 @Data
@@ -16,23 +13,18 @@ import java.util.Set;
 @ToString
 //Database part
 @Entity
-@Table(name = "shelter")
-public class Shelter {
-
+@Table(name = "employee")
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private int shelterId;
+    private int employeeId;
     @Column
     private String name;
     @Column
-    private String address;
+    private String role;
     @Column
-    private int numberOfEmployees;
+    private int salary;
     @Column
-    private int capacity;
-
-    @OneToMany(mappedBy = "shelter", cascade = CascadeType.ALL)
-    @JsonIgnore
-    private Set<Animal> animals;
+    private int age;
 }
