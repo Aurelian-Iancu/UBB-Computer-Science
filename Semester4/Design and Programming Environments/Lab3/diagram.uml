@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-679.0" y="38.0">com.example.lab1.model.Volunteering</node>
+    <node x="499.0" y="-17.0">com.example.lab1.model.Animal</node>
+    <node x="103.0" y="-61.0">com.example.lab1.model.Shelter</node>
+    <node x="-270.0" y="-17.0">com.example.lab1.model.Volunteer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.lab1.model.Volunteer" target="com.example.lab1.model.Volunteering" relationship="TO_MANY">
+      <point x="-171.5" y="-118.5" />
+      <point x="-295.0" y="101.5" />
+      <point x="-295.0" y="129.0" />
+      <point x="174.5" y="-91.0" />
+    </edge>
+    <edge source="com.example.lab1.model.Volunteering" target="com.example.lab1.model.Shelter" relationship="TO_ONE">
+      <point x="87.25" y="-182.0" />
+      <point x="-417.25" y="-76.0" />
+      <point x="187.0" y="-76.0" />
+      <point x="-84.0" y="-281.0" />
+    </edge>
+    <edge source="com.example.lab1.model.Shelter" target="com.example.lab1.model.Volunteering" relationship="TO_MANY">
+      <point x="84.0" y="-281.0" />
+      <point x="355.0" y="-86.0" />
+      <point x="-591.75" y="-86.0" />
+      <point x="-87.25" y="-182.0" />
+    </edge>
+    <edge source="com.example.lab1.model.Shelter" target="com.example.lab1.model.Animal" relationship="TO_MANY">
+      <point x="168.0" y="140.5" />
+      <point x="464.0" y="360.5" />
+      <point x="464.0" y="338.5" />
+      <point x="-173.0" y="118.5" />
+    </edge>
+    <edge source="com.example.lab1.model.Volunteering" target="com.example.lab1.model.Volunteer" relationship="TO_ONE">
+      <point x="174.5" y="91.0" />
+      <point x="-305.0" y="311.0" />
+      <point x="-305.0" y="338.5" />
+      <point x="-171.5" y="118.5" />
+    </edge>
+    <edge source="com.example.lab1.model.Animal" target="com.example.lab1.model.Shelter" relationship="TO_ONE">
+      <point x="-173.0" y="-118.5" />
+      <point x="474.0" y="101.5" />
+      <point x="474.0" y="79.5" />
+      <point x="168.0" y="-140.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.7208549222797928" showDependencies="true" x="93.00000000000011" y="217.50000000000006" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
