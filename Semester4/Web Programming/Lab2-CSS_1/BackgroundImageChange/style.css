@@ -3,8 +3,10 @@
     height: 650px;
     background-image: url("Images/1Corgi.jpg");
     background-size: cover;
+    transition: 5s all ease-in;
 }
 
 .my-div:hover{
     background-image: url("Images/2Corgi.jpg");
+    border-radius: 100px;
 }

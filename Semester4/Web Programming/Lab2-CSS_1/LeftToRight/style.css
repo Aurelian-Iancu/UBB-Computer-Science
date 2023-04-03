@@ -6,10 +6,11 @@
     height: 200px;
     background-color: blue;
     color: yellow;
-    transition: 5s left;
+    transition: 5s all ease-in;
 }
 
 .blue-div:hover {
     transform: rotate(90deg);
+    border-radius: 100%;
     left: 89.7%;
 }
