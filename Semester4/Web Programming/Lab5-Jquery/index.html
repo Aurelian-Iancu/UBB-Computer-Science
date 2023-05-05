@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      #movable {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        background-color: lightblue;
+        padding: 20px;
+        display: none;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var dragging = false;
+        var iX, iY;
+        $("#movable").mousedown(function (e) {
+          dragging = true;
+          iX = e.clientX - this.offsetLeft;
+          iY = e.clientY - this.offsetTop;
+        });
+
+        $(document).mousemove(function (e) {
+          if (dragging) {
+            var oX = e.clientX - iX;
+            var oY = e.clientY - iY;
+            $("#movable").css({ left: oX + "px", top: oY + "px" });
+          }
+        });
+
+        $(document).mouseup(function (e) {
+          dragging = false;
+          $("#movable")[0].releaseCapture();
+        });
+
+        $("#show-dialog-btn").click(function () {
+          $("#movable").fadeIn();
+        });
+
+        $("#close-dialog-btn").click(function () {
+          $("#movable").fadeOut();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="show-dialog-btn">Show Dialog</button>
+    <div id="movable">
+      <button id="close-dialog-btn" style="left: 200px">
+        <span class="button-text">X</span>
+      </button>
+      <p>This div is movable!</p>
+      <p>Just click and drag anywhere on this blue area to move it around.</p>
+    </div>
+  </body>
+</html>
