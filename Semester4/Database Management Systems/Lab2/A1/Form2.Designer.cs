@@ -39,16 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgChild)).BeginInit();
             this.SuspendLayout();
             // 
-            // ConnectButton
-            // 
-            this.ConnectButton.Location = new System.Drawing.Point(678, 490);
-            this.ConnectButton.Margin = new System.Windows.Forms.Padding(4);
-            this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(100, 28);
-            this.ConnectButton.TabIndex = 11;
-            this.ConnectButton.Text = "Connect";
-            this.ConnectButton.UseVisualStyleBackColor = true;
-            // 
             // RemoveButton
             // 
             this.RemoveButton.Location = new System.Drawing.Point(802, 454);
