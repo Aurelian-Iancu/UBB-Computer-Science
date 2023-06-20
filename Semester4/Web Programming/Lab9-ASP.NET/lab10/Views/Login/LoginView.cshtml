@@ -1,0 +1,26 @@
+﻿@{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Web - Assignment 10</title>
+        <link rel="stylesheet" href="~/Webapp/Styles/login.css">
+    </head>
+    <body>
+        <form id="login-form" action="/login/Login" method="POST">
+            Enter username : <input type="text" name="username"> <BR>
+            Enter password : <input type="password" name="password"> <BR>
+            <input type="submit" value="Login" />
+        </form>
+
+        <div id="errorDiv">@ViewData["Errors"]</div>
+    </body>
+    </html>
+
+
+
+
+
+

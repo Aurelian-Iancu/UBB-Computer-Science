@@ -1,0 +1,106 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hotel Chain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Chain</title>
+
+    <link rel="stylesheet" href="~/Webapp/Styles/main.css">
+    <script src="~/Webapp/Scripts/main.js"></script>
+</head>
+
+<body>
+    <main>
+        <ul id="nav-bar">
+            <li>
+                <button id="home-page" type="button">Home</button>
+            </li>
+            <li>
+                <button id="db-insert" type="button">Insert Room</button>
+            </li>
+            <li>
+                <button id="db-update" type="button">Update Room</button>
+            </li>
+            <li>
+                <button id="db-delete" type="button">Delete Room</button>
+            </li>
+        </ul>
+
+        <h1 class="title">Hotel Chain</h1>
+        <hr>
+
+        <div class="labelss">
+            <form class="form" action="">
+                <label for="room-category">Room Category:</label>
+                <input type="text" id="room-category" name="room-category"><br>
+                <label for="room-type">Room Type:</label>
+                <input type="text" id="room-type" name="room-type"><br>
+                <label for="room-price">Room Price:</label>
+                <input type="text" id="room-price" name="room-price"><br>
+                <label for="room-hotel">Room Hotel:</label>
+                <input type="text" id="room-hotel" name="room-hotel"><br>
+                <button id="filter-button" type="button">Filter</button>
+            </form>
+
+            <form class="form" action="">
+                <label for="room-startDate">Start Date:</label>
+                <input type="text" id="room-startDate" name="room-startDate"><br>
+                <label for="room-endDate">End Date:</label>
+                <input type="text" id="room-endDate" name="room-endDate"><br>
+                <div id="buttons-book">
+                    <button id="book-button" type="button">Book Reservation</button>
+                    <button id="cancel-button" type="button">Cancel Reservation</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="tabless">
+            <div id="main-rooms-div">
+                <table id="rooms-table">
+                    <thead>
+                    <th>Room Category</th>
+                    <th>Room Type</th>
+                    <th>Room Price</th>
+                    <th>Room Hotel</th>
+                    </thead>
+                    <tbody id="cols">
+                    </tbody>
+                </table>
+                <div id="buttons-rooms-div">
+                    <button id="prev-rooms-btn" type="button">Previous Page</button>
+                    <button id="next-rooms-btn" type="button">Next Page</button>
+                </div>
+            </div>
+
+            <div id="main-rooms-div">
+                <table id="rooms-table">
+                    <thead>
+                    <th>Room Category</th>
+                    <th>Room Type</th>
+                    <th>Room Price</th>
+                    <th>Room Hotel</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    </thead>
+                    <tbody id="cols2">
+                    </tbody>
+                </table>
+                <div id="buttons-rooms-div">
+                    <button id="prev-rooms-btn2" type="button">Previous Page</button>
+                    <button id="next-rooms-btn2" type="button">Next Page</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script language="javascript" type="text/javascript">
+            var eventHandler = new EventHandling();
+    </script>
+</body>
+</html>

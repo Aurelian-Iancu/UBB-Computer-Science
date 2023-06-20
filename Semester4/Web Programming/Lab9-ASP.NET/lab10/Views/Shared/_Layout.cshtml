@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Head content here -->
+</head>
+<body>
+    @if (!Request.Url.AbsolutePath.Contains("Insert") && !Request.Url.AbsolutePath.Contains("Update") && !Request.Url.AbsolutePath.Contains("Delete"))
+    {
+        <ul id="nav-bar">
+            <!-- Navbar content here -->
+        </ul>
+    }
+
+    <div id="content">
+        @RenderBody()
+    </div>
+
+    <!-- Scripts and other content here -->
+</body>
+</html>

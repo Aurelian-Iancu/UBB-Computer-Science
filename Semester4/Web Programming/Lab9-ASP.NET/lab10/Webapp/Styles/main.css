@@ -1,0 +1,241 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-image: linear-gradient(to top, #3d54806e 0%, #4b7cbc 100%);
+    min-height: 100vh;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#main-rooms-div {
+    width: 48%;
+    height: 60vh;
+    margin-left: 1%;
+    text-align: center;
+    margin-top: 0;
+    display: inline-block;
+}
+
+    #main-rooms-div div {
+        height: 20%;
+    }
+
+#main-rooms-div-delete {
+    width: 75%;
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+    #main-rooms-div-delete div {
+        height: 20%;
+    }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 75%;
+    margin: auto;
+    margin-top: 15px;
+    border: 2px solid black;
+}
+
+th, td {
+    text-align: center;
+    height: 19%;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+#prev-rooms-btn, #next-rooms-btn, #submit-delete-btn, #submit-update-btn, #prev-rooms-btn2, #next-rooms-btn2 {
+    width: 49%;
+    height: 60%;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+#submit-insert-btn {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    width: 750px;
+    height: 50px;
+}
+
+#filter-button {
+    width: 49%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+#prev-rooms-btn-delete, #next-rooms-btn-delete, #prev-rooms-btn-update, #next-rooms-btn-update {
+    width: 49%;
+    height: 60%;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+.title {
+    font-size: 5vh;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0000006e;
+}
+
+    #nav-bar > li {
+        float: left;
+        width: auto;
+    }
+
+    #nav-bar button {
+        border: 0;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: transparent;
+        width: auto;
+    }
+
+    #nav-bar li button:hover {
+        background-color: #111;
+    }
+
+#select-txtbox-div {
+    text-align: center;
+    width: 75%;
+    height: 15vh;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+    #select-txtbox-div label {
+        display: inline-block;
+        width: 17%;
+        height: 33%;
+        text-align: left;
+    }
+
+    #select-txtbox-div input {
+        width: 80%;
+        height: 33%;
+    }
+
+    #select-txtbox-div button {
+        width: 99%;
+        margin: auto;
+        height: 33%;
+    }
+
+#cart-div {
+    text-align: center;
+    width: 75%;
+    height: 15vh;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+    #cart-div label {
+        display: inline-block;
+        width: 17%;
+        height: 33%;
+        text-align: left;
+    }
+
+    #cart-div input {
+        width: 80%;
+        height: 33%;
+    }
+
+#cart-add-btn {
+    width: 49%;
+    margin: auto;
+    height: 33%;
+}
+
+#cart-remove-btn {
+    width: 49%;
+    margin: auto;
+    height: 33%;
+}
+
+#basket-label {
+    display: inline-block;
+    width: 75%;
+    height: 33%;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-left: 12%;
+}
+
+#cols tr.selected {
+    background-color: rgb(202, 196, 186);
+}
+
+#cols2 tr.selected {
+    background-color: rgb(202, 196, 186);
+}
+
+.form {
+    text-align: center;
+    width: 50%;
+    margin-left: 0;
+    padding: 0;
+}
+
+    .form label {
+        display: inline-block;
+        width: 17%;
+        text-align: left;
+    }
+
+    .form input {
+        width: 80%;
+    }
+
+form button {
+    width: 99%;
+    margin: auto;
+}
+
+.labelss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tabless {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#book-button {
+    width: 30%;
+    height: 50px;
+    margin-top: 65px;
+    margin-left: 130px;
+}
+
+#cancel-button {
+    width: 30%;
+    height: 50px;
+    margin-top: 65px;
+    margin-left: 100px;
+}

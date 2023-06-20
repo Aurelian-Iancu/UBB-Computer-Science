@@ -1,0 +1,19 @@
+﻿body {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+#login-form {
+    text-align: center;
+    margin: 15vh auto auto;
+    border: 2px solid black;
+    height: 10vh;
+    width: 50%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+#errorDiv {
+    text-align: center;
+    margin: 15vh auto auto;
+    width: 50%;
+}

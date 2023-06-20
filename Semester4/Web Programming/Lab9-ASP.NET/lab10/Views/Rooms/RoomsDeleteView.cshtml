@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hotel Chain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Chain</title>
+
+    <link rel="stylesheet" href="~/Webapp/Styles/main.css">
+    <link rel="stylesheet" href="~/Webapp/Styles/products_crud.css">
+    <script src="~/Webapp/Scripts/delete.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <ul id="nav-bar">
+            <li>
+                <button id="home-page" type="button">Home</button>
+            </li>
+            <li>
+                <button id="db-insert" type="button">Insert Room</button>
+            </li>
+            <li>
+                <button id="db-update" type="button">Update Room</button>
+            </li>
+            <li>
+                <button id="db-delete" type="button">Delete Room</button>
+            </li>
+        </ul>
+
+        <h1 class="title">Hotel Chain</h1><hr>
+
+        <div id="main-rooms-div-delete">
+            <table id="rooms-table-delete">
+                <thead>
+                <th>Room Category</th>
+                <th>Room Type</th>
+                <th>Room Price</th>
+                <th>Room Hotel</th>
+                </thead>
+                <tbody id="cols">
+                </tbody>
+            </table>
+            <div id="buttons-rooms-div-delete">
+                <button id="prev-rooms-btn-delete" type="button">Previous Page</button>
+                <button id="next-rooms-btn-delete" type="button">Next Page</button>
+                <button type="button" id="submit-delete-btn">Delete Room</button>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+
+<script language="javascript" type="text/javascript">
+        var eventHandler = new EventHandling();
+</script>
+</html>

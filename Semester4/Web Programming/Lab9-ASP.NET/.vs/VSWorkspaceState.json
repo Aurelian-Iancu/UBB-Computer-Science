@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\lab10",
+    "\\lab10\\Persistance",
+    "\\lab10\\Views",
+    "\\lab10\\Views\\Login",
+    "\\lab10\\Views\\Rooms",
+    "\\lab10\\Views\\Shared",
+    "\\lab10\\Webapp",
+    "\\lab10\\Webapp\\Scripts",
+    "\\lab10\\Webapp\\Styles"
+  ],
+  "SelectedNode": "\\lab10\\Persistance\\DataPersistance.cs",
+  "PreviewInSolutionExplorer": false
+}

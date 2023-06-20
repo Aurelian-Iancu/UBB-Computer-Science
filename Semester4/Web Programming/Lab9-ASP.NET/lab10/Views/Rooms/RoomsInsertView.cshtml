@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hotel Chain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Chain</title>
+
+    <link rel="stylesheet" href="~/Webapp/Styles/main.css">
+    <link rel="stylesheet" href="~/Webapp/Styles/products_crud.css">
+    <script src="~/Webapp/Scripts/insert.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <ul id="nav-bar">
+            <li>
+                <button id="home-page" type="button">Home</button>
+            </li>
+            <li>
+                <button id="db-insert" type="button">Insert Room</button>
+            </li>
+            <li>
+                <button id="db-update" type="button">Update Room</button>
+            </li>
+            <li>
+                <button id="db-delete" type="button">Delete Room</button>
+            </li>
+        </ul>
+
+        <h1 class="title">Hotel Chain</h1><hr>
+
+        <!-- <form class="form" action="../../server/controller/controller.php" method="POST"> -->
+        <form class="form">
+            <label for="room-category">Room Category:</label>
+            <input type="text" id="room-category" name="room-category"><br>
+            <label for="room-type">Room Type:</label>
+            <input type="text" id="room-type" name="room-type"><br>
+            <label for="room-price">Room Price:</label>
+            <input type="text" id="room-price" name="room-price"><br>
+            <label for="room-hotel">Room Hotel:</label>
+            <input type="text" id="room-hotel" name="room-hotel"><br>
+            <button type="button" id="submit-insert-btn">Insert Room</button>
+        </form>
+    </main>
+</body>
+
+<script language="javascript" type="text/javascript">
+        var eventHandler = new EventHandling();
+</script>
+</html>
