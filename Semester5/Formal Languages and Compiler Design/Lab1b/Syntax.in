@@ -1,0 +1,38 @@
+Syntax:
+program ::= "start" {" stmtlist "}"
+
+declaration ::= IDENTIFIER "oftype" type
+
+type1 ::=  "char" | "int" | "str"
+
+arraydecl ::= "vector" "[" nr "]" IDENTIFIER "oftype" type1
+
+type  ::= type1|arraydecl
+
+cmpdstmt ::= "{" stmtlist "}"
+
+stmtlist ::= stmt | stmt ";" stmtlist
+
+stmt ::= simplstmt | structstmt
+
+simplstmt ::= assignstmt | iostmt | declaration
+
+assignstmt ::= IDENTIFIER "=" expression
+
+expression ::= expression "+" term | expression "-" term | term
+
+term ::= term "*" factor | term "/" factor | term "mod" factor | factor
+
+factor ::= "(" expression ")" | IDENTIFIER
+
+iostmt ::= "BAGĂ" | "ARATĂ" "(" IDENTIFIER | CONSTANT ")"
+
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+
+ifstmt ::= "OARE" "(" condition ")" "ATUNCI" "{" stmtlist "}" ["ALTFEL" "{" stmtlist "}"]
+
+whilestmt ::= "CATTIMP" "(" condition ")" "FĂ" "{" stmtlist "}"
+
+condition ::= expression RELATION expression
+
+RELATION ::= "<" | "<=" | "==" | "<>" | ">=" | ">"

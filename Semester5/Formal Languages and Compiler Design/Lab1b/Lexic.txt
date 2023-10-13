@@ -1,0 +1,36 @@
+Alphabet:
+	a. Upper(A-Z) and lower case letters (a-z) of the English alphabet
+	b. Decimal digits (0-9)
+	c. Underline character '_'
+	d. ă
+
+	a. Special symbols, representing:
+	-operators: +, -, *, /, ==, <, <=, >=, mod, = 
+	-separators:  [ ] { }  : ; space, ()
+    reserved words:
+	-vector, char, int, string, bagă(input), arată(output), oare(if), altfel(else), atunci(then), mod,
+cattimp(while), fă, start, oftype
+
+	b. identifiers:
+    -a sequence of letters and digits and _ such that the first character is either _ or a letter
+		identifier ::= "_"{letter|digit} | letter{letter|digit}
+		letter ::= "A" | "B" | ... "Z"
+		digit ::= "0" | "1" | ... "9"
+	c. constants
+    1.integer - rule:
+
+      noconst :="+"no|"-"no|no
+
+      no:= digit|digit{no}
+
+2.character
+
+    character:="'"letter"'"|"'"digit"'"
+
+3.string
+
+      conststring:="""string"""
+
+      string:=char{string}
+
+      char:=letter|digit

@@ -1,0 +1,21 @@
+start 
+{
+    a! oftype int; // You can't have ! in your variables
+    divizor oftype int;
+    divizor = 2;
+    ok oftype int;
+    ok is 0; // 'is' is nor a special symbols nor an operator.
+    cattimp (divizor < a / 2) fă{
+        oare(a mod b) atunci{
+            ok = 1;
+        }
+        divizor = divizor + 1;
+    }
+
+    oare(ok == 1) atunci{
+        arata("Numarul este prim!");
+    }
+    altfel{
+        arata("Numarul nu este prim!");
+    }
+}
