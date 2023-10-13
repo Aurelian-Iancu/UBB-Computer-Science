@@ -13,9 +13,9 @@ start
     }
 
     oare(ok == 1) atunci{
-        arata("Numarul este prim!");
+        arată("Numarul este prim!");
     }
     altfel{
-        arata("Numarul nu este prim!");
+        arată("Numarul nu este prim!");
     }
 }
