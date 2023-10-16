@@ -19,9 +19,10 @@ cattimp(while), fă, start, oftype
 	c. constants
     1.integer - rule:
 
-      noconst :="+"no|"-"no|no
+      noconst = ["+"|"-"] non_zero{digit} | "0"
 
-      no:= digit|digit{no}
+      non_zero = "1" | ... "9"
+
 
 2.character
 
