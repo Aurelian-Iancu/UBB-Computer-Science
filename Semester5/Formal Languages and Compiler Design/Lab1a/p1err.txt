@@ -4,7 +4,7 @@ start
     divizor oftype int;
     divizor = 2;
     ok oftype int;
-    ok is 0; // 'is' is nor a special symbols nor an operator.
+    ok = 0;
     cattimp (divizor < a / 2) fă{
         oare(a mod b) atunci{
             ok = 1;
@@ -16,6 +16,6 @@ start
         arată("Numarul este prim!");
     }
     altfel{
-        arată("Numarul nu este prim!");
+        arată("Numarul nu este prim!); // We don't have the closing quotes
     }
 }

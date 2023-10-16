@@ -5,7 +5,7 @@ declaration ::= IDENTIFIER "oftype" type
 
 type1 ::=  "char" | "int" | "str"
 
-arraydecl ::= "vector" "[" nr "]" IDENTIFIER "oftype" type1
+arraydecl ::= "vector" "[" nr "]" "oftype" type1
 
 type  ::= type1|arraydecl
 
@@ -19,11 +19,11 @@ simplstmt ::= assignstmt | iostmt | declaration
 
 assignstmt ::= IDENTIFIER "=" expression
 
-expression ::= expression "+" term | expression "-" term | term
+expression ::= expression "+" term | expression "-" term | term | term "+" expression | term "-" expression
 
-term ::= term "*" factor | term "/" factor | term "mod" factor | factor
+term ::= term "*" factor | term "/" factor | term "mod" factor | factor | factor "*" term | factor "/" term | factor "mod" term
 
-factor ::= "(" expression ")" | IDENTIFIER
+factor ::= "(" expression ")" | IDENTIFIER | CONSTANT
 
 iostmt ::= "BAGĂ" | "ARATĂ" "(" IDENTIFIER | CONSTANT ")"
 
