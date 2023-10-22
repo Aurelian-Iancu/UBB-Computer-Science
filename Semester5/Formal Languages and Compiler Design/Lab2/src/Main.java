@@ -1,21 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        HashTable<Object> myTable = new HashTable<>(10);
+        SymbolTable symbolTable = new SymbolTable(15);
+        Pair<Integer, Integer> p1 = new Pair<>(-1, - 1);
+        Pair<Integer, Integer> p2 = new Pair<>(-1, - 1);
 
-        myTable.add(5);
-        myTable.add("apple");
-        myTable.add(42);
-        myTable.add(45);
-        myTable.add("banana");
-        myTable.add("cherry");
+        try{
+            p1 = symbolTable.addIdentifier("abc");
+            System.out.println("abc -> " + p1);
+            System.out.println("_a ->" + symbolTable.addIdentifier("_a"));
+            System.out.println("bdfas ->" + symbolTable.addIdentifier("bdfas"));
 
-        System.out.println(myTable);
+            p2 = symbolTable.addConstant("1");
+            System.out.println("2 -> " + symbolTable.addConstant("2"));
+            System.out.println("3 -> " + symbolTable.addConstant("3"));
+            System.out.println("string1 -> " + symbolTable.addConstant("string1"));
+            System.out.println("another -> " + symbolTable.addConstant("another"));
 
-        System.out.println("Position of 'apple': " + myTable.getPosition("apple"));
-        System.out.println("Position of 'banana': " + myTable.getPosition("banana"));
-        System.out.println("Position of 42: " + myTable.getPosition(42));
-        System.out.println("Position of 42: " + myTable.getPosition(45));
-        System.out.println("Position of 10: " + myTable.getPosition(10)); // Not found
+            System.out.println(symbolTable);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

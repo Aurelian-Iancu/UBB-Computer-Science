@@ -1,0 +1,19 @@
+Scanning
+
+Input: -source txt(the code file)
+       -tokens file 
+Output: PIF(program internal form) + ST(symbol table) + lexical error(if any)
+
+--First example
+VAR a : integer;
+    b : integer;
+    c: string;
+BEGIN
+    a := 10;
+    b := a + 10;
+    WRITE("A message");
+    WRITE("b");
+END
+
+        PIF                          ST
+token | ST_position            ST_position| symbol

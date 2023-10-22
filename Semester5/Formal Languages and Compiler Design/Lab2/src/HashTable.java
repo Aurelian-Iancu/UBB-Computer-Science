@@ -21,11 +21,11 @@ public class HashTable<T> {
     }
 
     private int hash(String key) {
-        int hash = 5381;
+        int sum = 0;
         for (int i = 0; i < key.length(); i++) {
-            hash = ((hash << 5) + hash) + key.charAt(i);
+            sum += key.charAt(i);
         }
-        return Math.abs(hash) % capacity;
+        return sum % capacity;
     }
 
     public boolean contains(T key){
@@ -45,19 +45,21 @@ public class HashTable<T> {
         return hashValue;
     }
 
-    public void add(T key) {
+    public Pair<Integer, Integer> add(T key) throws Exception {
         int hashValue = getHashValue(key);
         if (!hashTable.get(hashValue).contains(key)) {
             hashTable.get(hashValue).add(key);
+            return new Pair<>(hashValue, hashTable.get(hashValue).indexOf(key));
         }
+        throw new Exception("Key " + key + " is already in the table!");
     }
 
-    public int getPosition(T key) {
-        int hashValue = getHashValue(key);
-        if (hashValue != -1) {
-            return hashValue;
+    public Pair<Integer, Integer> getPosition(T key) {
+        if (this.contains(key)) {
+            int hashValue = getHashValue(key);
+            return new Pair<>(hashValue, hashTable.get(hashValue).indexOf(key));
         }
-        return -1; // Key not found or not supported
+        return new Pair<>(-1, -1);
     }
 
     @Override
