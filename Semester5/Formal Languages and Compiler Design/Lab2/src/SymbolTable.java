@@ -23,16 +23,16 @@ public class SymbolTable {
         return identifiersHashTable.contains(name);
     }
 
-    public boolean hasConstant(String constant) {
-        return constantsHashTable.contains(constant);
+    public boolean hasConstant(String name) {
+        return constantsHashTable.contains(name);
     }
 
     public Pair<Integer, Integer> getPositionIdentifier(String name) {
         return identifiersHashTable.getPosition(name);
     }
 
-    public Pair<Integer, Integer> getPositionConstant(String constant) {
-        return constantsHashTable.getPosition(constant);
+    public Pair<Integer, Integer> getPositionConstant(String name) {
+        return constantsHashTable.getPosition(name);
     }
 
     @Override

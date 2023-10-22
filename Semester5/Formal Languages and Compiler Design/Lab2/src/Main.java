@@ -16,7 +16,21 @@ public class Main {
             System.out.println("string1 -> " + symbolTable.addConstant("string1"));
             System.out.println("another -> " + symbolTable.addConstant("another"));
 
+
+            System.out.println("Is 2 in the constants table? " + symbolTable.hasConstant("2"));
+            System.out.println("Is 43 in the constants table? " + symbolTable.hasConstant("43"));
+
+            System.out.println("Is abc in the constants table? " + symbolTable.hasIdentifier("abc"));
+            System.out.println("Is 43 in the constants table? " + symbolTable.hasIdentifier("43"));
+
+            System.out.println("The position of 2 in the constants table is: " + symbolTable.getPositionConstant("2"));
+            System.out.println("The position of 34 in the constants table is: " + symbolTable.getPositionConstant("34"));
+
+            System.out.println("The position of abc in the identifiers table is: " + symbolTable.getPositionIdentifier("abc"));
+            System.out.println("The position of 34 in the identifiers table is: " + symbolTable.getPositionIdentifier("34"));
+
             System.out.println(symbolTable);
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
