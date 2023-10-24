@@ -5,7 +5,7 @@ Alphabet:
 	d. ă
 
 	a. Special symbols, representing:
-	-operators: +, -, *, /, ==, <, <=, >=, mod, = 
+	-operators: +, -, *, /, ==, <, >, <=, >=, mod, = 
 	-separators:  [ ] { }  : ; space, ()
     reserved words:
 	-vector, char, int, string, bagă(input), arată(output), oare(if), altfel(else), atunci(then), mod,
