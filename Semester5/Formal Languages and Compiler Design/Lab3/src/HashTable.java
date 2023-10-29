@@ -47,7 +47,7 @@ public class HashTable<T> {
 
     public Pair<Integer, Integer> add(T key) throws Exception {
         int hashValue = getHashValue(key);
-        if (!hashTable.contains(key)) {
+        if (!hashTable.get(hashValue).contains(key)) {
             hashTable.get(hashValue).add(key);
             return new Pair<>(hashValue, hashTable.get(hashValue).indexOf(key));
         }

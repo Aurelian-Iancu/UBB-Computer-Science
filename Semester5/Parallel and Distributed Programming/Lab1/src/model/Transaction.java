@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Transaction extends Inventory implements Runnable {
     private String name;
-    private float totalPrice = 0.0f;
+    private float totalPrice = 0;
     private Boolean inventoryChanged;
     private Inventory deposit;
     private Lock _mutex = new ReentrantLock();

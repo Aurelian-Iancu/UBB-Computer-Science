@@ -1,0 +1,16 @@
+start{
+    n typeof int;
+    bagă(n);
+    i typeof int;
+    i = 1;
+    toread typeof int;
+    sum typeof int;
+    sum = 0;
+    cattimp (i <= n) fă{
+        bagă(toread);
+        sum = sum + toread;
+        i = i + 1;
+    }
+
+    arată(sum);
+}

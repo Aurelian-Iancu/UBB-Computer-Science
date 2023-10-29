@@ -20,7 +20,7 @@ import java.util.Scanner;
  */
 
 public class Main {
-    private static final int NUMBER__OF_THREADS = 1000;
+    private static final int NUMBER__OF_THREADS = 5;
     private static Inventory deposit = new Inventory();
     private static List<Product> products = new ArrayList<>();
     private static List<Bill> recordOfSales = new ArrayList<>();
@@ -34,7 +34,7 @@ public class Main {
         for (int i = 0; i < NUMBER__OF_THREADS; i++) {
             Transaction t = new Transaction(deposit, "t" + i);
             Bill b = new Bill();
-            int product = new Random().nextInt(10);
+            int product = 10000;
             if (product < 0 ) product *= -1;
             for (int j = 0; j < product; j++) {
                 int quantity = new Random().nextInt(10);
@@ -85,7 +85,7 @@ public class Main {
         double sum = recordOfSales.stream().mapToDouble(i -> i.getProducts().stream().mapToDouble(j -> j.getPrice()).sum()).sum();
         if(transactions.stream().mapToDouble(i ->{
             if (i == null)
-                return 0.0f;
+                return 0;
             else
                 return i.getTotalPrice();
         }).sum() == sum) {
