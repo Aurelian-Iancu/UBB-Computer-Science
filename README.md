@@ -28,3 +28,6 @@ Here you can see all the work that I did for the university (UBB Computer Scienc
     * [ Web Programming](Semester4/Web%20Programming/)
 * [Semester 5](Semester5/)
     * [ Formal Languages and Compiler Design](Semester5/Formal%20Languages%20and%20Compiler%20Design/)	
+    * [ Mobile applications](Semester5/Mobile%20applications/)	
+    * [ Parallel and Distributed Programming](Semester5/Parallel%20and%20and%20Distributed%20Programming/)	
+    * [ Public Key Cryptography](Semester5/Public%20Key%20Cryptography/)
