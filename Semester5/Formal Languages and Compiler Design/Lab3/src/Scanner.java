@@ -194,7 +194,7 @@ public class Scanner {
             }
             FileWriter fileWriter = new FileWriter("PIF" + programFileName.replace(".txt", ".out"));
             for (var pair : PIF) {
-                fileWriter.write(pair.getFirst() + " -> (" + pair.getSecond().getFirst() + ", " + pair.getSecond().getFirst() + ")\n");
+                fileWriter.write(pair.getFirst() + " -> (" + pair.getSecond().getFirst() + ", " + pair.getSecond().getSecond() + ")\n");
             }
             fileWriter.close();
             fileWriter = new FileWriter("ST" + programFileName.replace(".txt", ".out"));
