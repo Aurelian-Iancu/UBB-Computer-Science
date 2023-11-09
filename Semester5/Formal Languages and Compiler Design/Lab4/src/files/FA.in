@@ -1,0 +1,7 @@
+states: p,r,s
+alphabet: t1,t2
+initial state: p
+final states: s
+transitions: p t1 r, r t2 s
+
+
