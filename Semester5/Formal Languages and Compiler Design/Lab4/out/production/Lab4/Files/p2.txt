@@ -1,0 +1,16 @@
+start{
+    a oftype int;
+    b oftype int;
+    bagă(a);
+    bagă(b);
+    cattimp (a <> b) fă{
+        oare(a > b) atunci{
+            a = a - b;
+        }
+        altfel{
+            b = b - a;
+        }
+    }
+
+    arată(a);
+}
