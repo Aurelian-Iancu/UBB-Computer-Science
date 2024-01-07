@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lab3/Lab3.iml" filepath="$PROJECT_DIR$/Lab3/Lab3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab5/Lab5.iml" filepath="$PROJECT_DIR$/Lab5/Lab5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab6/Lab6.iml" filepath="$PROJECT_DIR$/Lab6/Lab6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab8/Lab8.iml" filepath="$PROJECT_DIR$/Lab8/Lab8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/MPI/MPI.iml" filepath="$PROJECT_DIR$/Project/MPI/MPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parallel and Distributed Programming.iml" filepath="$PROJECT_DIR$/Parallel and Distributed Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/Threads/Threads.iml" filepath="$PROJECT_DIR$/Project/Threads/Threads.iml" />
+    </modules>
+  </component>
+</project>

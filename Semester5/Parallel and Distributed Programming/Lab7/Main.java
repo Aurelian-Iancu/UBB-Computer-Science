@@ -6,16 +6,14 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class Main {
-    static final int POLYNOMIAL_SIZE = 15000;
-    static final String IMPLEMENTATION = "karatsuba";
+    static final int POLYNOMIAL_SIZE = 40000;
+    static final String IMPLEMENTATION = "regular";
 
     public static void master(int processes) {
         Polynomial p1 = new Polynomial(POLYNOMIAL_SIZE);
         p1.generateCoefficients();
-//        System.out.println(p1);
         Polynomial p2 = new Polynomial(POLYNOMIAL_SIZE);
         p2.generateCoefficients();
-//        System.out.println(p2);
 
         Instant startTime = Instant.now();
 
