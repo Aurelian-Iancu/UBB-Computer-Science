@@ -1,0 +1,24 @@
+- download tailscale
+- run cmd as administrator
+- tailscale login --login-server http://130.61.201.28:8080
+- sudo headscale user create desktop
+- sudo headscale nodes register --user desktop ... for desktop key
+- curl -fsSL https://tailscale.com/install.sh | sh
+- sudo headscale users create linux
+- sudo headscale --user linux preauthkeys create --expiration 60m
+- tailscale up --login-server http://130.61.201.28:8080 --authkey (result of the above key)
+- sudo headscale nodes list (to see the nodes)
+- phone ... stuff. Change server for http://130.61.201.28:8080
+- connect just like desktop
+- sudo heascale users create phone
+- activate phone
+- sudo headscale routes list
+- sudo tailscale set --advertise-exit-node
+- run as exit node on phone
+- run exit node on desktop
+- sudo headscale routes enable -r where prefix is 0.0.0.0/0
+- echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+- echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+- sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
+
+-------------------------------Don't forget to unpin as exit node the desktop
