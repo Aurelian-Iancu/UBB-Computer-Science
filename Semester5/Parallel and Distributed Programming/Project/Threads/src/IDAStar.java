@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 
 public class IDAStar {
 
-    private static final int NR_THREADS = 1;
+    private static final int NR_THREADS = 2;
     //private static final int NR_TASKS = 5;
 
     private static ExecutorService executorService;

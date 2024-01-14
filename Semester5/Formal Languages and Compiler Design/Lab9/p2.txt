@@ -1,0 +1,26 @@
+prog{
+a (int), b (int), c (int), d (int);
+print("The ecuation: a*x^2 + b*x + c = 0");
+print("a=");
+read(a);
+print("b=");
+read(b);
+print("c=");
+read(c);
+d = b*b - 4*a*c;
+sol1 (int), sol2 (int);
+if d < 0 {
+	print("No real solutions.");
+};
+if d == 0 {
+	sol1 = (0-b)/(2*a);
+	print("Unique solution ");
+	print(sol1);
+};
+sol1 = (0-b-sqrt(d))/(2*a);
+sol2 = (0-b+sqrt(d))/(2*a);
+print("2 solutions ");
+print(sol1);
+print(" and ");
+print(sol2);
+}

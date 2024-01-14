@@ -1,0 +1,14 @@
+prog {
+n (int), number (int);
+print("How many numbers do you want to sum?");
+read(n);
+sum (int), index (int);
+sum = 0;
+index = 1;
+while index <= n {
+	read(number);
+	sum = sum + number;
+};
+print("The sum is");
+print(sum);
+}
