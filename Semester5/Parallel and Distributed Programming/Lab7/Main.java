@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class Main {
-    static final int POLYNOMIAL_SIZE = 40000;
-    static final String IMPLEMENTATION = "regular";
+    static final int POLYNOMIAL_SIZE = 10000;
+    static final String IMPLEMENTATION = "karatsuba";
 
     public static void master(int processes) {
         Polynomial p1 = new Polynomial(POLYNOMIAL_SIZE);

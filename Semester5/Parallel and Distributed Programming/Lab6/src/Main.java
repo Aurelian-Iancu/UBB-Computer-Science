@@ -1,44 +1,60 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Main {
+    public static void main(String[] args) {
+        // random graph
+        Graph graph = new Graph(13);
+        System.out.println(graph);
 
-    private static final int NR_GRAPHS = 2000;
-    private static final int NR_THREADS = 5;
+        // custom graphs
+        // graph 1 - Hamiltonian cycle: 0 -> 1 -> 2 -> 3 -> 4 -> 0
+        Graph graphWithHamiltonianCycle = new Graph(
+                new ArrayList<>(List.of(0, 1, 2, 3, 4)),
+                new ArrayList<>(
+                        List.of(
+                                new ArrayList<>(List.of(1, 4)),
+                                new ArrayList<>(List.of(2, 4)),
+                                new ArrayList<>(List.of(1, 3)),
+                                new ArrayList<>(List.of(0, 2, 4)),
+                                new ArrayList<>(List.of(0, 2))
+                        )
+                )
+        );
 
-    public static void main(String[] args) throws InterruptedException {
-        for (int i = 1; i <= NR_GRAPHS; i++) {
-            DirectedGraph graph = DirectedGraph.generateRandomHamiltonian(i*10); // nr of vertices
-            test(i, graph, NR_THREADS);
-        }
+        // graph 2 - no Hamiltonian cycle, edge 4 -> 0 is removed from the previous one
+        Graph graphWithoutHamiltonianCycle = new Graph(
+                new ArrayList<>(List.of(0, 1, 2, 3, 4)),
+                new ArrayList<>(
+                        List.of(
+                                new ArrayList<>(List.of(1, 4)),
+                                new ArrayList<>(List.of(2, 4)),
+                                new ArrayList<>(List.of(1, 3)),
+                                new ArrayList<>(List.of(0, 2, 4)),
+                                new ArrayList<>(List.of(2))
+                        )
+                )
+        );
+
+        var startTime = System.nanoTime();
+        HamiltonianCycleFinder findHamiltonianCycle = new HamiltonianCycleFinder(graph);
+        findHamiltonianCycle.beginSearch();
+        var endTime = System.nanoTime();
+        System.out.println("Graph size: " + graph.size());
+        System.out.println("Time: " + ((double) endTime - (double) startTime) / 1_000_000_000.0 + "s");
+
+        startTime = System.nanoTime();
+        findHamiltonianCycle = new HamiltonianCycleFinder(graphWithHamiltonianCycle);
+        findHamiltonianCycle.beginSearch();
+        endTime = System.nanoTime();
+        System.out.println("Graph with Hamiltonian cycle size: " + graphWithHamiltonianCycle.size());
+        System.out.println("Time: " + ((double) endTime - (double) startTime) / 1_000_000_000.0 + "s");
+
+        startTime = System.nanoTime();
+        findHamiltonianCycle = new HamiltonianCycleFinder(graphWithoutHamiltonianCycle);
+        findHamiltonianCycle.beginSearch();
+        endTime = System.nanoTime();
+        System.out.println("Graph without Hamiltonian cycle size: " + graphWithoutHamiltonianCycle.size());
+        System.out.println("Time: " + ((double) endTime - (double) startTime) / 1_000_000_000.0 + "s");
     }
-
-    public static void test(int vertices, DirectedGraph graph, int nrThreads) throws InterruptedException {
-        long startTime = System.nanoTime();
-        find(graph, nrThreads);
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime) / 1000000;
-        System.out.println(vertices*10 + " vertices: " + duration + " ms");
-    }
-
-    public static void find(DirectedGraph graph, int nrThreads) throws InterruptedException {
-        ExecutorService pool = Executors.newFixedThreadPool(nrThreads);
-
-        List<Integer> result = new ArrayList<>(graph.size());
-
-        AtomicBoolean atomicBoolean = new AtomicBoolean(false);
-
-        for (int i = 0; i < graph.size(); i++){ //check from each node
-            pool.submit(new CycleFinder(graph, i, result, atomicBoolean));
-        }
-
-        pool.shutdown();
-
-        pool.awaitTermination(10, TimeUnit.SECONDS);
-    }
-
 }
