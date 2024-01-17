@@ -14,7 +14,6 @@ public class IDAStar {
         Matrix initialState = Matrix.fromFile();
 
         executorService = Executors.newFixedThreadPool(NR_THREADS);
-        //executorService.submit(IDAStar::diagnosticsTread);
 
         Matrix solution = solve(initialState);
         System.out.println(solution);
@@ -106,20 +105,6 @@ public class IDAStar {
         return new Pair<>(min, solution);
 
     }
-
-//    public static void diagnosticsTread() {
-//        long startTime = System.currentTimeMillis();
-//        int k = 0;
-//        while (true) {
-//            // Add diagnostics here
-//            Matrix head = null;
-//            if (head == null) {
-//                long endTime = System.currentTimeMillis();
-//                //System.out.println("Run time: " + (endTime - startTime) + "ms");
-//                return;
-//            }
-//        }
-//    }
 
 
 }

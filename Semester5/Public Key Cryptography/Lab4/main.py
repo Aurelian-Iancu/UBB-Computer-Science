@@ -1,173 +1,95 @@
 import random
 
-ALPHABET = ' abcdefghijklmnopqrstuvwxyz'
-CHUNK_LENGTH = 3
-ALPHABET_LENGTH = len(ALPHABET)
 
-
-def validate(message):
-    for char in message:
-        if char not in ALPHABET:
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
             return False
     return True
 
 
-def get_int_less_than(p):
-    return random.randint(1, p - 2)
-
-
-def sieve(bound):
-    ans = []
-    marked = [False for _ in range(bound + 1)]
-    for i in range(2, bound + 1):
-        if not marked[i]:
-            ans.append(i)
-            for j in range(i + i, bound + 1, i):
-                marked[j] = True
-    return ans[10000:]
-
-
-def get_random_prime(bound):
-    primes = sieve(bound)
+def generate_prime(min_val, max_val):
+    primes = [i for i in range(min_val, max_val) if is_prime(i)]
     return random.choice(primes)
 
 
-def gcd(a, b):
-    while b:
-        r = a % b
-        a = b
-        b = r
-    return a
-
-def generators(n):
-    gens = []
-    for g in range(2, n):
-        if gcd(g, n) == 1:
-            gens.append(g)
-    return gens
+def mod_exp(a, b, m):
+    result = 1
+    a = a % m
+    while b > 0:
+        if b % 2 == 1:
+            result = (result * a) % m
+        b //= 2
+        a = (a * a) % m
+    return result
 
 
-def get_random_generator(n):
-    return random.choice(generators(n))
+def mod_inverse(a, m):
+    g, x, y = extended_gcd(a, m)
+    if g != 1:
+        raise Exception('The modular inverse does not exist')
+    else:
+        return x % m
 
 
-def modular_exp(x, y, p):
-    res = 1
-    x = x % p
-    if x == 0:
-        return 0
-    # bit shifting is safer for large numbers, when possible
-    while y > 0:
-        if (y & 1) == 1:
-            res = res * x % p
-        y = y >> 1  # y = y//2
-        x = x * x % p
-
-    return res
+def extended_gcd(a, b):
+    if a == 0:
+        return b, 0, 1
+    else:
+        g, x, y = extended_gcd(b % a, a)
+        return g, y - (b // a) * x, x
 
 
-def keys_generator():
-    p = get_random_prime(10 ** 7)
-    print("generated prime is=" + str(p))
-    g = get_random_generator(p)
-    print("generator g is=" + str(g))
-    a = get_int_less_than(p)  # private key
-    ga = modular_exp(g, a, p)
-    print("g^a is=" + str(ga))
-    public_key = (p, g, ga)
-    return public_key, a
+def generate_keys():
+    p = generate_prime(1000, 10000)
+    g = random.randint(1, p - 1)
+    a = random.randint(1, p - 2)
+    public_key = (p, g, mod_exp(g, a, p))
+    private_key = a
+    return public_key, private_key
 
 
-def convert_characters_to_number(characters):
-    number = 0
-    power = 1
-    for char in reversed(characters):
-        number += power * (ALPHABET.find(char) + 1)
-        power *= (ALPHABET_LENGTH+1)
-    return number
+def encrypt(plaintext, public_key):
+    p, g, ga = public_key
+    for char in plaintext:
+        if char not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ ":
+            raise ValueError(f"Invalid character in plaintext: {char}")
+
+    ciphertext = []
+    for char in plaintext:
+        m = ord(char) % p
+        k = random.randint(1, p - 2)
+        alpha = mod_exp(g, k, p)
+        beta = (m * mod_exp(ga, k, p)) % p
+        ciphertext.append((alpha, beta))
+    return ciphertext
 
 
-def convert_number_to_characters(number):
-    characters = ""
-    while number:
-        characters = ALPHABET[number % (ALPHABET_LENGTH+1) - 1]+characters
-        number//=(ALPHABET_LENGTH+1)
-    return characters
-
-
-def generate_random_text():
-    tests = []
-    for i in range(25):
-        length = random.randint(5, 10)
-        message = ""
-        for _ in range(length):
-            message += random.choice(ALPHABET)
-        tests.append(message)
-    return tests
-
-
-def test():
-    test_cases = generate_random_text()
-    print(test_cases)
-    public_key, private_key = keys_generator()
-    print("public key=" + str(public_key))
-    print("private key=" + str(private_key))
-    p = public_key[0]
-    g = public_key[1]
-    ga = public_key[2]
+def decrypt(ciphertext, public_key, private_key):
+    p, _, ga = public_key
     a = private_key
-    for test_message in test_cases:
+    decrypted_chars = [chr((mod_inverse(mod_exp(alpha, a, p), p) * beta) % p) for alpha, beta in ciphertext]
 
-        decrypted_text = ""
-        chunks = [test_message[i:i + CHUNK_LENGTH] for i in range(0, len(test_message), CHUNK_LENGTH)]
-        for c in chunks:
-            nr = convert_characters_to_number(c)
+    for char in decrypted_chars:
+        if char not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ ":
+            raise ValueError(f"Invalid character in decrypted plaintext: {char}")
 
-            k = get_int_less_than(p)
-            alpha = modular_exp(g, k, p)
-            beta = nr * modular_exp(ga, k, p) % p
-
-            decrypted_number = modular_exp(alpha, p - 1 - a, p) * beta % p
-            decrypted_text += convert_number_to_characters(decrypted_number)
-
-        print(test_message, decrypted_text)
-        assert decrypted_text == test_message
+    return ''.join(decrypted_chars)
 
 
-def main():
+# Example usage
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+plaintext = "HELLO"
+print(f'Original Plaintext: {plaintext}')
 
-    print("el gamal tests starting")
-    test()
-    print("el gamal tests passed")
+public_key, private_key = generate_keys()
+print(f'Public Key: {public_key}')
+print(f'Private Key: {private_key}')
 
-    initial_message = "fara"
-    print("-----------------------------------------")
-    print("message:" + initial_message)
+ciphertext = encrypt(plaintext, public_key)
+print(f'Ciphertext: {ciphertext}')
 
-    if not validate(initial_message):
-        print("Invalid characters in input message. Please only use lowercase alphabet and spaces.")
-        assert False
-
-    public_key, private_key = keys_generator()
-    print("public key=" + str(public_key))
-    print("private key=" + str(private_key))
-    p = public_key[0]
-    g = public_key[1]
-    ga = public_key[2]
-    a = private_key
-
-    decrypted_text = ""
-    chunks = [initial_message[i:i + CHUNK_LENGTH] for i in range(0, len(initial_message), CHUNK_LENGTH)]
-    for c in chunks:
-        nr = convert_characters_to_number(c)
-        k = get_int_less_than(p)
-        alpha = modular_exp(g, k, p)
-        beta = nr * modular_exp(ga, k, p) % p
-
-        decrypted_number = modular_exp(alpha, p - 1 - a, p) * beta % p
-        decrypted_text += convert_number_to_characters(decrypted_number)
-
-    print("decrypted message:" + decrypted_text)
-    assert decrypted_text == initial_message
-
-main()
+decrypted_plaintext = decrypt(ciphertext, public_key, private_key)
+print(f'Decrypted Plaintext: {decrypted_plaintext}')
