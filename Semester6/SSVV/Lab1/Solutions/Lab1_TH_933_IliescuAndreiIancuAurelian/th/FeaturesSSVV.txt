@@ -1,0 +1,36 @@
+List of features:
+
+1. General features
+	1.1 Exit
+	1.2 Student commands menu
+	1.3 Homework commands menu
+	1.4 Grade commands menu
+2. Features for students:
+	2.1 Exit student menu
+	2.2 Insert student
+	2.3 Delete student by id
+	2.4 Find student by id	
+	2.5 Update student by id
+	2.6 Show list of students
+3. Features for homeworks
+	3.1 Exit homeworks menu
+	3.2 Insert homework
+	3.3 Deadline extension
+	3.4 Delete homework
+	3.5 Search homework
+	3.6 Update homework
+	3.7 Show list of homeworks
+4. Features for grades
+	4.1 Exit grades menu.
+	4.2 Insert grade.
+	4.3 Delete grade.
+	4.4 Search grade by id of the homework and id of the student.
+	4.5 Show list of grades.
+
+Subpoint 5.
+	- Add a student is called when you go to the student menu and you choose "1" You will have to enter the id of the student,
+the name of the student, the group of the student and the email of the student.
+	- Add a Laboratory assignment is available when you are in the homeworks menu and you choose "1" You will have to enter the id of the 
+homework(nrTema), the description, the week deadline and the week in which the homework was turned in.
+	- Add a Grade to a Student at a given Laboratory assignment is called wheny ou go to the grades menu and you choose "1". You will have to 
+enter the id of the student, the number of the homework, the grade, the data and some feedback.

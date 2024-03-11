@@ -81,7 +81,7 @@ def decrypt(ciphertext, public_key, private_key):
 
 # Example usage
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
-plaintext = "HELLO"
+plaintext = "CRYPTO"
 print(f'Original Plaintext: {plaintext}')
 
 public_key, private_key = generate_keys()

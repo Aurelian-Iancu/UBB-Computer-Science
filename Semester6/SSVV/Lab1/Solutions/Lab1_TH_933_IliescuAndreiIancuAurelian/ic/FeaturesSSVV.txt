@@ -1,0 +1,6 @@
+1. Show list of students
+2. Add a student
+3. Get a student by its id
+4. Edit for a student
+5. Remove for a student
+6. Exit menu.	
