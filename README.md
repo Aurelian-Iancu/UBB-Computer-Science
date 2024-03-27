@@ -31,3 +31,5 @@ Here you can see all the work that I did for the university (UBB Computer Scienc
     * [ Mobile applications](Semester5/Mobile%20applications/)	
     * [ Parallel and Distributed Programming](Semester5/Parallel%20and%20Distributed%20Programming/)	
     * [ Public Key Cryptography](Semester5/Public%20Key%20Cryptography/)
+* [Semester 6](Semester6/)
+    * [ SSVV](Semester6/SSVV/)
