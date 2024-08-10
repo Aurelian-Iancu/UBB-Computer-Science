@@ -33,3 +33,6 @@ Here you can see all the work that I did for the university (UBB Computer Scienc
     * [ Public Key Cryptography](Semester5/Public%20Key%20Cryptography/)
 * [Semester 6](Semester6/)
     * [ SSVV](Semester6/SSVV/)
+    * [ Blockchain](Semester6/Blockchain/)
+    * [ NC](Semester6/NC/)
+    * [ GameDev](Semester6/GameDev/)
